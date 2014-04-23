@@ -119,11 +119,11 @@ nmap <Leader>] :TagbarToggle<CR>
 " ,a<something> to align visually selected lines on <something>
 vnoremap <silent> <Leader>a= :Tabularize /=<CR>
 vnoremap <silent> <Leader>a=> :Tabularize /=><CR>
-vnoremap <silent> <Leader>a, :Tabularize /,\zs<CR>
+vnoremap <silent> <Leader>a, :Tabularize /,\@<=/l0r1<CR>
 vnoremap <silent> <Leader>a{ :Tabularize /{<CR>
 vnoremap <silent> <Leader>a\| :Tabularize /\|<CR>
 vnoremap <silent> <Leader>a: :Tabularize /:\zs<CR>
-vnoremap <silent> <Leader>a<space> :Tabularize / \zs<CR>
+vnoremap <silent> <Leader>a<space> :Tabularize /[^ ] \+\zs/l0r1<CR>
 
 " ,f to clear cache and fuzzy search files; ,F in current file's directory
 map <silent> <leader>f :ClearCtrlPCache<cr>\|:CtrlP<cr>
