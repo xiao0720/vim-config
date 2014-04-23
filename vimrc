@@ -176,10 +176,10 @@ nnoremap <Leader>u :GundoToggle<CR>
 " ,z to zoom pane when using splits
 map <Leader>z :ZoomWin<CR>
 
-" C-c to copy to the global buffer
+" A-c to copy to the global buffer
 vmap <A-c> "+y<CR>
 
-" C-v to paste from the global buffer
+" A-v to paste from the global buffer
 map <A-v> "+p<CR>
 
 " Ctrl+s to write the file (Will scroll-lock Vim in the terminal!)
@@ -191,13 +191,6 @@ nmap <C-\> :call <SID>SynStack()<CR>
 
 " F5 to reload doc
 map <silent> <F5> <esc>:e %<CR>
-
-" Rebind half/full page scrolls to do 1 line at a time.
-" Numbers are the Distance, Duraction and speed
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 20, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 20, 4)<CR>
 
 " ----------------------------------------------
 " Insert Mode Abbreviations
@@ -289,17 +282,6 @@ else
   "set guifont=Source\ Code\ Pro\ 10
   set guifont=DejaVu\ Sans\ Mono\ 9
   " if you don't have these fonts, set one here or in your ~/vim.local file
-endif
-
-" Ruby debugger settings
-if has('gui')
-  if has("mac")
-    let g:ruby_debugger_progname = 'mvim'
-  else
-    let g:ruby_debugger_progname = 'gvim'
-  endif
-  map <Leader>dg :Rdebugger<CR>
-  map <Leader>dr :RdbTest<CR>
 endif
 
 " Fix supertab/endwise incompatibility
@@ -468,7 +450,7 @@ command! -nargs=0 Hipster :normal iTrust fund fashion axe bitters art party
       \ cliche cray mlkshk ugh cornhole kitsch quinoa
 
 " Automatically turn on colorizers highlighting for some filetypes
-let g:colorizer_auto_filetype='css,html,less,scss,vim'
+let g:colorizer_auto_filetype='css,haml,html,less,scss,vim'
 
 " Make colorizer play nicely with 2html
 let g:colorizer_syntax = 1
