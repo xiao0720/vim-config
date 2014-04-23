@@ -241,6 +241,14 @@ imap jk <ESC>
 imap kj <ESC>
 
 " ----------------------------------------------
+" Map Uncommon Filetype for Syntax Highlighting
+" ----------------------------------------------
+
+au BufRead,BufNewFile *.scss set filetype=css
+au BufRead,BufNewFile *.jade.html set filetype=jade
+au BufRead,BufNewFile *.palette set filetype=ruby
+
+" ----------------------------------------------
 " Setup Misc Vim Behaviours
 " ----------------------------------------------
 
@@ -263,12 +271,6 @@ if version >= 730
 endif
 
 autocmd FileType make set noexpandtab
-
-" Treat scss files as css
-au BufRead,BufNewFile *.scss set filetype=css
-
-" Treat .jade.html (required by meteor) as Jade
-au BufRead,BufNewFile *.jade.html set filetype=jade
 
 " Extend % to do/end etc
 runtime! plugin/matchit.vim
