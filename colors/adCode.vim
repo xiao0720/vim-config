@@ -63,26 +63,27 @@ hi Typedef                  guifg=#7e8aa2 guibg=NONE    guisp=NONE    gui=NONE  
 
 "  Ruby
 hi rubyAccess               guifg=#a40073 guibg=NONE guisp=NONE gui=NONE ctermfg=126 ctermbg=NONE cterm=NONE
-hi rubyClass                guifg=#a40073 guibg=NONE guisp=NONE gui=NONE ctermfg=126 ctermbg=NONE cterm=NONE
-hi rubyDefine               guifg=#aa2266 guibg=NONE guisp=NONE gui=bold ctermfg=125 ctermbg=NONE cterm=bold
-hi rubyInteger              guifg=#00c99b guibg=NONE guisp=NONE gui=NONE ctermfg=125 ctermbg=NONE cterm=NONE
-hi rubyControl              guifg=#cc55dd guibg=NONE guisp=NONE gui=NONE ctermfg=162 ctermbg=NONE cterm=NONE
-hi rubyConstant             guifg=#8c5fe6 guibg=NONE guisp=NONE gui=NONE ctermfg=135 ctermbg=NONE cterm=NONE
-hi rubyClassDeclaration     guifg=#00c99b guibg=NONE guisp=NONE gui=NONE ctermfg=43  ctermbg=NONE cterm=NONE
-hi rubyIdentifier           guifg=#c6b6fe guibg=NONE guisp=NONE gui=NONE ctermfg=147 ctermbg=NONE cterm=NONE
-hi rubyInstanceVariable     guifg=#96ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=118 ctermbg=NONE cterm=NONE
-hi rubySymbol               guifg=#00c4ff guibg=NONE guisp=NONE gui=NONE ctermfg=45  ctermbg=NONE cterm=NONE
 hi rubyBlockParameter       guifg=#1199ff guibg=NONE guisp=NONE gui=NONE ctermfg=33  ctermbg=NONE cterm=NONE
 hi rubyBlockParameterList   guifg=#FFFFFF guibg=NONE guisp=NONE gui=bold ctermfg=231 ctermbg=NONE cterm=bold
+hi rubyClass                guifg=#eaea00 guibg=NONE guisp=NONE gui=NONE ctermfg=126 ctermbg=NONE cterm=NONE
+hi rubyClassDeclaration     guifg=#ffcc00 guibg=NONE guisp=NONE gui=NONE ctermfg=43  ctermbg=NONE cterm=NONE
 hi rubyClassVariable        guifg=#ffcc11 guibg=NONE guisp=NONE gui=NONE ctermfg=220 ctermbg=NONE cterm=NONE
-hi rubyGlobalVariable       guifg=#ffff00 guibg=NONE guisp=NONE gui=NONE ctermfg=11  ctermbg=NONE cterm=NONE
+hi rubyConstant             guifg=#ff9f00 guibg=NONE guisp=NONE gui=NONE ctermfg=135 ctermbg=NONE cterm=NONE
+hi rubyControl              guifg=#cc55dd guibg=NONE guisp=NONE gui=NONE ctermfg=162 ctermbg=NONE cterm=NONE
+hi rubyDefine               guifg=#aa2266 guibg=NONE guisp=NONE gui=bold ctermfg=125 ctermbg=NONE cterm=bold
+hi rubyFloat                guifg=#00fabb guibg=NONE guisp=NONE gui=NONE ctermfg=45  ctermbg=NONE cterm=NONE
 hi rubyFunction             guifg=#00c4ff guibg=NONE guisp=NONE gui=NONE ctermfg=45  ctermbg=NONE cterm=NONE
+hi rubyGlobalVariable       guifg=#ffff00 guibg=NONE guisp=NONE gui=NONE ctermfg=11  ctermbg=NONE cterm=NONE
+hi rubyIdentifier           guifg=#c6b6fe guibg=NONE guisp=NONE gui=NONE ctermfg=147 ctermbg=NONE cterm=NONE
+hi rubyInclude              guifg=#ffff00 guibg=NONE guisp=NONE gui=NONE ctermfg=220 ctermbg=NONE cterm=NONE
+hi rubyInstanceVariable     guifg=#96ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=118 ctermbg=NONE cterm=NONE
+hi rubyInteger              guifg=#00c99b guibg=NONE guisp=NONE gui=NONE ctermfg=125 ctermbg=NONE cterm=NONE
 hi rubyPredefinedIdentifier guifg=#de5577 guibg=NONE guisp=NONE gui=NONE ctermfg=168 ctermbg=NONE cterm=NONE
 hi rubyRegexp               guifg=#dd0093 guibg=NONE guisp=NONE gui=NONE ctermfg=162 ctermbg=NONE cterm=NONE
 hi rubyRegexpdelimiter      guifg=#540063 guibg=NONE guisp=NONE gui=NONE ctermfg=53  ctermbg=NONE cterm=NONE
-hi rubyStringDelimiter      guifg=#96ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=118 ctermbg=NONE cterm=NONE
 hi rubyRegexpspecial        guifg=#a40073 guibg=NONE guisp=NONE gui=NONE ctermfg=126 ctermbg=NONE cterm=NONE
-hi rubyInclude              guifg=#ffff00 guibg=NONE guisp=NONE gui=NONE ctermfg=220 ctermbg=NONE cterm=NONE
+hi rubyStringDelimiter      guifg=#96ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=118 ctermbg=NONE cterm=NONE
+hi rubySymbol               guifg=#00c4ff guibg=NONE guisp=NONE gui=NONE ctermfg=45  ctermbg=NONE cterm=NONE
 
 "  NERD_Tree
 hi NERDTreeCWD              guifg=#96ff00 ctermfg=118   gui=none
