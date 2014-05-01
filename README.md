@@ -23,8 +23,8 @@ Should this not leave you with a nice working vim (certain versions are a bit if
 ## External Dependencies
 There are a couple of things you might want to install to get the best out of this config:
 * ctags - enables tags support when workingn with code
-* Ack - enables grepping through the current directories with Ack-grep
 * Ag - enables grepping through the current directories with [the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
+* Ack - enables grepping through the current directories with Ack-grep. Only needed if you can't or won't install Ag.
 
 # Local Customisation
 Local changes (eg if you prefer a different font or colour scheme) can be made `~/.vimrc.local`
@@ -45,13 +45,13 @@ just those defined or overridden locally, not the ones provided by default.
 This plugin is a front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep.
 (more)[http://www.vim.org/scripts/script.php?script_id=2572]
 
-Requires ack (aka ack-grep) to be installed.
+**Important:** Requires ack (aka ack-grep) to be installed.
 
 
 ## Ag
 This plugin is a front for Ag. Ag can be used as a replacement for 153% of the uses of Ack.
 
-Requires [the_silver_surfer](https://github.com/ggreer/the_silver_searcher) to be installed
+**Important:** Requires [the_silver_surfer](https://github.com/ggreer/the_silver_searcher) to be installed
 
 ## Autotag
 Automatically update tags when saving files ([more](http://www.vim.org/scripts/script.php?script_id=1343))
