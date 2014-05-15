@@ -1,4 +1,4 @@
-An awesome Vim config for development, slow roasted with a Ruby twist and a shot of web.
+An awesome Vim config for development, slow roasted with a Ruby twist and a shot of web-dev.
 
 # Installation
 
