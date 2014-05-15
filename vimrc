@@ -108,6 +108,7 @@ set smartcase
 " make W and Q act like w and q
 command! W :w
 command! Q :q
+command! Qa :qa
 
 " make Y consistent with C and D
 nnoremap Y y$
