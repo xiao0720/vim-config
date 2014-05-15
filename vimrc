@@ -143,10 +143,10 @@ nmap <leader>G <Plug>GitGutterPrevHunk
 " ,gt to toggle the gutter
 nmap <leader>gt :GitGutterToggle<CR>
 
-" ,gh yo highlight changed lines
+" ,gh highlight changed lines
 nmap <leader>gh :GitGutterLineHighlightsToggle<CR>
 
-" ,h to dismiss search result highlighting until next search
+" ,h to dismiss search result highlighting until next search or press of 'n'
 :noremap <silent> <leader>h :noh<CR>
 
 " ,H to show hidden characters
