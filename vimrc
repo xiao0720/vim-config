@@ -62,7 +62,7 @@ syntax on
 " ----------------------------------------------
 
 let mapleader = ","
-colorscheme darkermate
+colorscheme adCode
 
 set autoindent
 set autowrite       " Writes on make/shell commands
