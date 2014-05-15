@@ -146,16 +146,12 @@ Keys      | Function
   `,` `v` | Toggle 'projector mode' (large font, high contrast)
 
 
-## rails
-Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more ([more](http://www.vim.org/scripts/script.php?script_id=1567))
+## rake
+It's like rails.vim without the rails ([more](http://www.vim.org/scripts/script.php?script_id=3669))
 
 Keys      | Function
 ----------|--------------------
-  `,` `r` | run rake
-
-
-## rake
-It's like rails.vim without the rails ([more](http://www.vim.org/scripts/script.php?script_id=3669))
+  `:` `A` | Toggle between Ruby production code and spec
 
 
 ## repeat

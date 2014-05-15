@@ -39,7 +39,6 @@ Bundle 't9md/vim-ruby-xmpfilter'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-speeddating'
@@ -118,7 +117,7 @@ nmap <Leader>] :TagbarToggle<CR>
 
 " ,a<something> to align visually selected lines on <something>
 vnoremap <silent> <Leader>a= :Tabularize /=<CR>
-vnoremap <silent> <Leader>a=> :Tabularize /=><CR>
+vnoremap <silent> <Leader>a=> :Tabularize /=>/l1c1r1<CR>
 vnoremap <silent> <Leader>a, :Tabularize /,\@<=/l0r1<CR>
 vnoremap <silent> <Leader>a{ :Tabularize /{<CR>
 vnoremap <silent> <Leader>a\| :Tabularize /\|<CR>
