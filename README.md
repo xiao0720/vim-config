@@ -243,18 +243,6 @@ Add haml, sass and SCSS syntax support ([more](https://github.com/tpope/vim-haml
 Less syntax highlighting ([more](https://github.com/groenewege/vim-less))
 
 
-## vim-rails
-Quick navigation around rails projects ([more](https://github.com/tpope/vim-rails))
-
-Keys             | Function
------------------|-----------------------------------------------------------
-  `:A`           | Alternate file- switch between specs and production code
-  `:R`           | Related file- switch between modles, controllers and views
-  `:Emodel`      | Switch to the model
-  `:Eview`       | Switch to the view
-  `:Econtroller` | Switch to the controller
-
-
 ## vim-ruby
 Ruby support (newer than the version released with vim). ([more](https://github.com/vim-ruby/vim-ruby))
 
