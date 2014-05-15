@@ -254,6 +254,31 @@ au BufRead,BufNewFile *.jade.html set filetype=jade
 au BufRead,BufNewFile *.palette set filetype=ruby
 
 " ----------------------------------------------
+" Setup Look & Feel
+" ----------------------------------------------
+
+" Setup the projector toggle plugin
+let g:default_colorscheme = 'adCode'
+let g:projector_colorscheme = 'mac-classic'
+
+" Setup Font
+if has('win32')
+  set guifont=Consolas\ 9
+elseif has('mac')
+  set guifont=Menlo:h11
+else
+  set guifont=DejaVu\ Sans\ Mono\ 9
+  " if you don't have these fonts, set one in your ~/vim.local file like this:
+  " set guifont=fontname\ 10
+endif
+
+" Display soft column limit in modern versions of vim
+if version >= 730
+  au WinEnter,FileType * set cc=
+  au WinEnter,FileType ruby,eruby,rspec,cucumber set cc=140
+endif
+
+" ----------------------------------------------
 " Setup Misc Vim Behaviours
 " ----------------------------------------------
 
@@ -265,31 +290,10 @@ let g:airline_right_alt_sep = ""
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_theme = "powerlineish"
 
-" Setup the projector toggle plugin
-let g:default_colorscheme = 'darkermate'
-let g:projector_colorscheme = 'mac-classic'
-
-" Display soft column limit in modern versions of vim
-if version >= 730
-  au WinEnter,FileType * set cc=
-  au WinEnter,FileType ruby,eruby,rspec,cucumber set cc=140
-endif
-
 autocmd FileType make set noexpandtab
 
 " Extend % to do/end etc
 runtime! plugin/matchit.vim
-
-" Select a sensible font based on environment
-if has('win32')
-  set guifont=Consolas\ 9
-elseif has('mac')
-  set guifont=Menlo:h11
-else
-  "set guifont=Source\ Code\ Pro\ 10
-  set guifont=DejaVu\ Sans\ Mono\ 9
-  " if you don't have these fonts, set one here or in your ~/vim.local file
-endif
 
 " Fix supertab/endwise incompatibility
 let g:SuperTabCrMapping = 0

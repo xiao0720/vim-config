@@ -12,7 +12,7 @@ if version > 580
     endif
 endif
 
-let colors_name="adCode2"
+let colors_name="adCode"
 
 if has("gui_running")
     set background=dark
