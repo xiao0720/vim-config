@@ -8,7 +8,7 @@ call vundle#begin()
 " Define all the plugins!
 " ----------------------------------------------
 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 Plugin 'AdamWhittingham/projector_mode'
 Plugin 'AutoTag'
