@@ -1,11 +1,12 @@
 set nocompatible
 filetype off
 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
 " ----------------------------------------------
 " Define all the plugins!
 " ----------------------------------------------
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
@@ -48,8 +49,13 @@ Bundle 'vim-coffee-script'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vroom'
 
-syntax on
+" ----------------------------------------------
+" No More plugins after here thanks!
+" ----------------------------------------------
+
+call vundle#end()
 filetype plugin indent on
+syntax on
 
 " ----------------------------------------------
 " Setup basic Vim behaviour

@@ -7,4 +7,5 @@
 tags
 tmp
 bundle/*
-!bundle/vundle
+!bundle/Vundle.vim
+!bundle/Vundle.vim/*
