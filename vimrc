@@ -40,7 +40,7 @@ Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround'
@@ -511,6 +511,15 @@ let g:vim_markdown_folding_disabled=1
 
 " Don't report Angular ng-* attributes as errors in HTML
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
+" Projectionist defaults
+let g:projectiles = {
+      \  "spec/*.rb": {
+      \     "app/*.rb":       {"alternate": "spec/{}_spec.rb", "type": "source"},
+      \     "lib/*.rb":       {"alternate": "spec/{}_spec.rb", "type": "source"},
+      \     "spec/*_spec.rb": {"alternate": ["app/{}.rb","lib/{}.rb"], "type": "test"}
+      \  }
+      \ }
 
 " ----------------------------------------------
 "  Source any local config

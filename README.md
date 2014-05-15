@@ -146,11 +146,12 @@ Keys      | Function
   `,` `v` | Toggle 'projector mode' (large font, high contrast)
 
 
-## rake
-It's like rails.vim without the rails ([more](http://www.vim.org/scripts/script.php?script_id=3669))
+## Projectionist
+Map different files and folders to groups ([more](https://github.com/tpope/vim-projectionist))
+If you want to be a Vim legend, you really should brush up on what this excellent plugin does!
 
 Keys      | Function
-----------|--------------------
+----------|---------------------------------------------
   `:` `A` | Toggle between Ruby production code and spec
 
 
