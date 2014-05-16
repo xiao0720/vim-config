@@ -18,7 +18,7 @@ if has("gui_running")
     set background=dark
 endif
 
-hi Normal                   guifg=#FAFAFA ctermfg=231  guibg=#121212 ctermbg=NONE gui=NONE cterm=NONE
+hi Normal                   guifg=#FAFAFA ctermfg=231  guibg=#121212 ctermbg=233  gui=NONE cterm=NONE
 hi Visual                   guifg=#FAFAFA ctermfg=231  guibg=#3C414C ctermbg=238  gui=NONE cterm=NONE
 hi LineNr                   guifg=#4A4A4A ctermfg=239  guibg=#1F1F1F ctermbg=234  gui=NONE cterm=NONE
 hi Cursor                   guifg=NONE    ctermfg=NONE guibg=#626262 ctermbg=241  gui=NONE cterm=NONE
@@ -42,8 +42,6 @@ hi GitGutterChange          guifg=#FFFF33 ctermfg=227  guibg=#ABAB00 ctermbg=142
 hi GitGutterChangeLine      guifg=NONE    ctermfg=NONE guibg=#242003 ctermbg=234  gui=NONE cterm=NONE
 hi GitGutterDelete          guifg=#FF3333 ctermfg=203  guibg=#331111 ctermbg=233  gui=NONE cterm=NONE
 hi GitGutterDeleteLine      guifg=NONE    ctermfg=NONE guibg=#250505 ctermbg=232  gui=NONE cterm=NONE
-hi qfFileName               guifg=#50D0FF ctermfg=81   gui=NONE cterm=NONE
-hi qfLineNr                 guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
 hi Boolean                  guifg=#FFC525 ctermfg=220  gui=NONE cterm=NONE
 hi Character                guifg=#30C000 ctermfg=70   gui=NONE cterm=NONE
 hi Comment                  guifg=#707070 ctermfg=242  guibg=NONE    ctermbg=NONE gui=ITALIC cterm=NONE
