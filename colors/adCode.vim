@@ -37,11 +37,11 @@ hi NERDTreeCWD              guifg=#A0FF20 ctermfg=154  gui=NONE cterm=NONE
 hi NERDTreeDir              guifg=#2599FF ctermfg=33   gui=NONE cterm=NONE
 hi NERDTreeDirSlash         guifg=#2599FF ctermfg=33   gui=NONE cterm=NONE
 hi GitGutterAdd             guifg=#33FF33 ctermfg=83   guibg=#115511 ctermbg=22   gui=NONE cterm=NONE
-hi GitGutterAddLine         guifg=NONE    ctermfg=NONE guibg=#062806 ctermbg=232  gui=NONE cterm=NONE
-hi GitGutterChange          guifg=#FFFF33 ctermfg=227  guibg=#ABAB00 ctermbg=142  gui=NONE cterm=NONE
-hi GitGutterChangeLine      guifg=NONE    ctermfg=NONE guibg=#242003 ctermbg=234  gui=NONE cterm=NONE
+hi GitGutterAddLine         guifg=NONE    ctermfg=NONE guibg=#063806 ctermbg=22   gui=NONE cterm=NONE
+hi GitGutterChange          guifg=#FFFF33 ctermfg=227  guibg=#757500 ctermbg=100  gui=NONE cterm=NONE
+hi GitGutterChangeLine      guifg=NONE    ctermfg=NONE guibg=#383805 ctermbg=237  gui=NONE cterm=NONE
 hi GitGutterDelete          guifg=#FF3333 ctermfg=203  guibg=#331111 ctermbg=233  gui=NONE cterm=NONE
-hi GitGutterDeleteLine      guifg=NONE    ctermfg=NONE guibg=#250505 ctermbg=232  gui=NONE cterm=NONE
+hi GitGutterDeleteLine      guifg=NONE    ctermfg=NONE guibg=#380505 ctermbg=52   gui=NONE cterm=NONE
 hi qfFileName               guifg=#50D0FF ctermfg=81   gui=NONE cterm=NONE
 hi qfLineNr                 guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
 hi Boolean                  guifg=#FFC525 ctermfg=220  gui=NONE cterm=NONE
@@ -160,4 +160,14 @@ hi javaScriptFunction       guifg=#FFC912 ctermfg=220  gui=NONE cterm=NONE
 hi javaScriptStatement      guifg=#FFC912 ctermfg=220  gui=NONE cterm=NONE
 hi javaScriptNull           guifg=#FF2BC5 ctermfg=200  gui=NONE cterm=NONE
 hi javaScriptMember         guifg=#00C900 ctermfg=40   gui=NONE cterm=NONE
+hi cucumberFeature          guifg=#FFC525 ctermfg=220  gui=NONE cterm=NONE
+hi cucumberScenario         guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
+hi cucumberTags             guifg=#D555D5 ctermfg=170  guibg=NONE    ctermbg=NONE gui=ITALIC cterm=NONE
+hi cucumberBackground       guifg=#D555D5 ctermfg=170  gui=NONE cterm=NONE
+hi cucumberGiven            guifg=#A090FF ctermfg=141  gui=NONE cterm=NONE
+hi cucumberGivenAnd         guifg=#A090FF ctermfg=141  gui=NONE cterm=NONE
+hi cucumberWhen             guifg=#50D0FF ctermfg=81   gui=NONE cterm=NONE
+hi cucumberWhenAnd          guifg=#50D0FF ctermfg=81   gui=NONE cterm=NONE
+hi cucumberThen             guifg=#A0FF20 ctermfg=154  gui=NONE cterm=NONE
+hi cucumberThenAnd          guifg=#A0FF20 ctermfg=154  gui=NONE cterm=NONE
 
