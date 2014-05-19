@@ -161,6 +161,14 @@ hi javaScriptFunction       guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
 hi javaScriptStatement      guifg=#30C000 ctermfg=70   gui=NONE cterm=NONE
 hi javaScriptNull           guifg=#D555D5 ctermfg=170  gui=NONE cterm=NONE
 hi javaScriptMember         guifg=#30C000 ctermfg=70   gui=NONE cterm=NONE
+hi coffeeConditional        guifg=#A898FF ctermfg=141  gui=NONE cterm=NONE
+hi coffeeRepeat             guifg=#AA5AFF ctermfg=135  gui=NONE cterm=NONE
+hi coffeeParens             guifg=#FAFAFA ctermfg=231  gui=NONE cterm=NONE
+hi coffeeParen              guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
+hi coffeeBrackets           guifg=#FAFAFA ctermfg=231  gui=NONE cterm=NONE
+hi coffeeBracket            guifg=#FFC912 ctermfg=220  gui=NONE cterm=NONE
+hi coffeeObjAssign          guifg=#30C000 ctermfg=70   gui=NONE cterm=NONE
+hi coffeeString             guifg=#A0FF20 ctermfg=154  gui=NONE cterm=NONE
 hi cucumberFeature          guifg=#FFC912 ctermfg=220  gui=NONE cterm=NONE
 hi cucumberScenario         guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
 hi cucumberTags             guifg=#D555D5 ctermfg=170  guibg=NONE    ctermbg=NONE gui=ITALIC cterm=NONE
