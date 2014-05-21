@@ -483,7 +483,7 @@ nnoremap <C-n> :call NumberToggle()<cr>
 
 " Set ctrlp to ignore files in the VCS directories
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|bzr|tmp|log)$',
+  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|\.bzr|tmp|log|public|node_modules|vendor)$',
   \ 'file': '\v\.(exe|so|dll|swp|DS_Store|zip|jar)$',
   \ }
 
