@@ -5,7 +5,7 @@ An awesome Vim config for development, slow roasted with a Ruby twist and a shot
 ```bash
     git clone https://github.com/AdamWhittingham/vim-config.git ~/.vim
     ln -s ~/.vim/vimrc ~/.vimrc
-    vim +PluginInstall +qall
+    vim +:PluginInstall +:PluginClean +qall
 ```
 
 Should this not leave you with a nice working vim (certain versions are a bit iffy about the last line) then launch vim and run `:PluginInstall`
