@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'AdamWhittingham/projector_mode'
+Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'AutoTag'
 Plugin 'ZoomWin'
 Plugin 'ack.vim'
@@ -163,8 +164,12 @@ noremap <silent> <leader>p :ToggleProjectorMode<CR>
 " ,rt to run ctags on the current directory
 map <leader>rt :!ctags -R .<CR><CR>
 
-" ,s to toggle spelling highlighting
-nmap <silent> <Leader>s :setlocal spell! spelllang=en_gb<CR>
+" ,s and ,S to split and join lines
+nmap <silent> <leader>s :SplitjoinSplit<cr>
+nmap <silent> <leader>S :SplitjoinJoin<cr>
+
+" ,sp to toggle spelling highlighting
+nmap <silent> <Leader>sp :setlocal spell! spelllang=en_gb<CR>
 
 " ,sw to strip whitespace off the ends
 nmap <silent> <Leader>sw :call StripTrailingWhitespace()<CR>
@@ -177,7 +182,7 @@ map <silent> <leader>T :VroomRunNearestTest<CR>
 nnoremap <Leader>u :GundoToggle<CR>
 
 " ,w to toggle line wrap
-:map <silent> <Leader>w :set wrap!<CR>
+map <silent> <Leader>w :set wrap!<CR>
 
 " ,z to zoom pane when using splits
 map <Leader>z :ZoomWin<CR>

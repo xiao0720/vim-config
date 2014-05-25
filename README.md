@@ -172,6 +172,13 @@ append a '# =>' to a line, then ,x to execute the file and insert all results.
 ## speeddating
 Fix up C-a and C-x when dealing with dates. ([more](https://github.com/tpope/vim-speeddating))
 
+## SplitJoin
+Split and join code lines, such as Ruby ifs or CSS hashes ([more](https://github.com/AndrewRadev/splitjoin.vim))
+
+Keys         | Function
+-------------|-----------------------
+  `,` `s`    | Split the current line
+  `,` `S`    | Join the current lines
 
 ## SuperTab
 Do all your insert-mode completion with Tab ([more](http://www.vim.org/scripts/script.php?script_id=1643))
@@ -294,7 +301,7 @@ Keys             | Function
   `,` `h`        | Hide search highlighting
   `,` `H`        | Show/hide hidden characters
   `,` `rt`       | Run `ctags -R .`
-  `,` `s`        | Show/hide spelling errors
+  `,` `sp`       | Show/hide spelling errors
   `,` `sw`       | Strip trailing whitespace
   `,` `w`        | Toggle word wrapping
   `:Lorem`       | Generate 'lorem ipsum' text
