@@ -18,7 +18,15 @@ Should this not leave you with a nice working vim (certain versions are a bit if
     git pull
 ```
 
-2. Grab the latest plugins by launching vim and running `:BundleInstall`
+2. Grab the latest plugins by launching vim and running `:PluginInstall`
+
+The plugin install step can be automated by creating a `.git/hooks/post-merge` containing the following,
+and making it executable (`chmod u+x .git/hooks/post-merge`):
+
+```bash
+    #!/bin/bash
+    vim +PluginInstall +PluginClean +qall
+```
 
 ## External Dependencies
 There are a couple of things you might want to install to get the best out of this config:
