@@ -18,19 +18,15 @@ Should this not leave you with a nice working vim (certain versions are a bit if
     git pull
 ```
 
-2. Grab the latest plugins by launching vim and running `:PluginInstall`
+2. Update the plugins
 
-The plugin install step can be automated by creating a `.git/hooks/post-merge` containing the following,
-and making it executable (`chmod u+x .git/hooks/post-merge`):
+This can also be automatically done using git hooks, simply install the hook by running `install-plugin-update-hook.sh` once.
 
-```bash
-    #!/bin/bash
-    vim +PluginInstall +PluginClean +qall
-```
+If you have problems with the hook or simply want to update plugins at your convenience, you can do so manually by opening Vim and running `:PluginInstall` then `:PluginClean`.
 
 ## External Dependencies
 There are a couple of things you might want to install to get the best out of this config:
-* ctags - enables tags support when workingn with code
+* ctags - enables tags support when working with code
 * Ag - enables grepping through the current directories with [the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 * Ack - enables grepping through the current directories with Ack-grep. Only needed if you can't or won't install Ag.
 
