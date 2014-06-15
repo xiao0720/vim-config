@@ -22,7 +22,7 @@ Should this not leave you with a nice working vim (certain versions are a bit if
 
 This can also be automatically done using git hooks, simply install the hook by running `install-plugin-update-hook.sh` once.
 
-If you have problems with the hook or simply want to update plugins at your convenience, you can do so manually by opening Vim and running `:PluginInstall` then `:PluginClean`.
+If you have problems with the hook or simply want to update plugins at your convenience, you can do so manually by opening Vim and running `:PluginUpdate` and `:PluginClean`.
 
 ## External Dependencies
 There are a couple of things you might want to install to get the best out of this config:
