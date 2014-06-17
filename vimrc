@@ -13,7 +13,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'AdamWhittingham/projector_mode'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'AutoTag'
-Plugin 'ZoomWin'
 Plugin 'ack.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
@@ -49,6 +48,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-coffee-script'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vroom'
+Plugin 'regedarek/ZoomWin'
 
 " ----------------------------------------------
 " No More plugins after here thanks!
