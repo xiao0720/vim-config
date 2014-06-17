@@ -1,16 +1,20 @@
 An awesome Vim config for development, slow roasted with a Ruby twist and a shot of web-dev.
 
-# Installation
+# Install & Configuration
 
+## Installing for the first time
+Assuming you already have vim installed, just run each of the following commands:
 ```bash
     git clone https://github.com/AdamWhittingham/vim-config.git ~/.vim
     ln -s ~/.vim/vimrc ~/.vimrc
     vim +:PluginInstall +:PluginClean +qall
 ```
 
-Should this not leave you with a nice working vim (certain versions are a bit iffy about the last line) then launch vim and run `:PluginInstall`
+Should this not leave you with a nice working vim (certain versions are a bit iffy about the last line) then launch vim and run `:PluginUpdate`
 
-## Keeping up-to-date
+If :PluginUpdate did work for you, you'll want to make updating easier by installing the auto-update hook. Simply run `~/vim/install-plugin-update-hook.sh`
+
+## Update
 1. Grab the latest version of the config
 
 ```bash
@@ -19,8 +23,7 @@ Should this not leave you with a nice working vim (certain versions are a bit if
 ```
 
 2. Update the plugins
-
-This can also be automatically done using git hooks, simply install the hook by running `install-plugin-update-hook.sh` once.
+If you've installed the auto-update hook, a git pull should trigger Vim to update itself and you're done!
 
 If you have problems with the hook or simply want to update plugins at your convenience, you can do so manually by opening Vim and running `:PluginUpdate` and `:PluginClean`.
 
@@ -28,11 +31,10 @@ If you have problems with the hook or simply want to update plugins at your conv
 There are a couple of things you might want to install to get the best out of this config:
 * ctags - enables tags support when working with code
 * Ag - enables grepping through the current directories with [the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
-* Ack - enables grepping through the current directories with Ack-grep. Only needed if you can't or won't install Ag.
+* Ack - enables grepping through the current directories with Ack-grep. Only needed if you can't (or won't) install Ag.
 
-# Local Customisation
-Local changes (eg if you prefer a different font or colour scheme) can be made `~/.vimrc.local`
-(or in a branch!)
+## Personalisation
+We all like things seutp a little bit differently, so personalisation changes (like changing the font or colour scheme) can be made by writing Vim config into `~/.vimrc.local`
 
 # The Leader Key
 A large number of the useful commands in Vim start with the 'leader' key, so Vim knows something cool is about to happen.

@@ -536,5 +536,5 @@ let g:projectiles = {
 "  Keep this last to make sure local config overrides global!
 " ----------------------------------------------
 if filereadable(expand("~/.vimrc.local"))
-source ~/.vimrc.local
+  source ~/.vimrc.local
 endif
