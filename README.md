@@ -36,33 +36,34 @@ There are a couple of things you might want to install to get the best out of th
 ## Personalisation
 We all like things seutp a little bit differently, so personalisation changes (like changing the font or colour scheme) can be made by writing Vim config into `~/.vimrc.local`
 
-# The Leader Key
+# Using the config
+## The Leader Key
 A large number of the useful commands in Vim start with the 'leader' key, so Vim knows something cool is about to happen.
 
 For this config, the leader is the comma button. This is shown in the following notes as `,`
 
-# Plugins - all the goodies!
+## Plugins - all the goodies!
 
 See the plugins' web pages for more information. The keybindings listed are mostly
 just those defined or overridden locally, not the ones provided by default.
 
 
-## Ack
+### Ack
 This plugin is a front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep.
 (more)[http://www.vim.org/scripts/script.php?script_id=2572]
 
 **Important:** Requires ack (aka ack-grep) to be installed.
 
 
-## Ag
+### Ag
 This plugin is a front for Ag. Ag can be used as a replacement for 153% of the uses of Ack.
 
 **Important:** Requires [the_silver_surfer](https://github.com/ggreer/the_silver_searcher) to be installed
 
-## Autotag
+### Autotag
 Automatically update tags when saving files ([more](http://www.vim.org/scripts/script.php?script_id=1343))
 
-## bufexplorer
+### bufexplorer
 Buffer explorer/browser ([more](http://www.vim.org/scripts/script.php?script_id=42))
 
 Keys      | Function
@@ -70,11 +71,11 @@ Keys      | Function
   `,` `.` | Show buffer explorer
 
 
-## Coffeescript
+### Coffeescript
 Adds support for CoffeeScript. It handles syntax, indenting, and compiling ([more](http://www.vim.org/scripts/script.php?script_id=3590))
 
 
-## color_highlight
+### color_highlight
 Highlight color names and codes in the same color that they represent ([more] (http://www.vim.org/scripts/script.php?script_id=3963))
 
 Keys       | Function
@@ -83,7 +84,7 @@ Keys       | Function
   `,` `cF` | Toggle text or background colouring
 
 
-## CtrlP
+### CtrlP
 Fast file navigation for VIM ([more](https://github.com/kien/ctrlp.vim))
 
 Keys           | Function
@@ -104,11 +105,11 @@ Keys       | Function
 `Ctrl`+`t` or `<c-v>`, `<c-x>` | Open the selected entry in a new tab or in a new split.
 
 
-## Endwise
+### Endwise
 Auto completion of 'end' in Ruby ([more](https://github.com/tpope/vim-endwise))
 
 
-## Gundo
+### Gundo
 Gundo is a Vim plugin for visualizing your undo tree to make it usable ([more](http://www.vim.org/scripts/script.php?script_id=3304))
 
 Keys      | Function
@@ -116,15 +117,15 @@ Keys      | Function
   `,` `u` | Toggle Gundo tree
 
 
-## markdown
+### markdown
 Syntax highlighting for Markdown ([more](http://plasticboy.com/markdown-vim-mode/))
 
 
-## machit
+### machit
 Allows % to be changed to match more than single characters; often more up-to-date than the version which ships with Vim. ([more](http://www.vim.org/scripts/script.php?script_id=39))
 
 
-## nerdcommenter
+### nerdcommenter
 A plugin that allows for easy commenting of code for many filetypes ([more](http://www.vim.org/scripts/script.php?script_id=1218))
 
 Keys             | Function
@@ -132,7 +133,7 @@ Keys             | Function
   `,` `c{space}` | Comment/Uncomment this line
 
 
-## nerdtree
+### nerdtree
 A tree explorer plugin for navigating the filesystem ([more](http://www.vim.org/scripts/script.php?script_id=1658))
 
 Keys      | Function
@@ -144,7 +145,7 @@ Keys      | Function
   `?`     | Toggle the help list
 
 
-## projector mode
+### projector mode
 Toggle 'projector mode': larger font and high contrast colour scheme ([more](https://github.com/AdamWhittingham/projector_mode))
 
 Keys      | Function
@@ -152,7 +153,7 @@ Keys      | Function
   `,` `v` | Toggle 'projector mode' (large font, high contrast)
 
 
-## Projectionist
+### Projectionist
 Map different files and folders to groups ([more](https://github.com/tpope/vim-projectionist))
 If you want to be a Vim legend, you really should brush up on what this excellent plugin does!
 
@@ -161,11 +162,11 @@ Keys      | Function
   `:` `A` | Toggle between Ruby production code and spec
 
 
-## repeat
+### repeat
 Use the repeat command (.) with supported plugins ([more](http://www.vim.org/scripts/script.php?script_id=2136))
 
 
-## ruby-xmpfilter
+### ruby-xmpfilter
 
 Helper for ruby's xmpfilter ([more](https://github.com/t9md/vim-ruby-xmpfilter))
 
@@ -175,10 +176,10 @@ append a '# =>' to a line, then ,x to execute the file and insert all results.
 **Important:** You need to install the `rcodetools` gem for this to work.
 
 
-## speeddating
+### speeddating
 Fix up C-a and C-x when dealing with dates. ([more](https://github.com/tpope/vim-speeddating))
 
-## SplitJoin
+### SplitJoin
 Split and join code lines, such as Ruby ifs or CSS hashes ([more](https://github.com/AndrewRadev/splitjoin.vim))
 
 Keys         | Function
@@ -186,19 +187,19 @@ Keys         | Function
   `,` `s`    | Split the current line
   `,` `S`    | Join the current lines
 
-## SuperTab
+### SuperTab
 Do all your insert-mode completion with Tab ([more](http://www.vim.org/scripts/script.php?script_id=1643))
 
 
-## surround
+### surround
 Delete/change/add parentheses/quotes/XML-tags/much more with ease ([more](http://www.vim.org/scripts/script.php?script_id=1697))
 
 
-## syntastic
+### syntastic
 Automatic syntax checking ([more](https://github.com/scrooloose/syntastic))
 
 
-## Tabular
+### Tabular
 Configurable, flexible, intuitive text aligning ([more](http://github.com/godlygeek/tabular))
 
 Keys             | Function
@@ -212,7 +213,7 @@ Keys             | Function
   `,` `a<space>` | Align on spaces
 
 
-## Tagbar
+### Tagbar
 Sidebar for showing and navigating the tags in current file ([more](https://github.com/majutsushi/tagbar))
 
 Keys      | Function
@@ -220,16 +221,16 @@ Keys      | Function
   `,` `]` | toggle the sidebar
 
 
-## unimpaired
+### unimpaired
 Pairs of handy bracket maps ([more](http://www.vim.org/scripts/script.php?script_id=1590))
 
-## vim-abolish
+### vim-abolish
 Better abbreviations, substitution and search with Bash like {a,b} style expansions
 
-## vim-airline
+### vim-airline
 Powerline like behaviour, but without the heavy Python ([more](https://github.com/bling/vim-airline))
 
-## vim-gitgutter
+### vim-gitgutter
 Show the changes made since the last commit in the gutter ([more](https://github.com/airblade/vim-gitgutter))
 
 Keys       | Function
@@ -240,7 +241,7 @@ Keys       | Function
   `,` `gh` | Highlight all changed lines
 
 
-## vim-indent-guidelines
+### vim-indent-guidelines
 Show indent guidelines - very useful when editing Haml! ([more](https://github.com/nathanaelkane/vim-indent-guides))
 
 Keys       | Function
@@ -248,24 +249,24 @@ Keys       | Function
   `,` `ig` | Toggle indentation guidelines
 
 
-## vim-haml
+### vim-haml
 Add haml, sass and SCSS syntax support ([more](https://github.com/tpope/vim-haml))
 
 
-## vim-less
+### vim-less
 Less syntax highlighting ([more](https://github.com/groenewege/vim-less))
 
 
-## vim-ruby
+### vim-ruby
 Ruby support (newer than the version released with vim). ([more](https://github.com/vim-ruby/vim-ruby))
 
 
-## vim-ruby-refactoring
+### vim-ruby-refactoring
 Refactoring tool for Ruby in vim! ([more](https://github.com/ecomba/vim-ruby-refactoring))
 
 See [relish documentation](http://relishapp.com/despo/vim-ruby-refactoring) for examples.
 
-## vim-textobj-rubyblock
+### vim-textobj-rubyblock
 Allow Ruby-aware text manipulation ([more](https://github.com/nelstrom/vim-textobj-rubyblock))
 
 Keys        | Function
@@ -281,7 +282,7 @@ Keys        | Function
   `i``r`    | Contact the selection in one scope level
 
 
-## vroom
+### vroom
 A plugin for running your Ruby tests, specs, and features. ([more](http://www.vim.org/scripts/script.php?script_id=3995))
 
 Keys      | Function
@@ -290,7 +291,7 @@ Keys      | Function
   `,` `T` | Run nearest test/spec/feature to the cursor
 
 
-## ZoomWin
+### ZoomWin
 Zoom in/out of windows and panes (toggle between one window and multi-window) ([more](http://www.vim.org/scripts/script.php?script_id=508))
 
 Keys      | Function
@@ -298,7 +299,7 @@ Keys      | Function
   `,` `z` | Zoom
 
 
-# Other Keybindings
+## Other Keybindings
 Keys             | Function
 -----------------|-----------------------------------------------------
   `,` `,`        | Toggle between the previously opened buffer
