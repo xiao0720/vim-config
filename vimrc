@@ -63,6 +63,10 @@ syntax on
 " ----------------------------------------------
 
 let mapleader = ","
+" Space is a vary popular leader key, so make it mimic leader
+nmap <space> <leader>
+nmap <space><space> <leader><leader>
+
 colorscheme adCode
 
 set autoindent
