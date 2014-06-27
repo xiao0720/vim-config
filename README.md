@@ -17,6 +17,7 @@ There are a couple of things you might want to install to get the best out of th
 * ctags - enables tags support when working with code
 * Ag - enables grepping through the current directories with [the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 * Ack - enables grepping through the current directories with Ack-grep. Only needed if you can't (or won't) install Ag.
+* rcodetools - enables execution of ruby in-editor, run `gem install rcodetools`
 
 # Updating
 1. Grab the latest version of the config
