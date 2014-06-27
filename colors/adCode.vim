@@ -181,4 +181,9 @@ hi cucumberWhen              guifg=#3FCCFF ctermfg=81   gui=NONE cterm=NONE
 hi cucumberWhenAnd           guifg=#3FCCFF ctermfg=81   gui=NONE cterm=NONE
 hi cucumberThen              guifg=#A0FF20 ctermfg=154  gui=NONE cterm=NONE
 hi cucumberThenAnd           guifg=#A0FF20 ctermfg=154  gui=NONE cterm=NONE
+hi sshConfigHostSect         guifg=#0080FF ctermfg=33   gui=BOLD cterm=BOLD
+hi sshConfigHostPort         guifg=#3FCCFF ctermfg=81   gui=BOLD cterm=BOLD
+hi sshConfigKeyword          guifg=#A898FF ctermfg=141  gui=NONE cterm=NONE
+hi sshconfigPreferredAuth    guifg=#FFC912 ctermfg=220  gui=NONE cterm=NONE
+hi sshconfigNumber           guifg=#A0FF20 ctermfg=154  gui=NONE cterm=NONE
 
