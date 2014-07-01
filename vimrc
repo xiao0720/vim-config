@@ -240,21 +240,6 @@ map <C-l> <C-w>l
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 
-
-" ----------------------------------------------
-" <ESC> Shortcuts
-" ----------------------------------------------
-
-imap jkl <ESC>
-imap jlk <ESC>
-imap kjl <ESC>
-imap klj <ESC>
-imap lkj <ESC>
-imap ljk <ESC>
-imap ;l <ESC>
-imap jk <ESC>
-imap kj <ESC>
-
 " ----------------------------------------------
 " Map Uncommon Filetype for Syntax Highlighting
 " ----------------------------------------------
