@@ -31,6 +31,12 @@ If you've installed the auto-update hook, a git pull should trigger Vim to updat
 
 If you have problems with the hook or simply want to update plugins at your convenience, you can do so manually by opening Vim and running `:PluginUpdate` and `:PluginClean`.
 
+# TEMPORARY :A NOTE
+If you update plugins and :A (vim-projectionists switch to alternate file) doesn't work, run:
+```bash
+pushd ~/.vim/bundle/vim-projectionist && git reset --hard 6d1d1c6 && popd
+```
+
 # Personalisation
 We all like things seutp a little bit differently, so personalisation changes (like changing the font or colour scheme) can be made by writing Vim config into `~/.vimrc.local`
 
@@ -43,7 +49,6 @@ For this config, the leader is the comma button. This is shown in the following 
 ## Plugins - all the goodies!
 See the plugins' web pages for more information. The keybindings listed are mostly
 just those defined or overridden locally, not the ones provided by default.
-
 
 ### Ack
 This plugin is a front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep.
