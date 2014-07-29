@@ -9,5 +9,3 @@ tmp
 bundle/*
 !bundle/Vundle.vim
 !bundle/Vundle.vim/*
-!bundle/vim-projectionist
-!bundle/vim-projectionist/*
