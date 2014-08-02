@@ -111,6 +111,10 @@ Keys       | Function
 Auto completion of 'end' in Ruby ([more](https://github.com/tpope/vim-endwise))
 
 
+### Elixir
+Elixir language support ([more](https://github.com/elixir-lang/vim-elixir))
+
+
 ### Gundo
 Gundo is a Vim plugin for visualizing your undo tree to make it usable ([more](http://www.vim.org/scripts/script.php?script_id=3304))
 
