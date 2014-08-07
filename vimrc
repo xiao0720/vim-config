@@ -514,7 +514,7 @@ let g:vim_markdown_folding_disabled=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 " Projectionist defaults
-let g:projectiles = {
+let g:projectionist_heuristics ={
       \  "spec/*.rb": {
       \     "app/*.rb":       {"alternate": "spec/{}_spec.rb", "type": "source"},
       \     "lib/*.rb":       {"alternate": "spec/{}_spec.rb", "type": "source"},
