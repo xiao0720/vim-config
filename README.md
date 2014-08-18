@@ -5,12 +5,12 @@ Assuming you already have vim, just run:
 ```bash
     git clone https://github.com/AdamWhittingham/vim-config.git ~/.vim
     ln -s ~/.vim/vimrc ~/.vimrc
-    vim +:PluginInstall +:PluginClean +qall
+    vim +:PluginUpdate +:PluginClean +qall
 ```
 
-Should this not leave you with a nice working vim (certain versions are a bit iffy about the last line) then launch vim and run `:PluginUpdate`
+Should this not leave you with a nice working vim (certain vims are a bit iffy about the last line) then launch vim and run `:PluginUpdate`
 
-If :PluginUpdate did work for you, you can make updating easier by installing the update hookwith `~/vim/install-plugin-update-hook.sh`
+You can make updating easier by installing the update hook with `~/vim/install-plugin-update-hook.sh`
 
 ## External Dependencies
 There are a couple of things you might want to install to get the best out of this config:
@@ -20,19 +20,22 @@ There are a couple of things you might want to install to get the best out of th
 * rcodetools - enables execution of ruby in-editor, run `gem install rcodetools`
 
 # Updating
-1. Grab the latest version of the config
 ```bash
     cd ~/.vim
     git pull
 ```
+If you've installed the auto-update hook, the git pull should trigger Vim to update and you're done!
 
-2. Update the plugins
-If you've installed the auto-update hook, a git pull should trigger Vim to update itself and you're done!
-
-If you have problems with the hook or simply want to update plugins at your convenience, you can do so manually by opening Vim and running `:PluginUpdate` and `:PluginClean`.
+Manually update by opening Vim and running `:PluginUpdate` and `:PluginClean`.
 
 # Personalisation
-We all like things seutp a little bit differently, so personalisation changes (like changing the font or colour scheme) can be made by writing Vim config into `~/.vimrc.local`
+We all like things a little differently, so there are a couple of ways to easily tweak and add to the config.
+
+## Add more plugins
+Simply write normal Bundle plugin lines to `~/.vim.plugins.local`
+
+## Set up options and add more functions
+Changes like using a different font or colour scheme can be made by writing Vim config into `~/.vimrc.local`
 
 # Using the config
 ## The Leader Key

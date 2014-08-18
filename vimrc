@@ -52,6 +52,10 @@ Plugin 'vim-coffee-script'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vroom'
 
+if filereadable(expand("~/.vim.plugins.local"))
+  source ~/.vim.plugins.local
+endif
+
 " ----------------------------------------------
 " No More plugins after here thanks!
 " ----------------------------------------------
