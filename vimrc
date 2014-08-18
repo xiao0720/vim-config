@@ -448,7 +448,7 @@ command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
       \ proident, sunt in culpa qui officia deserunt mollit anim id est
       \ laborum
 
-"define :Lorem command to dump in a paragraph of lorem ipsum
+"define :Hipster command to dump in a paragraph of Hipster ipsum
 command! -nargs=0 Hipster :normal iTrust fund fashion axe bitters art party
       \ raw denim. XOXO distillery tofu, letterpress cred literally gluten-free
       \ flexitarian fap. VHS fashion axe gluten-free 90's church-key, kogi
@@ -469,10 +469,11 @@ autocmd BufNewFile,BufRead *.md :setlocal wrap
 " Setup relative number toggle on Ctrl+n
 function! NumberToggle()
   if(&relativenumber == 1)
-    set number
+    set norelativenumber
   else
     set relativenumber
   endif
+  set number
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
