@@ -68,10 +68,11 @@ syntax on
 " Setup basic Vim behaviour
 " ----------------------------------------------
 
-let mapleader = ","
-" Space is a vary popular leader key, so make it mimic leader
-nmap <space> <leader>
-nmap <space><space> <leader><leader>
+let mapleader = " "
+" Some of my colleagues do not accept <space> as their one true leader.
+" Make the heathens using comma still be able to use this config.
+nmap , <leader>
+nmap ,, <leader><leader>
 
 colorscheme adCode
 
