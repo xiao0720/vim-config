@@ -125,77 +125,77 @@ command! Qa :qa
 " make Y consistent with C and D
 nnoremap Y y$
 
-" ,. to view all document buffers
+" <leader>. to view all document buffers
 nmap <silent> <unique> <Leader>. :BufExplorer<CR>
 
-" ,, to switch to the previous buffer
+" Double leader to switch to the previous buffer
 map <silent> <Leader><Leader> :b#<CR>
 
-" ,] to toggle the tags sidebar
+" <leader>] to toggle the tags sidebar
 nmap <Leader>] :TagbarToggle<CR>
 
-" ,a<something> to align visually selected lines on <something>
+" <leader>a<?> to align visually selected lines on <something>
 vnoremap <silent> <Leader>a= :Tabularize /=<CR>
 vnoremap <silent> <Leader>a=> :Tabularize /=>/l1c1r1<CR>
 vnoremap <silent> <Leader>a, :Tabularize /,\@<=/l0r1<CR>
 vnoremap <silent> <Leader>a{ :Tabularize /{<CR>
 vnoremap <silent> <Leader>a\| :Tabularize /\|<CR>
-vnoremap <silent> <Leader>a: :Tabularize /:\zs<CR>
+vnoremap <silent> <Leader>a: :Tabularize /\w:\zs/l0l1<CR>
 vnoremap <silent> <Leader>a<space> :Tabularize /[^ ] \+\zs/l0r1<CR>
 
-" ,f to clear cache and fuzzy search files; ,F in current file's directory
+"  <Leader>f to clear cache and fuzzy search files; ,F in current file's directory
 map <silent> <leader>f :ClearCtrlPCache<cr>\|:CtrlP<cr>
 map <silent> <leader>F :ClearCtrlPCache<cr>\|:CtrlPCurFile<cr>
 
-" ,g to jump to the next change since git commit
-" ,G to jump to the last change since git commit
+"  <Leader>g to jump to the next change since git commit
+"  <Leader>G to jump to the last change since git commit
 nmap <leader>g <Plug>GitGutterNextHunk
 nmap <leader>G <Plug>GitGutterPrevHunk
 
-" ,gt to toggle the gutter
+"  <Leader>gt to toggle the gutter
 nmap <leader>gt :GitGutterToggle<CR>
 
-" ,gh highlight changed lines
+"  <Leader>gh highlight changed lines
 nmap <leader>gh :GitGutterLineHighlightsToggle<CR>
 
-" ,h to dismiss search result highlighting until next search or press of 'n'
+"  <Leader>h to dismiss search result highlighting until next search or press of 'n'
 :noremap <silent> <leader>h :noh<CR>
 
-" ,H to show hidden characters
+"  <Leader>H to show hidden characters
 set listchars=tab:>-,trail:·,eol:$
 nmap <silent> <leader>H :set nolist!<CR>
 
-" ,m to toggle file tree (,M to select the current file in the tree)
+"  <Leader>m to toggle file tree (,M to select the current file in the tree)
 nmap <silent> <Leader>m :NERDTreeToggle<CR>
 map <silent> <Leader>M :NERDTreeFind<CR>
 
-" ,p to switch to better font for projector
+"  <Leader>p to switch to better font for projector
 noremap <silent> <leader>p :ToggleProjectorMode<CR>
 
-" ,rt to run ctags on the current directory
+"  <Leader>rt to run ctags on the current directory
 map <leader>rt :!ctags -R .<CR><CR>
 
-" ,s and ,S to split and join lines
+"  <Leader>s and ,S to split and join lines
 nmap <silent> <leader>s :SplitjoinSplit<cr>
 nmap <silent> <leader>S :SplitjoinJoin<cr>
 
-" ,sp to toggle spelling highlighting
+"  <Leader>sp to toggle spelling highlighting
 nmap <silent> <Leader>sp :setlocal spell! spelllang=en_gb<CR>
 
-" ,sw to strip whitespace off the ends
+"  <Leader>sw to strip whitespace off the ends
 nmap <silent> <Leader>sw :call StripTrailingWhitespace()<CR>
 
-" ,t to run tests
+"  <Leader>t to run tests
 map <silent> <leader>t :VroomRunTestFile<CR>
 map <silent> <leader>T :VroomRunNearestTest<CR>
 
-" ,u to toggle undo history browser
+"  <Leader>u to toggle undo history browser
 nnoremap <Leader>u :GundoToggle<CR>
 
-" ,w to toggle line wrap
+"  <Leader>w to toggle line wrap
 map <silent> <Leader>w :set wrap!<CR>
 
-" ,z to zoom pane when using splits
+"  <Leader>z to zoom pane when using splits
 map <Leader>z :ZoomWin<CR>
 
 " A-c to copy to the global buffer
