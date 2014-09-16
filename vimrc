@@ -267,10 +267,11 @@ if has('win32')
   set guifont=Consolas\ 9
 elseif has('mac')
   set guifont=Menlo:h11
-else
+elseif has("unix")
   set guifont=DejaVu\ Sans\ Mono\ 9
   " if you don't have these fonts, set one in your ~/vim.local file like this:
-  " set guifont=fontname\ 10
+  " else
+  "   set guifont=fontname\ 10
 endif
 
 " Display soft column limit in modern versions of vim
