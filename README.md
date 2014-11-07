@@ -3,14 +3,10 @@ An awesome Vim config for development, slow roasted with a Ruby twist and a shot
 # Installing
 Assuming you already have vim, just run:
 ```bash
-    git clone https://github.com/AdamWhittingham/vim-config.git ~/.vim
-    ln -s ~/.vim/vimrc ~/.vimrc
-    vim +:PluginUpdate +:PluginClean +qall
+    git clone https://github.com/AdamWhittingham/vim-config.git ~/.vim && ~/.vim/install
 ```
 
 Should this not leave you with a nice working vim (certain vims are a bit iffy about the last line) then launch vim and run `:PluginUpdate`
-
-You can make updating easier by installing the update hook with `~/vim/install-plugin-update-hook.sh`
 
 ## External Dependencies
 There are a couple of things you might want to install to get the best out of this config:
