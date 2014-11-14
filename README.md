@@ -8,6 +8,14 @@ Assuming you already have vim, just run:
 
 Should this not leave you with a nice working vim (certain vims are a bit iffy about the last line) then launch vim and run `:PluginUpdate`
 
+If you are using zsh there may be an issue running tests with ,t (it can't find the bundle). If you don't already have an /etc/zprofile file it can be fixed by doing the following:
+
+```bash
+    sudo mv /etc/zshenv /etc/zprofile
+```
+more details here: http://vim.1045645.n5.nabble.com/MacVim-and-PATH-td3388705.html#a3392363
+
+
 ## External Dependencies
 There are a couple of things you might want to install to get the best out of this config:
 * ctags - enables tags support when working with code
