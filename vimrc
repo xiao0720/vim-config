@@ -213,6 +213,9 @@ map <A-v> "+p<CR>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
 
+" Replace the default U (undo last line) to Redo for speedyness
+nmap U <c-r>
+
 " Ctrl+\ to view the Vim style of the text under the cursor
 nmap <C-\> :call <SID>SynStack()<CR>
 

@@ -318,6 +318,7 @@ Keys             | Function
   `,` `sp`       | Show/hide spelling errors
   `,` `sw`       | Strip trailing whitespace
   `,` `w`        | Toggle word wrapping
+  `U`            | Redo (easier than C-r but replaces default 'undo last line')
   `:Lorem`       | Generate 'lorem ipsum' text
   `:Hipster`     | Generate 'hipster ipsum' text
 
