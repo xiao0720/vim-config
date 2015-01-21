@@ -307,18 +307,21 @@ Keys      | Function
 
 
 ## Other Keybindings
-Keys             | Function
------------------|-----------------------------------------------------
-  `,` `,`        | Toggle between the previously opened buffer
-  `ctrl-]`       | Jump to definition (needs exuberant ctags installed)
-  `ctrl-n`       | Toggle between absolute and relative numbering
-  `,` `h`        | Hide search highlighting
-  `,` `H`        | Show/hide hidden characters
-  `,` `rt`       | Run `ctags -R .`
-  `,` `sp`       | Show/hide spelling errors
-  `,` `sw`       | Strip trailing whitespace
-  `,` `w`        | Toggle word wrapping
-  `U`            | Redo (easier than C-r but replaces default 'undo last line')
-  `:Lorem`       | Generate 'lorem ipsum' text
-  `:Hipster`     | Generate 'hipster ipsum' text
+Keys              | Function
+------------------|-----------------------------------------------------
+  `space` `space` | Toggle between the previously opened buffer
+  `ctrl-]`        | Jump to definition (needs exuberant ctags installed)
+  `ctrl-n`        | Toggle between absolute and relative numbering
+  `space` `h`     | Hide search highlighting
+  `space` `H`     | Show/hide hidden characters
+  `space` `rt`    | Run `ctags -R .`
+  `space` `sp`    | Show/hide spelling errors
+  `space` `sw`    | Strip trailing whitespace
+  `space` `w` `s` | Split the current window vertically
+  `space` `w` `S` | Split the current window horizontally
+  `space` `w` `w` | Jump into the next split
+  `space` `$`     | Toggle line wrapping
+  `U`             | Redo (easier than C-r but replaces default 'undo last line')
+  `:Lorem`        | Generate 'lorem ipsum' text
+  `:Hipster`      | Generate 'hipster ipsum' text
 

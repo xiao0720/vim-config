@@ -197,11 +197,11 @@ map <silent> <leader>T :VroomRunNearestTest<CR>
 "  <Leader>u to toggle undo history browser
 nnoremap <Leader>u :GundoToggle<CR>
 
-"  <Leader>w to toggle line wrap
-map <silent> <Leader>w :set wrap!<CR>
-
 "  <Leader>z to zoom pane when using splits
 map <Leader>z :ZoomWin<CR>
+
+"  <Leader>$ to toggle line wrap
+map <silent> <Leader>$ :set wrap!<CR>
 
 " A-c to copy to the global buffer
 vmap <A-c> "+y<CR>
@@ -232,6 +232,11 @@ iabbrev </ </<C-X><C-O>
 " ----------------------------------------------
 " Window split & size shortcuts
 " ----------------------------------------------
+
+" <leader> w for window commands
+map <leader>w <c-w>w
+map <leader>ws :vsplit<CR>
+map <leader>wS :split<CR>
 
 " C-w s to vertical split
 map <C-w>s :vsplit<CR>
