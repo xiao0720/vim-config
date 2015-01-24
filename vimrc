@@ -30,6 +30,7 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'matchit.zip'
+Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'othree/html5.vim'
@@ -101,6 +102,9 @@ set timeoutlen=500
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jar,.git/*,.svn/* " Ignores files in any VCS or tmp directory
 set wildmode=list:longest " Shell-like behaviour for command autocompletion
 set fillchars+=vert:\  "Set the window borders to not have | chars in them
+set macmeta
+
+call yankstack#setup()
 
 " GVim Options
 set guioptions-=T     " no toolbar
@@ -176,9 +180,6 @@ nmap <silent> <leader>H :set nolist!<CR>
 nmap <silent> <Leader>m :NERDTreeToggle<CR>
 map <silent> <Leader>M :NERDTreeFind<CR>
 
-"  <Leader>p to switch to better font for projector
-noremap <silent> <leader>p :ToggleProjectorMode<CR>
-
 "  <Leader>rt to run ctags on the current directory
 map <leader>rt :!ctags -R .<CR><CR>
 
@@ -201,6 +202,9 @@ nnoremap <Leader>u :GundoToggle<CR>
 
 "  <Leader>z to zoom pane when using splits
 map <Leader>z :ZoomWin<CR>
+
+"  <Leader>= to switch to better style for projecting
+noremap <silent> <leader>= :ToggleProjectorMode<CR>
 
 "  <Leader>$ to toggle line wrap
 map <silent> <Leader>$ :set wrap!<CR>
@@ -261,6 +265,10 @@ map <C-l> <C-w>l
 " C-J and C-K to jump down and up between splits
 map <C-j> <C-w>j
 map <C-k> <C-w>k
+
+let g:yankstack_map_keys = 0
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 " ----------------------------------------------
 " Map Uncommon Filetype for Syntax Highlighting

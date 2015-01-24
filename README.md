@@ -157,7 +157,7 @@ Toggle 'projector mode': larger font and high contrast colour scheme ([more](htt
 
 Keys      | Function
 ----------|--------------------
-  `,` `v` | Toggle 'projector mode' (large font, high contrast)
+  `<leader>` `=` | Toggle 'projector mode' (large font, high contrast)
 
 
 ### Projectionist
@@ -296,6 +296,16 @@ Keys      | Function
 ----------|--------------------------------------------------------------
   `,` `t` | Run current test/spec/feature, or previous if in another file
   `,` `T` | Run nearest test/spec/feature to the cursor
+
+
+### Yankstack
+Keeps a stack of your recent yanked lines so you can paste all of them
+quickly. ([more](https://github.com/maxbrunsfeld/vim-yankstack))
+
+Keys      | Function
+----------|--------------------------------------------------------------
+  `,` `p` | Swap the last paste for the next item in the yank stack
+  `,` `P` | Swap the last paste for the previous item in the yank stack
 
 
 ### ZoomWin
