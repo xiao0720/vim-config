@@ -256,6 +256,10 @@ Keys       | Function
   `,` `ig` | Toggle indentation guidelines
 
 
+### vim-javascript
+Adds syntax checking and better highlighting for Javascript files. ([more](https://github.com/pangloss/vim-javascript))
+
+
 ### vim-haml
 Add haml, sass and SCSS syntax support ([more](https://github.com/tpope/vim-haml))
 
