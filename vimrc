@@ -13,6 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'AdamWhittingham/projector_mode'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'AutoTag'
+Plugin 'SirVer/ultisnips'
 Plugin 'ack.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
@@ -20,6 +21,7 @@ Plugin 'bogado/file-line'
 Plugin 'bufexplorer.zip'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'colorizer'
+Plugin 'dvmtn/vim-snippets'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'elixir-lang/vim-elixir'
@@ -103,7 +105,6 @@ set timeoutlen=500
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jar,.git/*,.svn/* " Ignores files in any VCS or tmp directory
 set wildmode=list:longest " Shell-like behaviour for command autocompletion
 set fillchars+=vert:\  "Set the window borders to not have | chars in them
-set macmeta
 
 call yankstack#setup()
 
@@ -270,6 +271,14 @@ map <C-k> <C-w>k
 let g:yankstack_map_keys = 0
 nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
+
+" ----------------------------------------------
+" Auto-complete shortcuts
+" ----------------------------------------------
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " ----------------------------------------------
 " Map Uncommon Filetype for Syntax Highlighting
