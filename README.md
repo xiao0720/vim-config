@@ -235,11 +235,26 @@ Keys               | Function
 ### unimpaired
 Pairs of handy bracket maps ([more](http://www.vim.org/scripts/script.php?script_id=1590))
 
+
 ### vim-abolish
 Better abbreviations, substitution and search with Bash like {a,b} style expansions
 
+
 ### vim-airline
 Powerline like behaviour, but without the heavy Python ([more](https://github.com/bling/vim-airline))
+
+
+### vim-easy-align
+Easy and versatile alignments ([more](https://github.com/junegunn/vim-easy-align))
+Align left, center or right on `=`, `:`, `<space>`, `|`, other sensible defaults or a regex.
+
+Seriously, take 5 minutes to look at the [official docs](https://github.com/junegunn/vim-easy-align) for this, it'll pay off!
+
+Keys               | Function
+-------------------|-----------------------------------
+  `a`              | Start alignment of visually selected lines
+  `ga<scope>`      | Start alignment of the specified scope (eg. `gaip` starts inside paragraph)
+
 
 ### vim-gitgutter
 Show the changes made since the last commit in the gutter ([more](https://github.com/airblade/vim-gitgutter))

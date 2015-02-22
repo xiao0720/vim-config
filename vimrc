@@ -29,6 +29,7 @@ Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
 Plugin 'gregsexton/MatchTag'
 Plugin 'groenewege/vim-less'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
@@ -230,6 +231,12 @@ nmap <C-\> :call <SID>SynStack()<CR>
 
 " F5 to reload doc
 map <silent> <F5> <esc>:e %<CR>
+
+" Start interactive EasyAlign in visual mode (e.g. vipa)
+vmap a <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " ----------------------------------------------
 " Insert Mode Abbreviations
