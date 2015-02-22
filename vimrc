@@ -564,8 +564,8 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 " Projectionist defaults
 let g:projectionist_heuristics ={
       \  "spec/*.rb": {
-      \     "app/*.rb":       {"alternate": "spec/{}_spec.rb", "type": "source"},
-      \     "lib/*.rb":       {"alternate": "spec/{}_spec.rb", "type": "source"},
+      \     "app/*.rb":       {"alternate": "spec/{}_spec.rb",         "type": "source"},
+      \     "lib/*.rb":       {"alternate": "spec/{}_spec.rb",         "type": "source"},
       \     "spec/*_spec.rb": {"alternate": ["app/{}.rb","lib/{}.rb"], "type": "test"}
       \  }
       \}
