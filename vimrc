@@ -292,7 +292,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " Map Uncommon Filetype for Syntax Highlighting
 " ----------------------------------------------
 
-au BufRead,BufNewFile *.scss set filetype=css
+au BufRead,BufNewFile *.scss set filetype=scss.css
 au BufRead,BufNewFile *.jade.html set filetype=jade
 au BufRead,BufNewFile *.palette set filetype=ruby
 
