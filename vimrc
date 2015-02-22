@@ -27,6 +27,7 @@ Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
+Plugin 'gregsexton/MatchTag'
 Plugin 'groenewege/vim-less'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kien/ctrlp.vim'
@@ -209,7 +210,7 @@ map <Leader>z :ZoomWin<CR>
 noremap <silent> <leader>= :ToggleProjectorMode<CR>
 
 "  <Leader>$ to toggle line wrap
-map <silent> <Leader>$ :set wrap!<CR>
+map <silent> <leader>$ :set wrap!<CR>
 
 " A-c to copy to the global buffer
 vmap <A-c> "+y<CR>

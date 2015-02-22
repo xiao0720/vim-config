@@ -128,8 +128,12 @@ Keys               | Function
 Syntax highlighting for Markdown ([more](http://plasticboy.com/markdown-vim-mode/))
 
 
-### machit
+### matchit
 Allows % to be changed to match more than single characters; often more up-to-date than the version which ships with Vim. ([more](http://www.vim.org/scripts/script.php?script_id=39))
+
+
+### matchtag
+Adds bracket-like highlighting to HTML and XML tags. Helpful in finding that damn missing closing tag when you have to edit raw HTML like the ancient Romans.
 
 
 ### nerdcommenter
