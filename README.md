@@ -30,7 +30,7 @@ There are a couple of things you might want to install to get the best out of th
 ```
 If you've installed the auto-update hook, the git pull should trigger Vim to update and you're done!
 
-Manually update by opening Vim and running `:PlugUpdate` and `:PlugClean`.
+Manually update by opening Vim and running `:PlugClean` and `:PlugUpdate`.
 
 # Personalisation
 We all like things a little differently, so there are a couple of ways to easily tweak and add to the config.
