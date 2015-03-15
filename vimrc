@@ -1,64 +1,61 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
 " ----------------------------------------------
 " Define all the plugins!
 " ----------------------------------------------
 
-Plugin 'gmarik/Vundle.vim'
-
-Plugin 'AdamWhittingham/projector_mode'
-Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'AutoTag'
-Plugin 'SirVer/ultisnips'
-Plugin 'ack.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-airline'
-Plugin 'bogado/file-line'
-Plugin 'bufexplorer.zip'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'colorizer'
-Plugin 'dvmtn/vim-snippets'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'ervandew/supertab'
-Plugin 'godlygeek/tabular'
-Plugin 'gregsexton/MatchTag'
-Plugin 'groenewege/vim-less'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'kana/vim-textobj-user'
-Plugin 'kien/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'matchit.zip'
-Plugin 'maxbrunsfeld/vim-yankstack'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'othree/html5.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'regedarek/ZoomWin'
-Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'sjl/gundo.vim'
-Plugin 'slim-template/vim-slim.git'
-Plugin 't9md/vim-ruby-xmpfilter'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-projectionist'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-speeddating'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'vim-coffee-script'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'vroom'
+Plug 'AdamWhittingham/projector_mode'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'AutoTag'
+Plug 'SirVer/ultisnips'
+Plug 'ack.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
+Plug 'bogado/file-line'
+Plug 'bufexplorer.zip'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'colorizer'
+Plug 'dvmtn/vim-snippets'
+Plug 'digitaltoad/vim-jade'
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'elixir-lang/vim-elixir'
+Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
+Plug 'gregsexton/MatchTag'
+Plug 'groenewege/vim-less'
+Plug 'junegunn/vim-easy-align'
+Plug 'kana/vim-textobj-user'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'matchit.zip'
+Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown'
+Plug 'regedarek/ZoomWin'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'sjl/gundo.vim'
+Plug 'slim-template/vim-slim.git'
+Plug 't9md/vim-ruby-xmpfilter'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-coffee-script'
+Plug 'vim-ruby/vim-ruby'
+Plug 'vroom'
 
 if filereadable(expand("~/.vim.plugins.local"))
   source ~/.vim.plugins.local
@@ -68,7 +65,7 @@ endif
 " No More plugins after here thanks!
 " ----------------------------------------------
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 syntax on
 
