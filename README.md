@@ -67,8 +67,10 @@ This plugin is a front for Ag. Ag can be used as a replacement for 153% of the u
 
 **Important:** Requires [the_silver_surfer](https://github.com/ggreer/the_silver_searcher) to be installed
 
+
 ### Autotag
 Automatically update tags when saving files ([more](http://www.vim.org/scripts/script.php?script_id=1343))
+
 
 ### bufexplorer
 Buffer explorer/browser ([more](http://www.vim.org/scripts/script.php?script_id=42))
@@ -194,6 +196,7 @@ append a '# =>' to a line, then ,x to execute the file and insert all results.
 ### speeddating
 Fix up C-a and C-x when dealing with dates. ([more](https://github.com/tpope/vim-speeddating))
 
+
 ### SplitJoin
 Split and join code lines, such as Ruby ifs or CSS hashes ([more](https://github.com/AndrewRadev/splitjoin.vim))
 
@@ -201,6 +204,7 @@ Keys               | Function
 -------------------|-----------------------
   `<space>` `s`    | Split the current line
   `<space>` `S`    | Join the current lines
+
 
 ### SuperTab
 Do all your insert-mode completion with Tab ([more](http://www.vim.org/scripts/script.php?script_id=1643))
@@ -297,8 +301,8 @@ Ruby support (newer than the version released with vim). ([more](https://github.
 
 ### vim-ruby-refactoring
 Refactoring tool for Ruby in vim! ([more](https://github.com/ecomba/vim-ruby-refactoring))
-
 See [relish documentation](http://relishapp.com/despo/vim-ruby-refactoring) for examples.
+
 
 ### vim-textobj-rubyblock
 Allow Ruby-aware text manipulation ([more](https://github.com/nelstrom/vim-textobj-rubyblock))
