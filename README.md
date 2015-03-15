@@ -36,9 +36,13 @@ Manually update by opening Vim and running `:PlugClean` and `:PlugUpdate`.
 We all like things a little differently, so there are a couple of ways to easily tweak and add to the config.
 
 ## Add more plugins
-Simply write normal Bundle plugin lines to `~/.vim.plugins.local`
+Simply write normal plugin lines to `~/.vim.plugins.local`.
+For example:
+```
+Plug 'AdamWhittingham/projector_mode'
+```
 
-## Set up options and add more functions
+## Set up, override or extend config
 Changes like using a different font or colour scheme can be made by writing Vim config into `~/.vimrc.local`
 
 # Using the config
