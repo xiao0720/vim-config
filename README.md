@@ -6,7 +6,7 @@ Assuming you already have vim, just run:
     git clone https://github.com/AdamWhittingham/vim-config.git ~/.vim && ~/.vim/install
 ```
 
-Should this not leave you with a nice working vim (certain vims are a bit iffy about the last line) then launch vim and run `:PluginUpdate`
+Should this not leave you with a nice working vim (certain vims are a bit iffy about the last line) then launch vim and run `:PlugUpdate`
 
 If you are using zsh there may be an issue running tests with ,t (it can't find the bundle). If you don't already have an /etc/zprofile file it can be fixed by doing the following:
 
@@ -30,7 +30,7 @@ There are a couple of things you might want to install to get the best out of th
 ```
 If you've installed the auto-update hook, the git pull should trigger Vim to update and you're done!
 
-Manually update by opening Vim and running `:PluginUpdate` and `:PluginClean`.
+Manually update by opening Vim and running `:PlugUpdate` and `:PlugClean`.
 
 # Personalisation
 We all like things a little differently, so there are a couple of ways to easily tweak and add to the config.
