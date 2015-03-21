@@ -41,6 +41,7 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
@@ -577,3 +578,6 @@ let g:projectionist_heuristics ={
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" Enable ragtag XML tag mappings
+let g:ragtag_global_maps = 1
