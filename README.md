@@ -179,6 +179,10 @@ Keys               | Function
   `:` `A`          | Toggle between Ruby production code and spec
 
 
+### ragtag
+A set of mappings for HTML, XML, PHP, ASP, eRuby, JSP, and more ([more](http://www.vim.org/scripts/script.php?script_id=1896))
+
+
 ### repeat
 Use the repeat command (.) with supported plugins ([more](http://www.vim.org/scripts/script.php?script_id=2136))
 
