@@ -58,6 +58,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-coffee-script'
 Plug 'vim-ruby/vim-ruby'
+Plug 'kien/rainbow_parentheses.vim'
 
 if filereadable(expand("~/.vim.plugins.local"))
   source ~/.vim.plugins.local
@@ -180,6 +181,9 @@ nmap <leader>gh :GitGutterLineHighlightsToggle<CR>
 "  <Leader>H to show hidden characters
 set listchars=tab:>-,trail:·,eol:$
 nmap <silent> <leader>H :set nolist!<CR>
+
+" Rainbow colour parens and brachets to see what matches and which levels
+map <silent> <leader>) :RainbowParenthesesToggleAll<CR>
 
 "  <Leader>m to toggle file tree (,M to select the current file in the tree)
 nmap <silent> <Leader>m :NERDTreeToggle<CR>
