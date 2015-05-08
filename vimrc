@@ -6,17 +6,11 @@ call plug#begin('~/.vim/plugged')
 " ----------------------------------------------
 Plug 'AdamWhittingham/projector_mode'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'AutoTag'
-Plug 'airblade/vim-gitgutter'
-Plug 'bling/vim-airline'
 Plug 'bogado/file-line'
 Plug 'colorizer'
 Plug 'godlygeek/tabular'
-Plug 'gregsexton/MatchTag'
-Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'regedarek/ZoomWin'
-Plug 'scrooloose/nerdcommenter'
 Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-projectionist'
@@ -25,38 +19,31 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-unimpaired'
 
-" Extra text manipulation and movement
-Plug 'matchit.zip'
-Plug 'tpope/vim-surround'
-Plug 'junegunn/vim-easy-align'
-Plug 'kana/vim-textobj-user'
-
 " Search and file exploring
 Plug 'ack.vim'
 Plug 'bufexplorer.zip'
 Plug 'kien/ctrlp.vim'
-Plug 'majutsushi/tagbar'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-projectionist'
 
+" Additional contextual information
+Plug 'AutoTag'
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
+Plug 'gregsexton/MatchTag'
+Plug 'majutsushi/tagbar'
+
 " Extra text manipulation and movement
-Plug 'matchit.zip'
-Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-easy-align'
 Plug 'kana/vim-textobj-user'
+Plug 'matchit.zip'
+Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-surround'
 
 " Snippets and autocomplete
 Plug 'tpope/vim-endwise'
-
-" Search and file exploring
-Plug 'ack.vim'
-Plug 'bufexplorer.zip'
-Plug 'kien/ctrlp.vim'
-Plug 'majutsushi/tagbar'
-Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-projectionist'
 
 " Extra syntax highlighting and language support
 Plug 'scrooloose/syntastic'
@@ -68,15 +55,15 @@ Plug 'scrooloose/syntastic'
   Plug 'vroom',                          {'for': 'ruby'}
   " Web stuff
   Plug 'cakebaker/scss-syntax.vim',      {'for': 'css'}
-  Plug 'digitaltoad/vim-jade',           {'for': 'jade'}
-  Plug 'groenewege/vim-less',            {'for': 'less'}
-  Plug 'othree/html5.vim'
-  Plug 'pangloss/vim-javascript'
+  Plug 'digitaltoad/vim-jade'
+  Plug 'groenewege/vim-less'
+  Plug 'othree/html5.vim',               {'for': 'html'}
+  Plug 'pangloss/vim-javascript',        {'for': 'javascript'}
   Plug 'plasticboy/vim-markdown'
   Plug 'vim-coffee-script'
   " Misc Languages
-  Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
-  Plug 'tpope/vim-haml',         {'for': 'haml'}
+  Plug 'elixir-lang/vim-elixir'
+  Plug 'tpope/vim-haml'
 
 Plug 'kien/rainbow_parentheses.vim'
 
