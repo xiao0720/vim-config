@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 " ----------------------------------------------
 " Define all the plugins!
 " ----------------------------------------------
+
 Plug 'AdamWhittingham/projector_mode'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'bogado/file-line'
