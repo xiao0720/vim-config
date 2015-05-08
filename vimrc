@@ -1,63 +1,83 @@
 set nocompatible
-filetype off
-
 call plug#begin('~/.vim/plugged')
 
 " ----------------------------------------------
 " Define all the plugins!
 " ----------------------------------------------
-
 Plug 'AdamWhittingham/projector_mode'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AutoTag'
-Plug 'SirVer/ultisnips'
-Plug 'ack.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'bogado/file-line'
-Plug 'bufexplorer.zip'
 Plug 'colorizer'
-Plug 'dvmtn/vim-snippets'
-Plug 'ecomba/vim-ruby-refactoring'
-Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'gregsexton/MatchTag'
-Plug 'junegunn/vim-easy-align'
-Plug 'kana/vim-textobj-user'
-Plug 'kien/ctrlp.vim'
-Plug 'majutsushi/tagbar'
-Plug 'matchit.zip'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'regedarek/ZoomWin'
-Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim'
-Plug 't9md/vim-ruby-xmpfilter'
 Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-haml'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vroom'
 
-" Extra Syntax highlighting
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'digitaltoad/vim-jade'
-Plug 'elixir-lang/vim-elixir'
-Plug 'groenewege/vim-less'
-Plug 'othree/html5.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'plasticboy/vim-markdown'
-Plug 'vim-coffee-script'
-Plug 'vim-ruby/vim-ruby'
+" Extra text manipulation and movement
+Plug 'matchit.zip'
+Plug 'tpope/vim-surround'
+Plug 'junegunn/vim-easy-align'
+Plug 'kana/vim-textobj-user'
+
+" Search and file exploring
+Plug 'ack.vim'
+Plug 'bufexplorer.zip'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-projectionist'
+
+" Extra text manipulation and movement
+Plug 'matchit.zip'
+Plug 'tpope/vim-surround'
+Plug 'junegunn/vim-easy-align'
+Plug 'kana/vim-textobj-user'
+
+" Snippets and autocomplete
+Plug 'tpope/vim-endwise'
+
+" Search and file exploring
+Plug 'ack.vim'
+Plug 'bufexplorer.zip'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-projectionist'
+
+" Extra syntax highlighting and language support
+Plug 'scrooloose/syntastic'
+  " Ruby
+  Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}
+  Plug 'vim-ruby/vim-ruby',              {'for': 'ruby'}
+  Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}
+  Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}
+  Plug 'vroom',                          {'for': 'ruby'}
+  " Web stuff
+  Plug 'cakebaker/scss-syntax.vim',      {'for': 'css'}
+  Plug 'digitaltoad/vim-jade',           {'for': 'jade'}
+  Plug 'groenewege/vim-less',            {'for': 'less'}
+  Plug 'othree/html5.vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'plasticboy/vim-markdown'
+  Plug 'vim-coffee-script'
+  " Misc Languages
+  Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
+  Plug 'tpope/vim-haml',         {'for': 'haml'}
+
 Plug 'kien/rainbow_parentheses.vim'
 
 if filereadable(expand("~/.vim.plugins.local"))
@@ -337,7 +357,11 @@ let g:airline_left_alt_sep = ""
 let g:airline_right_sep = ""
 let g:airline_right_alt_sep = ""
 let g:airline#extensions#whitespace#enabled = 0
-let g:airline_theme = "powerlineish"
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#tagbar#enabled = 0
+
+let g:airline_theme = "kolor"
 
 autocmd FileType make set noexpandtab
 
