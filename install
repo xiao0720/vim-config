@@ -1,5 +1,5 @@
 #!/bin/bash
 
 [[ -e ~/.vim/vimrc ]] || ln -s ~/.vim/vimrc ~/.vimrc
-vim +:PlugClean +:PlugUpdate +qall
+vim +PlugClean +PlugUpdate +qall
 ~/.vim/install-plugin-update-hook.sh
