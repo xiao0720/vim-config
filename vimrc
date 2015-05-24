@@ -192,6 +192,9 @@ vnoremap <silent> <Leader>a<space> :Tabularize /[^ ] \+\zs/l0r1<CR>
 map <silent> <leader>f :ClearCtrlPCache<cr>\|:CtrlP<cr>
 map <silent> <leader>F :ClearCtrlPCache<cr>\|:CtrlPCurFile<cr>
 
+"  <Leader>} to Search for a tag in the current project
+map <silent> <leader>} :CtrlPTag<cr>
+
 "  <Leader>g to jump to the next change since git commit
 "  <Leader>G to jump to the last change since git commit
 nmap <leader>g <Plug>GitGutterNextHunk

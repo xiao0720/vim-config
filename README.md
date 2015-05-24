@@ -101,6 +101,7 @@ Keys               | Function
   `Ctrl` + `p`     | Open the CtrlP fuzzy search
   `<space>` `f`    | Refresh the cache and open the CtrlP fuzzy search
   `<space>` `F`    | Open CtrlP searching for files in the same directory as the current file
+  `<space>` `}`    | Open CtrlP searching for tags in the current project
 
 Once the search window is open, you can use the following:
 
