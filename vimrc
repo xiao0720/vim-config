@@ -113,9 +113,30 @@ set smarttab
 set statusline=%<%f\ %h%m%r%=%-20.(line=%l\ of\ %L,col=%c%V%)\%h%m%r%=%-40(,%n%Y%)\%P%#warningmsg#%{SyntasticStatuslineFlag()}%*
 set tabstop=2
 set timeoutlen=500
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jar,.git/*,.svn/* " Ignores files in any VCS or tmp directory
 set wildmode=list:longest " Shell-like behaviour for command autocompletion
 set fillchars+=vert:\  "Set the window borders to not have | chars in them
+
+" -----------------------------------
+" Setup file wildcard ignored names
+" -----------------------------------
+
+" Disable output and VCS files
+set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+
+" Disable archive files
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.jar
+
+" Ignore bundler and sass cache
+set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
+
+" Ignore rails temporary asset caches
+set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
+
+" Ignore node modules
+set wildignore+=node_modules/*
+
+" Disable temp and backup files
+set wildignore+=*.swp,*.swo,*~,._*
 
 call yankstack#setup()
 
