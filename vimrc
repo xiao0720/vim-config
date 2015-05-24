@@ -356,6 +356,17 @@ if version >= 730
 endif
 
 " ----------------------------------------------
+" Setup CtrlP File Finder
+" ----------------------------------------------
+
+let g:ctrlp_show_hidden = 1
+
+" Use Ag for search if its available on this system
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
+" ----------------------------------------------
 " Setup Misc Vim Behaviours
 " ----------------------------------------------
 
@@ -561,12 +572,6 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
-
-" Set ctrlp to ignore files in the VCS directories
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|\.bzr|dist|tmp|log|public|node_modules|vendor)$',
-  \ 'file': '\v\.(exe|so|dll|swp|DS_Store|zip|jar)$',
-  \ }
 
 "  Set the git gutter colors to be the same as the number column
 hi clear SignColumn
