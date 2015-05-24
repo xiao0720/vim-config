@@ -167,6 +167,9 @@ command! W :w
 command! Q :q
 command! Qa :qa
 
+" Disable Ex Mode to remove confusion
+nnoremap Q <Nop>
+
 " make Y consistent with C and D
 nnoremap Y y$
 
