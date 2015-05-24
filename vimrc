@@ -272,10 +272,10 @@ nmap <C-\> :call <SID>SynStack()<CR>
 map <silent> <F5> <esc>:e %<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipa)
-vmap a <Plug>(EasyAlign)
+vmap a <Plug>(LiveEasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(LiveEasyAlign)
 
 " ----------------------------------------------
 " Insert Mode Abbreviations
