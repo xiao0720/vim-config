@@ -28,6 +28,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-projectionist'
 
 " Additional contextual information
+Plug 'AdamWhittingham/vim-copy-filename'
 Plug 'AutoTag'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
@@ -64,6 +65,7 @@ Plug 'scrooloose/syntastic'
   " Misc Languages
   Plug 'elixir-lang/vim-elixir'
   Plug 'tpope/vim-haml'
+  Plug 'chase/vim-ansible-yaml'
 
 Plug 'kien/rainbow_parentheses.vim'
 
@@ -361,6 +363,9 @@ if version >= 730
   au WinEnter,FileType ruby,eruby,rspec,cucumber set cc=140
 endif
 
+" Ignore blank lines when calculating indentaiton on ansible yml configs
+let g:ansible_options = {'ignore_blank_lines': 0}
+
 " ----------------------------------------------
 " Setup CtrlP File Finder
 " ----------------------------------------------
@@ -381,6 +386,8 @@ let g:airline_left_sep = ""
 let g:airline_left_alt_sep = ""
 let g:airline_right_sep = ""
 let g:airline_right_alt_sep = ""
+let g:airline_section_z = '%c, %l/%L'
+
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
@@ -527,6 +534,14 @@ function! StripTrailingWhitespace()
 	normal `z
 endfunction
 
+" Delete comment character when joining commented lines
+ if v:version > 703 || v:version == 703 && has("patch541")
+   set formatoptions+=j
+ endif
+
+" Use only 1 space after "." when joining lines instead of 2
+set nojoinspaces
+
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
@@ -588,6 +603,7 @@ let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '~'
 let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_modified_removed = '~'
+let g:gitgutter_max_signs = 1000
 
 " Vroom settings
 let g:vroom_write_all = 1

@@ -93,6 +93,17 @@ Keys               | Function
   `<space>` `cF`   | Toggle text or background colouring
 
 
+### copy-filename
+Adds some shortcuts for quickly copying the name or path of the current file ([more](https://github.com/AdamWhittingham/vim-copy-filename))
+
+Keys               | Function
+-------------------|------------------------------------
+  `<space>` `cp`   | Copy the files relative path
+  `<space>` `cP`   | Copy the files absolute path
+  `<space>` `cd`   | Copy the files directory path
+  `<space>` `cf`   | Copy the files basename
+
+
 ### CtrlP
 Fast file navigation for VIM ([more](https://github.com/kien/ctrlp.vim))
 
