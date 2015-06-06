@@ -336,6 +336,15 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " ----------------------------------------------
+" Copy file path details to the system clipboard
+" ----------------------------------------------
+
+nmap <leader>cp :CopyRelativePath<CR>
+nmap <leader>cP :CopyAbsolutePath<CR>
+nmap <leader>cf :CopyFileName<CR>
+nmap <leader>cd :CopyDirectoryPath<CR>
+
+" ----------------------------------------------
 " Map Uncommon Filetype for Syntax Highlighting
 " ----------------------------------------------
 
