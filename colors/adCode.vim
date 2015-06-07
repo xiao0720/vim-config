@@ -73,17 +73,17 @@ hi Title                      guifg=#F6F3E8 ctermfg=255  gui=NONE cterm=NONE
 hi Todo                       guifg=#757E92 ctermfg=244  gui=NONE cterm=NONE
 hi Type                       guifg=#54C0FF ctermfg=75   gui=NONE cterm=NONE
 hi Typedef                    guifg=#7E8AA2 ctermfg=103  gui=NONE cterm=NONE
-hi rubyAccess                 guifg=#F480DB ctermfg=212  guibg=NONE    ctermbg=NONE gui=BOLD cterm=BOLD
+hi rubyAccess                 guifg=#DB73C3 ctermfg=169  guibg=NONE    ctermbg=NONE gui=BOLD cterm=BOLD
 hi rubyAttribute              guifg=#AA74FF ctermfg=141  gui=NONE cterm=NONE
 hi rubyBlockParameter         guifg=#45C2FB ctermfg=75   gui=NONE cterm=NONE
 hi rubyBlockParameterList     guifg=#1897DD ctermfg=32   gui=NONE cterm=NONE
 hi rubyBoolean                guifg=#FEC833 ctermfg=221  gui=NONE cterm=NONE
-hi rubyClass                  guifg=#F480DB ctermfg=212  gui=NONE cterm=NONE
+hi rubyClass                  guifg=#DB73C3 ctermfg=169  gui=NONE cterm=NONE
 hi rubyClassVariable          guifg=#45C2FB ctermfg=75   gui=NONE cterm=NONE
 hi rubyConditional            guifg=#9D72C0 ctermfg=133  gui=NONE cterm=NONE
 hi rubyConstant               guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
 hi rubyControl                guifg=#58D3D1 ctermfg=80   gui=NONE cterm=NONE
-hi rubyDefine                 guifg=#757E92 ctermfg=244  gui=NONE cterm=NONE
+hi rubyDefine                 guifg=#AA74FF ctermfg=141  gui=NONE cterm=NONE
 hi rubyDoBlock                guifg=NONE    ctermfg=NONE guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi rubyException              guifg=#CD3F44 ctermfg=167  gui=NONE cterm=NONE
 hi rubyFloat                  guifg=#AFFF4B ctermfg=155  gui=NONE cterm=NONE
@@ -96,7 +96,7 @@ hi rubyInterpolation          guifg=#AFFF4B ctermfg=155  gui=NONE cterm=NONE
 hi rubyInterpolationDelimiter guifg=#AFFF4B ctermfg=155  gui=NONE cterm=NONE
 hi rubyMethodBlock            guifg=NONE    ctermfg=NONE guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi rubyMethodDeclaration      guifg=#45C2FB ctermfg=75   gui=NONE cterm=NONE
-hi rubyModule                 guifg=#F8AFE8 ctermfg=218  guibg=NONE    ctermbg=NONE gui=ITALIC cterm=NONE
+hi rubyModule                 guifg=#E59CD4 ctermfg=182  guibg=NONE    ctermbg=NONE gui=ITALIC cterm=NONE
 hi rubyPredefinedIdentifier   guifg=#FEC833 ctermfg=221  gui=NONE cterm=NONE
 hi rubyRegexp                 guifg=#AFFF4B ctermfg=155  gui=NONE cterm=NONE
 hi rubyRegexpAnchor           guifg=#59DC4C ctermfg=77   gui=NONE cterm=NONE
@@ -182,8 +182,8 @@ hi coffeeObjAssign            guifg=#59DC4C ctermfg=77   gui=NONE cterm=NONE
 hi coffeeString               guifg=#AFFF4B ctermfg=155  gui=NONE cterm=NONE
 hi cucumberFeature            guifg=#FEC833 ctermfg=221  gui=NONE cterm=NONE
 hi cucumberScenario           guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
-hi cucumberTags               guifg=#F480DB ctermfg=212  guibg=NONE    ctermbg=NONE gui=ITALIC cterm=NONE
-hi cucumberBackground         guifg=#F480DB ctermfg=212  gui=NONE cterm=NONE
+hi cucumberTags               guifg=#DB73C3 ctermfg=169  guibg=NONE    ctermbg=NONE gui=ITALIC cterm=NONE
+hi cucumberBackground         guifg=#DB73C3 ctermfg=169  gui=NONE cterm=NONE
 hi cucumberGiven              guifg=#9D72C0 ctermfg=133  gui=NONE cterm=NONE
 hi cucumberGivenAnd           guifg=#9D72C0 ctermfg=133  gui=NONE cterm=NONE
 hi cucumberWhen               guifg=#45C2FB ctermfg=75   gui=NONE cterm=NONE
