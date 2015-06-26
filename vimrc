@@ -650,6 +650,13 @@ let g:projectionist_heuristics ={
       \  }
       \}
 
+" Show current line highlighting only in the active pane
+augroup BgHighlight
+  autocmd!
+  autocmd WinEnter * set cul
+  autocmd WinLeave * set nocul
+augroup END
+
 " ----------------------------------------------
 "  Source any local config
 "  Keep this last to make sure local config overrides global!
