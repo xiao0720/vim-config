@@ -48,24 +48,27 @@ Plug 'tpope/vim-endwise'
 
 " Extra syntax highlighting and language support
 Plug 'scrooloose/syntastic'
-  " Ruby
-  Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}
-  Plug 'vim-ruby/vim-ruby',              {'for': 'ruby'}
-  Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}
-  Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}
-  Plug 'vroom',                          {'for': 'ruby'}
-  " Web stuff
-  Plug 'cakebaker/scss-syntax.vim',      {'for': 'css'}
-  Plug 'digitaltoad/vim-jade'
-  Plug 'groenewege/vim-less'
-  Plug 'othree/html5.vim',               {'for': 'html'}
-  Plug 'pangloss/vim-javascript',        {'for': 'javascript'}
-  Plug 'plasticboy/vim-markdown'
-  Plug 'vim-coffee-script'
-  " Misc Languages
-  Plug 'elixir-lang/vim-elixir'
-  Plug 'tpope/vim-haml'
-  Plug 'chase/vim-ansible-yaml'
+
+" Ruby
+Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}
+Plug 'vim-ruby/vim-ruby',              {'for': 'ruby'}
+Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}
+Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}
+Plug 'vroom',                          {'for': 'ruby'}
+
+" Web stuff
+Plug 'cakebaker/scss-syntax.vim',      {'for': 'css'}
+Plug 'digitaltoad/vim-jade'
+Plug 'groenewege/vim-less'
+Plug 'othree/html5.vim',               {'for': 'html'}
+Plug 'pangloss/vim-javascript',        {'for': 'javascript'}
+Plug 'plasticboy/vim-markdown'
+Plug 'vim-coffee-script'
+
+" Misc Languages
+Plug 'elixir-lang/vim-elixir'
+Plug 'tpope/vim-haml'
+Plug 'chase/vim-ansible-yaml'
 
 Plug 'kien/rainbow_parentheses.vim'
 
