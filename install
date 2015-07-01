@@ -1,5 +1,13 @@
 #!/bin/bash
 
-[[ -e ~/.vim/vimrc ]] || ln -s ~/.vim/vimrc ~/.vimrc
-vim +PlugClean +PlugUpdate +qall
-~/.vim/install-plugin-update-hook.sh
+if [[ -e ~/.vimrc ]]
+then
+  echo ''
+  echo "It looks like you've got your own config..."
+  echo "...take a look in .vimrc in case you need it."
+  echo ''
+else
+  ln -s ~/.vim/vimrc ~/.vimrc
+  vim +PlugClean +PlugUpdate +qall
+  ~/.vim/install-plugin-update-hook.sh
+fi
