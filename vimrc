@@ -100,6 +100,7 @@ set autoindent
 set autowrite       " Writes on make/shell commands
 set backspace=start,indent,eol
 set backupdir=/var/tmp,~/.tmp,. " Don't clutter project dirs up with swap files
+set background=dark
 set directory=/var/tmp,~/.tmp,.
 set cf              " Enable error files & error jumping.
 set cursorline
