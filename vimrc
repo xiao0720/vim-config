@@ -72,7 +72,6 @@ Plug 'vim-coffee-script'
 Plug 'elixir-lang/vim-elixir'
 Plug 'tpope/vim-haml'
 Plug 'chase/vim-ansible-yaml'
-
 Plug 'kien/rainbow_parentheses.vim'
 
 if filereadable(expand("~/.vim.plugins.local"))
@@ -105,6 +104,7 @@ set backupdir=/var/tmp,~/.tmp,. " Don't clutter project dirs up with swap files
 set background=dark
 set directory=/var/tmp,~/.tmp,.
 set cf              " Enable error files & error jumping.
+set complete+=kspell
 set cursorline
 set expandtab
 set hidden          " Allow buffer switching without saving
