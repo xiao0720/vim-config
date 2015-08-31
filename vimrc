@@ -274,11 +274,11 @@ imap <C-s> <esc>:w<CR>
 " Replace the default U (undo last line) to Redo for speedyness
 nmap U <c-r>
 
-" Ctrl+\ to view the Vim style of the text under the cursor
-nmap <C-\> :call <SID>SynStack()<CR>
-
 " F5 to reload doc
 map <silent> <F5> <esc>:e %<CR>
+
+" F6 to view the Vim style of the text under the cursor
+nmap <F6> :call VimSyntaxGroups()<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipa)
 vmap a <Plug>(LiveEasyAlign)
@@ -553,6 +553,13 @@ function! StripTrailingWhitespace()
 	exec '%s/\s*$//g'
 	normal 'yz<cr>
 	normal `z
+endfunction
+
+" Display Vim syntax groups under the cursor
+function! VimSyntaxGroups()
+  for id in synstack(line("."), col("."))
+    echo synIDattr(id, "name")
+  endfor
 endfunction
 
 " Delete comment character when joining commented lines
