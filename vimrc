@@ -24,7 +24,7 @@ Plug 'tpope/vim-unimpaired'
 
 " Search and file exploring
 Plug 'ack.vim'
-Plug 'bufexplorer.zip'
+Plug 'jlanzarotta/bufexplorer'
 Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
