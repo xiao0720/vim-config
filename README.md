@@ -98,6 +98,7 @@ Adds some shortcuts for quickly copying the name or path of the current file ([m
 
 Keys               | Function
 -------------------|------------------------------------
+  `<space>` `cr`   | Copy the files relative path and line number (great for rspec!)
   `<space>` `cp`   | Copy the files relative path
   `<space>` `cP`   | Copy the files absolute path
   `<space>` `cd`   | Copy the files directory path

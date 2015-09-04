@@ -344,6 +344,7 @@ nmap <leader>cp :CopyRelativePath<CR>
 nmap <leader>cP :CopyAbsolutePath<CR>
 nmap <leader>cf :CopyFileName<CR>
 nmap <leader>cd :CopyDirectoryPath<CR>
+nmap <leader>cr :CopyRelativePathAndLine<CR>
 
 " ----------------------------------------------
 " Map Uncommon Filetype for Syntax Highlighting
