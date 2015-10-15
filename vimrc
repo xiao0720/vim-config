@@ -110,6 +110,7 @@ set expandtab
 set hidden          " Allow buffer switching without saving
 set history=1000    " Remember a decent way back
 set laststatus=2    " Always show status line.
+set listchars=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail:•
 set mousehide
 set nofoldenable    " Disable all folding of content
 set nowrap          " Line wrapping off
@@ -222,7 +223,6 @@ nmap <leader>gh :GitGutterLineHighlightsToggle<CR>
 :noremap <silent> <leader>h :noh<CR>
 
 "  <Leader>H to show hidden characters
-set listchars=tab:>-,trail:·,eol:$
 nmap <silent> <leader>H :set nolist!<CR>
 
 " Rainbow colour parens and brachets to see what matches and which levels
