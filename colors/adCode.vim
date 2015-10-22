@@ -28,8 +28,10 @@ hi Search                     guifg=#151718 ctermfg=233  guibg=#FEC833 ctermbg=2
 hi MatchParen                 guifg=#FEC833 ctermfg=221  guibg=#151718 ctermbg=233  gui=BOLD cterm=BOLD
 hi SignColumn                 guifg=#FAFAFA ctermfg=231  guibg=#212426 ctermbg=235  gui=NONE cterm=NONE
 hi VertSplit                  guifg=#212426 ctermfg=235  guibg=#212426 ctermbg=235  gui=NONE cterm=NONE
-hi NonText                    guifg=#DB73C3 ctermfg=169
-hi SpecialKey                 guifg=#DB73C3 ctermfg=169
+hi NonText                    guifg=#3C414C ctermfg=238  gui=BOLD cterm=BOLD
+hi SpecialKey                 guifg=#3C414C ctermfg=238  guibg=#FF9800 ctermbg=208  gui=BOLD cterm=BOLD
+hi RedundantSpaces            guifg=NONE    ctermfg=NONE guibg=#CD3F44 ctermbg=167  gui=NONE cterm=NONE
+hi BadSpaces                  guifg=#3C414C ctermfg=238  guibg=#FF9800 ctermbg=208  gui=NONE cterm=NONE
 hi StatusLine                 guifg=#D3D3D5 ctermfg=188  guibg=#3C414C ctermbg=238  gui=NONE cterm=NONE
 hi StatusLineNC               guifg=#939395 ctermfg=246  guibg=#3C414C ctermbg=238  gui=NONE cterm=NONE
 hi PMenu                      guifg=#FAFAFA ctermfg=231  guibg=#3C414C ctermbg=238  gui=NONE cterm=NONE

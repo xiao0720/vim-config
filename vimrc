@@ -110,7 +110,7 @@ set expandtab
 set hidden          " Allow buffer switching without saving
 set history=1000    " Remember a decent way back
 set laststatus=2    " Always show status line.
-set listchars=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail:•
+set listchars=nbsp:█,eol:¶,tab:>-,extends:»,precedes:«,trail:•
 set mousehide
 set nofoldenable    " Disable all folding of content
 set nowrap          " Line wrapping off
@@ -422,6 +422,10 @@ let g:SuperTabCrMapping = 0
 " Highlight trailing whitespace
 highlight RedundantSpaces term=standout ctermbg=red guibg=red
 match RedundantSpaces /\s\+$\| \+\ze\t/ "\ze sets end of match so only spaces highlighted
+
+" Highlight Non-breaking spaces
+highlight BadSpaces term=standout ctermbg=red guibg=red
+match BadSpaces / \+/
 
 " A whole bunch of NERDTree configuration stolen from carlhuda's janus
 let NERDTreeIgnore=['\.rbc$', '\~$']
