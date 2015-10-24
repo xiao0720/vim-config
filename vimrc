@@ -201,16 +201,19 @@ vnoremap <silent> <Leader>a\| :Tabularize /\|<CR>
 vnoremap <silent> <Leader>a: :Tabularize /\w:\zs/l0l1<CR>
 vnoremap <silent> <Leader>a<space> :Tabularize /[^ ] \+\zs/l0r1<CR>
 
-"  <Leader>f to clear cache and fuzzy search files; ,F in current file's directory
+"  <Leader>f to fuzzy search files
 map <silent> <leader>f :CtrlP<cr>
+
+"  <Leader>F to fuzzy search files in the same directory as the current file
 map <silent> <leader>F :CtrlPCurFile<cr>
 
 "  <Leader>} to Search for a tag in the current project
 map <silent> <leader>} :CtrlPTag<cr>
 
 "  <Leader>g to jump to the next change since git commit
-"  <Leader>G to jump to the last change since git commit
 nmap <leader>g <Plug>GitGutterNextHunk
+
+"  <Leader>G to jump to the last change since git commit
 nmap <leader>G <Plug>GitGutterPrevHunk
 
 "  <Leader>gt to toggle the gutter
@@ -230,13 +233,17 @@ map <silent> <leader>) :RainbowParenthesesToggleAll<CR>
 
 "  <Leader>m to toggle file tree (,M to select the current file in the tree)
 nmap <silent> <Leader>m :NERDTreeToggle<CR>
+
+"  <Leader>M to toggle file tree, selecting the current file
 map <silent> <Leader>M :NERDTreeFind<CR>
 
 "  <Leader>rt to run ctags on the current directory
 map <leader>rt :!ctags -R .<CR><CR>
 
-"  <Leader>s and ,S to split and join lines
+"  <Leader>s to split/expand lines
 nmap <silent> <leader>s :SplitjoinSplit<cr>
+
+"  <Leader>S to join/condense lines
 nmap <silent> <leader>S :SplitjoinJoin<cr>
 
 "  <Leader>sp to toggle spelling highlighting
@@ -245,8 +252,10 @@ nmap <silent> <Leader>sp :setlocal spell! spelllang=en_gb<CR>
 "  <Leader>sw to strip whitespace off the ends
 nmap <silent> <Leader>sw :call StripTrailingWhitespace()<CR>
 
-"  <Leader>t to run tests
+"  <Leader>t to run all tests in the current file
 map <silent> <leader>t :VroomRunTestFile<CR>
+
+"  <Leader>t to run the tests in the scope nearest the cursor
 map <silent> <leader>T :VroomRunNearestTest<CR>
 
 "  <Leader>u to toggle undo history browser
@@ -261,15 +270,11 @@ noremap <silent> <leader>= :ToggleProjectorMode<CR>
 "  <Leader>$ to toggle line wrap
 map <silent> <leader>$ :set wrap!<CR>
 
-" A-c to copy to the global buffer
-vmap <A-c> "+y<CR>
-
-" A-v to paste from the global buffer
-map <A-v> "+p<CR>
-
-" Ctrl+s to write the file (Will scroll-lock Vim in the terminal!)
-map <C-s> <esc>:w<CR>
-imap <C-s> <esc>:w<CR>
+if has("gui_running")
+  " Ctrl+s to write the file (would scroll-lock Vim in the terminal!)
+  map <C-s> <esc>:w<CR>
+  imap <C-s> <esc>:w<CR>
+endif
 
 " Replace the default U (undo last line) to Redo for speedyness
 nmap U <c-r>
@@ -282,9 +287,6 @@ nmap <F6> :call VimSyntaxGroups()<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipa)
 vmap aa <Plug>(LiveEasyAlign)
-
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(LiveEasyAlign)
 
 " ----------------------------------------------
 " Insert Mode Abbreviations
@@ -391,6 +393,7 @@ let g:ctrlp_show_hidden = 1
 
 " Use Ag for search if its available on this system
 if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
   let g:ctrlp_use_caching = 0
 endif
