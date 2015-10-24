@@ -201,6 +201,9 @@ vnoremap <silent> <Leader>a\| :Tabularize /\|<CR>
 vnoremap <silent> <Leader>a: :Tabularize /\w:\zs/l0l1<CR>
 vnoremap <silent> <Leader>a<space> :Tabularize /[^ ] \+\zs/l0r1<CR>
 
+" Start interactive EasyAlign in visual mode (e.g. vipa)
+vmap aa <Plug>(LiveEasyAlign)
+
 "  <Leader>f to fuzzy search files
 map <silent> <leader>f :CtrlP<cr>
 
@@ -261,6 +264,9 @@ map <silent> <leader>T :VroomRunNearestTest<CR>
 "  <Leader>u to toggle undo history browser
 nnoremap <Leader>u :GundoToggle<CR>
 
+" Replace the default U (undo last line) to Redo for speedyness
+nmap U <c-r>
+
 "  <Leader>z to zoom pane when using splits
 map <Leader>z :ZoomWin<CR>
 
@@ -279,14 +285,13 @@ endif
 " Replace the default U (undo last line) to Redo for speedyness
 nmap U <c-r>
 
+nmap <leader>* :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 " F5 to reload doc
 map <silent> <F5> <esc>:e %<CR>
 
 " F6 to view the Vim style of the text under the cursor
 nmap <F6> :call VimSyntaxGroups()<CR>
-
-" Start interactive EasyAlign in visual mode (e.g. vipa)
-vmap aa <Plug>(LiveEasyAlign)
 
 " ----------------------------------------------
 " Insert Mode Abbreviations

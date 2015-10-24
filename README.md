@@ -375,6 +375,7 @@ Keys               | Function
 Keys               | Function
 -------------------|-----------------------------------------------------
   `space` `space`  | Toggle between the previously opened buffer
+  `space` `*`      | Search for the word under the cursor in all files
   `ctrl-]`         | Jump to definition (needs exuberant ctags installed)
   `ctrl-n`         | Toggle between absolute and relative numbering
   `space` `h`      | Hide search highlighting
