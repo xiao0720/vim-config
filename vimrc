@@ -202,8 +202,8 @@ vnoremap <silent> <Leader>a: :Tabularize /\w:\zs/l0l1<CR>
 vnoremap <silent> <Leader>a<space> :Tabularize /[^ ] \+\zs/l0r1<CR>
 
 "  <Leader>f to clear cache and fuzzy search files; ,F in current file's directory
-map <silent> <leader>f :ClearCtrlPCache<cr>\|:CtrlP<cr>
-map <silent> <leader>F :ClearCtrlPCache<cr>\|:CtrlPCurFile<cr>
+map <silent> <leader>f :CtrlP<cr>
+map <silent> <leader>F :CtrlPCurFile<cr>
 
 "  <Leader>} to Search for a tag in the current project
 map <silent> <leader>} :CtrlPTag<cr>
@@ -392,6 +392,7 @@ let g:ctrlp_show_hidden = 1
 " Use Ag for search if its available on this system
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
 endif
 
 " ----------------------------------------------
@@ -545,8 +546,7 @@ function! SetCursorPosition()
   end
 endfunction
 
-" strip trailing whitespace<foo&bar>
-"autocmd BufWritePre,FileWritePre * call StripTrailingWhitespace()
+" strip trailing whitespace
 function! StripTrailingWhitespace()
 	normal mz
 	normal Hmy
