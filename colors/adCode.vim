@@ -204,4 +204,14 @@ hi sshConfigKeyword           guifg=#9D72C0 ctermfg=133  gui=NONE cterm=NONE
 hi sshconfigPreferredAuth     guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
 hi sshconfigNumber            guifg=#AFFF4B ctermfg=155  gui=NONE cterm=NONE
 hi neoSnippetExpandSnippets   guifg=#3C414C ctermfg=238  guibg=#3C414C ctermbg=238  gui=UNDERLINE cterm=UNDERLINE
+hi yamlKey                    guifg=#1897DD ctermfg=32   gui=NONE cterm=NONE
+hi yamlScalar                 guifg=#FAFAFA ctermfg=231  gui=NONE cterm=NONE
+hi yamlDelimiter              guifg=#757E92 ctermfg=244  gui=NONE cterm=NONE
+hi yamlOperator               guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
+hi ansibleRepeat              guifg=#1897DD ctermfg=32   gui=NONE cterm=NONE
+hi ansibleConditional         guifg=#DB73C3 ctermfg=169  gui=NONE cterm=NONE
+hi jinjaVarBlock              guifg=#59DC4C ctermfg=77   gui=NONE cterm=NONE
+hi jinjaVarDelim              guifg=#59DC4C ctermfg=77   gui=NONE cterm=NONE
+hi jinjaVariable              guifg=#59DC4C ctermfg=77   gui=NONE cterm=NONE
+hi jinjaAttribute             guifg=#AFFF4B ctermfg=155  gui=NONE cterm=NONE
 
