@@ -281,7 +281,7 @@ map <silent> <F5> <esc>:e %<CR>
 nmap <F6> :call VimSyntaxGroups()<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipa)
-vmap a <Plug>(LiveEasyAlign)
+vmap aa <Plug>(LiveEasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(LiveEasyAlign)
