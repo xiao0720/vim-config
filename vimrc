@@ -53,8 +53,9 @@ Plug 'tpope/vim-endwise'
 Plug 'scrooloose/syntastic'
 
 " Ruby
+Plug 'tpope/vim-rbenv'
+Plug 'vim-ruby/vim-ruby'
 Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}
-Plug 'vim-ruby/vim-ruby',              {'for': 'ruby'}
 Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}
 Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}
 Plug 'vroom',                          {'for': 'ruby'}
@@ -660,11 +661,6 @@ let g:vim_markdown_folding_disabled=1
 
 " Don't report Angular ng-* attributes as errors in HTML
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-
-" Use Ruby from rbenv if available
-if executable('rbenv')
-  let g:syntastic_ruby_mri_exe=system("rbenv which ruby")
-endif
 
 " Projectionist defaults
 let g:projectionist_heuristics ={
