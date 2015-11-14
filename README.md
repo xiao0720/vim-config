@@ -80,7 +80,7 @@ Keys               | Function
   `<space>` `.`    | Show buffer explorer
 
 
-### Coffeescript
+### Coffeescript
 Adds support for CoffeeScript. It handles syntax, indenting, and compiling ([more](http://www.vim.org/scripts/script.php?script_id=3590))
 
 
@@ -201,7 +201,7 @@ Highlight all brachets based on their level. Helpful for working out the scope o
 
 Keys               | Function
 -------------------|---------------------------------------------
-  `<leader> `)`    | Toggle rainbow highlighting of brachets
+  `<leader>` `)`    | Toggle rainbow highlighting of brachets
 
 ### repeat
 Use the repeat command (.) with supported plugins ([more](http://www.vim.org/scripts/script.php?script_id=2136))
@@ -228,6 +228,14 @@ Keys               | Function
 -------------------|-----------------------
   `<space>` `s`    | Split the current line
   `<space>` `S`    | Join the current lines
+
+### Switch
+Switch the word under the cursor is an alternative has been defined.
+For example, change 'true' to 'false' or 'should' to 'should_not' ([more](https://github.com/AndrewRadev/switch.vim))
+
+Keys               | Function
+-------------------|-----------------------
+  `gs`             | Switch the current word
 
 
 ### SuperTab
