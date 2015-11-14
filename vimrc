@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'AdamWhittingham/projector_mode'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'bogado/file-line'
 Plug 'colorizer'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
@@ -23,12 +22,12 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-unimpaired'
 
 " Search and file exploring
-Plug 'ack.vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-projectionist'
+Plug 'bogado/file-line'
 
 " Additional contextual information
 Plug 'AdamWhittingham/vim-copy-filename'
@@ -45,12 +44,15 @@ Plug 'matchit.zip'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
+Plug 'maxbrunsfeld/vim-yankstack'
 
 " Snippets and autocomplete
 Plug 'tpope/vim-endwise'
 
 " Extra syntax highlighting and language support
 Plug 'scrooloose/syntastic'
+Plug 'vim-coffee-script'
+Plug 'plasticboy/vim-markdown',        {'for': 'markdown'}
 
 " Ruby
 Plug 'tpope/vim-rbenv'
@@ -60,12 +62,15 @@ Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}
 Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}
 Plug 'vroom',                          {'for': 'ruby'}
 
-" Web stuff
+" CSS & HTML
 Plug 'cakebaker/scss-syntax.vim',      {'for': 'css'}
-Plug 'digitaltoad/vim-jade'
-Plug 'groenewege/vim-less'
+Plug 'digitaltoad/vim-jade',           {'for': 'jade'}
+Plug 'groenewege/vim-less',            {'for': 'less'}
 Plug 'othree/html5.vim',               {'for': 'html'}
+
+" Javascript
 Plug 'pangloss/vim-javascript',        {'for': 'javascript'}
+Plug 'mxw/vim-jsx',                    {'for': 'javascript.jsx'}
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-coffee-script'
 
@@ -151,7 +156,7 @@ set wildignore+=*.swp,*.swo,*~,._*
 
 call yankstack#setup()
 
-" GVim Options
+" GUI Vim Options
 set guioptions-=T     " no toolbar
 set guioptions-=m     " no menu
 set guioptions+=LlRrb " Hack which adds all scrollbars so that they can be removed, line below breaks without this
@@ -173,13 +178,13 @@ endif
 " Command Shortcuts
 " ----------------------------------------------
 
+" Disable Ex Mode to remove confusion
+nnoremap Q <Nop>
+
 " make W and Q act like w and q
 command! W :w
 command! Q :q
 command! Qa :qa
-
-" Disable Ex Mode to remove confusion
-nnoremap Q <Nop>
 
 " make Y consistent with C and D
 nnoremap Y y$
@@ -378,7 +383,6 @@ elseif has('mac')
 elseif has("unix")
   set guifont=DejaVu\ Sans\ Mono\ 10
   " if you don't have these fonts, set one in your ~/vim.local file like this:
-  " else
   "   set guifont=fontname\ 10
 endif
 
