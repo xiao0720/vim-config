@@ -424,7 +424,7 @@ let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#tagbar#enabled = 0
 
-let g:airline_theme = "kolor"
+let g:airline_theme = "kalisi"
 
 autocmd FileType make set noexpandtab
 
