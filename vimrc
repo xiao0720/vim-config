@@ -409,6 +409,13 @@ if executable('ag')
 endif
 
 " ----------------------------------------------
+" Setup CtrlP File Finder
+" ----------------------------------------------
+
+" Attempt alignment of keys when splitting a hash
+let g:splitjoin_align = 1
+
+" ----------------------------------------------
 " Setup Misc Vim Behaviours
 " ----------------------------------------------
 
