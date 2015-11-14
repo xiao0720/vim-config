@@ -166,7 +166,7 @@ set smartcase
 " Show lines which have been break-indented with a special character
 if v:version > 704 || v:version == 704 && has("patch338")
   set breakindent
-  set showbreak=►►
+  set showbreak=↪
 endif
 
 " ----------------------------------------------
