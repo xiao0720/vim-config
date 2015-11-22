@@ -74,10 +74,11 @@ Plug 'groenewege/vim-less',            {'for': 'less'}
 Plug 'othree/html5.vim',               {'for': 'html'}
 
 " Javascript
-Plug 'pangloss/vim-javascript',        {'for': 'javascript'}
+Plug 'othree/yajs.vim',                {'for': 'javascript'}
 Plug 'mxw/vim-jsx',                    {'for': 'javascript.jsx'}
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-coffee-script'
+Plug 'moll/vim-node'
 
 if filereadable(expand("~/.vim.plugins.local"))
   source ~/.vim.plugins.local
@@ -686,6 +687,9 @@ let g:projectionist_heuristics ={
       \     "spec/*_spec.rb": {"alternate": ["app/{}.rb","lib/{}.rb"], "type": "test"}
       \  }
       \}
+
+" Get jsx highlighting in files regardless of ending in .jsx (ie. .jsx.coffee)
+let g:jsx_ext_required = 0
 
 " Show current line highlighting only in the active pane
 augroup BgHighlight
