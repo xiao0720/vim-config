@@ -93,12 +93,12 @@ hi rubyAccess                 guifg=#DB73C3 ctermfg=169  guibg=NONE    ctermbg=N
 hi rubyAttribute              guifg=#AA74FF ctermfg=141  gui=NONE cterm=NONE
 hi rubyBlockParameter         guifg=#45C2FB ctermfg=75   gui=NONE cterm=NONE
 hi rubyBlockParameterList     guifg=#1897DD ctermfg=32   gui=NONE cterm=NONE
-hi rubyBoolean                guifg=#FEC833 ctermfg=221  gui=NONE cterm=NONE
+hi rubyBoolean                guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
 hi rubyClass                  guifg=#DB73C3 ctermfg=169  gui=NONE cterm=NONE
 hi rubyClassVariable          guifg=#45C2FB ctermfg=75   gui=NONE cterm=NONE
-hi rubyConditional            guifg=#9D72C0 ctermfg=133  gui=NONE cterm=NONE
+hi rubyConditional            guifg=#58D3D1 ctermfg=80   gui=NONE cterm=NONE
 hi rubyConstant               guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
-hi rubyControl                guifg=#58D3D1 ctermfg=80   gui=NONE cterm=NONE
+hi rubyControl                guifg=#DB73C3 ctermfg=169  gui=NONE cterm=NONE
 hi rubyDefine                 guifg=#AA74FF ctermfg=141  gui=NONE cterm=NONE
 hi rubyDoBlock                guifg=NONE    ctermfg=NONE guibg=NONE    ctermbg=NONE gui=NONE cterm=NONE
 hi rubyException              guifg=#CD3F44 ctermfg=167  gui=NONE cterm=NONE
@@ -114,6 +114,7 @@ hi rubyMethodBlock            guifg=NONE    ctermfg=NONE guibg=NONE    ctermbg=N
 hi rubyMethodDeclaration      guifg=#45C2FB ctermfg=75   gui=NONE cterm=NONE
 hi rubyModule                 guifg=#E59CD4 ctermfg=182  guibg=NONE    ctermbg=NONE gui=ITALIC cterm=NONE
 hi rubyPredefinedIdentifier   guifg=#FEC833 ctermfg=221  gui=NONE cterm=NONE
+hi rubyPseudoVariable         guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
 hi rubyRegexp                 guifg=#AFFF4B ctermfg=155  gui=NONE cterm=NONE
 hi rubyRegexpAnchor           guifg=#59DC4C ctermfg=77   gui=NONE cterm=NONE
 hi rubyRegexpDelimiter        guifg=#59DC4C ctermfg=77   gui=NONE cterm=NONE
