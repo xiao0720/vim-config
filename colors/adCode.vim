@@ -38,6 +38,14 @@ hi PMenu                      guifg=#FAFAFA ctermfg=231  guibg=#3C414C ctermbg=2
 hi PMenuSbar                  guifg=NONE    ctermfg=NONE guibg=#3C414C ctermbg=238  gui=NONE cterm=NONE
 hi PMenuSel                   guifg=#FAFAFA ctermfg=231  guibg=#1897DD ctermbg=32   gui=NONE cterm=NONE
 hi PMenuThumb                 guifg=#151718 ctermfg=233  guibg=#1897DD ctermbg=32   gui=NONE cterm=NONE
+hi StartifyBracket            guifg=#3C414C ctermfg=238  gui=NONE cterm=NONE
+hi StartifyPath               guifg=#1897DD ctermfg=32   gui=NONE cterm=NONE
+hi StartifySlash              guifg=#3C414C ctermfg=238  gui=NONE cterm=NONE
+hi StartifyFile               guifg=#45C2FB ctermfg=75   gui=NONE cterm=NONE
+hi StartifyFooter             guifg=#3C414C ctermfg=238  gui=NONE cterm=NONE
+hi StartifyHeader             guifg=#59DC4C ctermfg=77   gui=NONE cterm=NONE
+hi StartifyNumber             guifg=#FEC833 ctermfg=221  gui=NONE cterm=NONE
+hi StartifySpecial            guifg=#45C2FB ctermfg=75   gui=NONE cterm=NONE
 hi NERDTreeCWD                guifg=#AFFF4B ctermfg=155  gui=NONE cterm=NONE
 hi NERDTreeDir                guifg=#1897DD ctermfg=32   gui=NONE cterm=NONE
 hi NERDTreeDirSlash           guifg=#1897DD ctermfg=32   gui=NONE cterm=NONE

@@ -400,13 +400,13 @@ let g:startify_custom_footer = [
       \]
 
 let g:startify_list_order = [
-      \ ['', '   Recent (dir):'],
+      \ ['   Recent files in this directory:'],
       \ 'dir',
-      \ ['', '   Recent:'],
+      \ ['   Recent files:'],
       \ 'files',
-      \ ['', '   Bookmarks:'],
+      \ ['   Bookmarks:'],
       \ 'bookmarks',
-      \ ['', '   Sessions:'],
+      \ ['   Sessions:'],
       \ 'sessions',
       \ ]
 
@@ -416,9 +416,11 @@ let g:startify_skiplist = [
 
 let g:startify_bookmarks = [
       \ { 'v': '~/.vim/vimrc' },
-      \ { 'z': '~/.zshrc' },
-      \ { 't': '/tmp' },
+      \ { 't': '/tmp/foo.txt' },
       \ ]
+
+" Stop things splitting with Startify and replace it instead
+autocmd User Startified setlocal buftype=
 
 " Setup the projector toggle plugin
 let g:default_colorscheme = 'adCode'
