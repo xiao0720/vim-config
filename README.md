@@ -94,7 +94,7 @@ Keys               | Function
 
 
 ### copy-filename
-Adds some shortcuts for quickly copying the name or path of the current file ([more](https://github.com/AdamWhittingham/vim-copy-filename))
+Adds some short cuts for quickly copying the name or path of the current file ([more](https://github.com/AdamWhittingham/vim-copy-filename))
 
 Keys               | Function
 -------------------|------------------------------------
@@ -329,7 +329,7 @@ Add haml, sass and SCSS syntax support ([more](https://github.com/tpope/vim-haml
 Less syntax highlighting ([more](https://github.com/groenewege/vim-less))
 
 
-### vim-ruby
+### vim-ruby
 Ruby support (newer than the version released with vim). ([more](https://github.com/vim-ruby/vim-ruby))
 
 
@@ -357,7 +357,7 @@ Keys               | Function
   `i``r`           | Contact the selection in one scope level
 
 
-### vroom
+### vroom
 A plugin for running your Ruby tests, specs, and features. ([more](http://www.vim.org/scripts/script.php?script_id=3995))
 
 Keys               | Function
