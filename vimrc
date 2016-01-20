@@ -33,7 +33,7 @@ Plug 'bogado/file-line'
 
 " Additional contextual information
 Plug 'AdamWhittingham/vim-copy-filename'
-Plug 'AutoTag'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'gregsexton/MatchTag'
@@ -652,6 +652,10 @@ set nojoinspaces
 
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+
+" Tell Gutentags to store tags in .tags by default
+let g:gutentags_tagfile = '.tags'
+
 
 " Add function for showing the syntax tag for the selected text
 function! <SID>SynStack()

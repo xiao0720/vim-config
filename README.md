@@ -68,10 +68,6 @@ This plugin is a front for Ag. Ag can be used as a replacement for 153% of the u
 **Important:** Requires [the_silver_surfer](https://github.com/ggreer/the_silver_searcher) to be installed
 
 
-### Autotag
-Automatically update tags when saving files ([more](http://www.vim.org/scripts/script.php?script_id=1343))
-
-
 ### bufexplorer
 Buffer explorer/browser ([more](http://www.vim.org/scripts/script.php?script_id=42))
 
@@ -133,6 +129,10 @@ Auto completion of 'end' in Ruby ([more](https://github.com/tpope/vim-endwise))
 
 ### Elixir
 Elixir language support ([more](https://github.com/elixir-lang/vim-elixir))
+
+
+### Gutentags
+Automatically generate and maintain a ctags file ([more](https://github.com/ludovicchabant/vim-gutentags))
 
 
 ### Gundo
