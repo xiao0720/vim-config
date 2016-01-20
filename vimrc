@@ -460,17 +460,16 @@ if executable('ag')
 endif
 
 " ----------------------------------------------
-" Setup CtrlP File Finder
+" Setup SplitJoin
 " ----------------------------------------------
 
 " Attempt alignment of keys when splitting a hash
 let g:splitjoin_align = 1
 
 " ----------------------------------------------
-" Setup Misc Vim Behaviours
+" Setup the status bar
 " ----------------------------------------------
 
-" Setup vim-airline to look nicer
 let g:airline_left_sep = ""
 let g:airline_left_alt_sep = ""
 let g:airline_right_sep = ""
@@ -484,6 +483,9 @@ let g:airline#extensions#tagbar#enabled = 0
 
 let g:airline_theme = "kalisi"
 
+" ----------------------------------------------
+" Setup highlighting
+" ----------------------------------------------
 autocmd FileType make set noexpandtab
 
 " Extend % to do/end etc
@@ -500,6 +502,9 @@ match RedundantSpaces /\s\+$\| \+\ze\t/ "\ze sets end of match so only spaces hi
 highlight BadSpaces term=standout ctermbg=red guibg=red
 match BadSpaces / \+/
 
+" ----------------------------------------------
+" Setup NERDTree
+" ----------------------------------------------
 " A whole bunch of NERDTree configuration stolen from carlhuda's janus
 let NERDTreeIgnore=['\.rbc$', '\~$']
 
@@ -606,6 +611,10 @@ call s:DefineCommand("cd", "ChangeDirectory")
 call s:DefineCommand("touch", "Touch")
 call s:DefineCommand("rm", "Remove")
 
+" ----------------------------------------------
+" Setup Misc Vim Behaviours
+" ----------------------------------------------
+
 " Jump to last cursor position when opening a file
 " Don't do it when writing a commit log entry
 autocmd BufReadPost * call SetCursorPosition()
@@ -694,7 +703,7 @@ endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
 
-"  Set the git gutter colors to be the same as the number column
+" Set the git gutter colors to be the same as the number column
 hi clear SignColumn
 
 " Set the Gutter to show all the time, avoiding the column 'pop' when saving
