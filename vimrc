@@ -5,84 +5,83 @@ call plug#begin('~/.vim/plugged')
 " Define all the plugins!
 " ----------------------------------------------
 
-Plug 'AdamWhittingham/projector_mode'
-Plug 'AndrewRadev/switch.vim'
-Plug 'colorizer'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'ervandew/supertab'
-Plug 'godlygeek/tabular'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'regedarek/ZoomWin'
-Plug 'mhinz/vim-startify'
-Plug 'sjl/gundo.vim'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-ragtag'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-repeat'                      " Make many more operations repeatable with `.`
+
+" UI
+Plug 'AdamWhittingham/projector_mode'        " Toggle between colourschemes for work & projection or screensharing
+Plug 'airblade/vim-gitgutter'                " Show the column of changes to the file against git
+Plug 'bling/vim-airline'                     " Add a nicer status line
+Plug 'christoomey/vim-tmux-navigator'        " Move between Vim panes & Tmux panes easily
+Plug 'colorizer'                             " Show the colour off Hex colour codes
+Plug 'kien/rainbow_parentheses.vim'          " Colour in brachets in matching pairs
+Plug 'mhinz/vim-startify'                    " Start Vim with a more useful start screen
+Plug 'nathanaelkane/vim-indent-guides'       " Show indentation level guides
+Plug 'regedarek/ZoomWin'                     " Enable one pane to be fullscreened temporarily
+Plug 'sjl/gundo.vim'                         " Visualise the undo tree and make it easy to navigate
 
 " Search and file exploring
-Plug 'jlanzarotta/bufexplorer'
-Plug 'kien/ctrlp.vim'
-Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-projectionist'
-Plug 'bogado/file-line'
+Plug 'jlanzarotta/bufexplorer'               " Show a sortable list of open buffers
+Plug 'kien/ctrlp.vim'                        " Really powerful fuzzy finder for file names
+Plug 'rking/ag.vim'                          " Really fast search for text in all files
+Plug 'scrooloose/nerdtree'                   " Visualise the project directory and make it easy to navigate
+Plug 'bogado/file-line'                      " Allow Vim to be opened with a fileline argument (ie. foo.txt:20)
+Plug 'tpope/vim-unimpaired'                  " Extra bindings for common buffer navigation
 
 " Additional contextual information
-Plug 'AdamWhittingham/vim-copy-filename'
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'airblade/vim-gitgutter'
-Plug 'bling/vim-airline'
-Plug 'gregsexton/MatchTag'
-Plug 'majutsushi/tagbar'
+Plug 'AdamWhittingham/vim-copy-filename'     " Quick shortcuts for copying the file name, path and/or line number
+Plug 'gregsexton/MatchTag'                   " Highlight the matching opening or closing tag in HTML/XML
+Plug 'ludovicchabant/vim-gutentags'          " Better automated generation and update of ctags files
+Plug 'majutsushi/tagbar'                     " Visualise and navigate all the ctags found in the current file
+Plug 'tpope/vim-projectionist'               " Map tools and actions based on the project
 
 " Extra text manipulation and movement
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'junegunn/vim-easy-align'
-Plug 'kana/vim-textobj-user'
-Plug 'matchit.zip'
-Plug 'maxbrunsfeld/vim-yankstack'
-Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-surround'
-Plug 'maxbrunsfeld/vim-yankstack'
-Plug 'tpope/vim-speeddating'
+Plug 'AndrewRadev/splitjoin.vim'             " Quick joining or splitting of programming constructs (ie. `if...else...` to `? ... : ...`)
+Plug 'AndrewRadev/switch.vim'                " Quickly switch programming constructs between alternate version (ie. Ruby string to symbol)
+Plug 'godlygeek/tabular'                     " Format lines into a table
+Plug 'junegunn/vim-easy-align'               " Fast alignment of lines based on preset rules
+Plug 'kana/vim-textobj-user'                 " Extend Vims text object
+Plug 'matchit.zip'                           " Extend % to match more text objects
+Plug 'maxbrunsfeld/vim-yankstack'            " Paste text, then rotate though things yanked before/after
+Plug 'scrooloose/nerdcommenter'              " Quick toggle for code commenting
+Plug 'tpope/vim-abolish'                     " Allow smartcase substitution and search
+Plug 'tpope/vim-speeddating'                 " Extend vim increment/decrement to work on dates
+Plug 'tpope/vim-surround'                    " Quick editing or insertion for surrounding characters (ie. quickly add quotes around a line)
 
 " Snippets and autocomplete
-Plug 'tpope/vim-endwise'
+Plug 'ervandew/supertab'                     " Make tab more useful in triggering Vim omni-complete
+Plug 'tpope/vim-endwise'                     " Automatically insert programming block endings (ie. `end` in Ruby, `endif` in VimL)
+Plug 'tpope/vim-ragtag'                      " Provide bindings for closing HTML/XML tags
 
 " Extra syntax highlighting and language support
-Plug 'scrooloose/syntastic'
-Plug 'vim-coffee-script'
+Plug 'scrooloose/syntastic'                 " The Godfather of all syntax highlighting and checking
 Plug 'plasticboy/vim-markdown',        {'for': 'markdown'}
 Plug 'elixir-lang/vim-elixir'
 Plug 'chase/vim-ansible-yaml'
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'niquola/vim-hl7'
 
 " Ruby
 Plug 'tpope/vim-rbenv'
-Plug 'vim-ruby/vim-ruby'
-Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}
-Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}
 Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}
+Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}
+Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}
+Plug 'vim-ruby/vim-ruby',              {'for': 'ruby'}
 Plug 'vroom',                          {'for': 'ruby'}
 
 " CSS & HTML
 Plug 'cakebaker/scss-syntax.vim',      {'for': 'css'}
-Plug 'tpope/vim-haml'
 Plug 'digitaltoad/vim-jade',           {'for': 'jade'}
 Plug 'groenewege/vim-less',            {'for': 'less'}
 Plug 'othree/html5.vim',               {'for': 'html'}
-Plug 'slim-template/vim-slim'
+Plug 'slim-template/vim-slim',         {'for': 'slim'}
+Plug 'tpope/vim-haml',                 {'for': 'haml'}
 
 " Javascript
 Plug 'othree/yajs.vim',                {'for': 'javascript'}
 Plug 'mxw/vim-jsx',                    {'for': 'javascript.jsx'}
-Plug 'plasticboy/vim-markdown'
-Plug 'vim-coffee-script'
+Plug 'vim-coffee-script',              {'for': 'coffee'}
 Plug 'moll/vim-node'
 
+" Load any extra plugins specified in the home directory
 if filereadable(expand("~/.vim.plugins.local"))
   source ~/.vim.plugins.local
 endif
@@ -106,26 +105,26 @@ nmap <space><space> <leader><leader>
 
 colorscheme adCode
 
-set autoindent
-set autowrite       " Writes on make/shell commands
+set autoindent                          " Automatically indent based on syntax detection
+set autowrite                           " Writes on make/shell commands
 set backspace=start,indent,eol
-set backupdir=/var/tmp,~/.tmp,. " Don't clutter project dirs up with swap files
+set backupdir=/var/tmp,~/.tmp,.         " Don't clutter project dirs up with swap files
 set background=dark
 set directory=/var/tmp,~/.tmp,.
-set cf              " Enable error files & error jumping.
+set cf                                  " Enable error files & error jumping.
 set complete+=kspell
-set cursorline
-set expandtab
-set hidden          " Allow buffer switching without saving
-set history=1000    " Remember a decent way back
-set laststatus=2    " Always show status line.
+set cursorline                          " Hilight the line the cursor is on
+set expandtab                           " Convert tabs to spaces AS IS RIGHT AND PROPER
+set hidden                              " Allow buffer switching without saving
+set history=1000                        " Remember a decent way back
+set laststatus=2                        " Always show status line.
 set listchars=nbsp:█,eol:¶,tab:>-,extends:»,precedes:«,trail:•
-set mousehide
-set nofoldenable    " Disable all folding of content
-set nowrap          " Line wrapping off
-set number          " line numbers
-set ruler           " Ruler on
-set scrolloff=3     " More context around cursor
+set mousehide                           " Hide the mouse cursor when typing
+set nofoldenable                        " Disable all folding of content
+set nowrap                              " Line wrapping off
+set number                              " line numbers
+set ruler                               " Ruler on
+set scrolloff=3                         " More context around cursor
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 set shiftwidth=2
 set shortmess+=A
@@ -133,9 +132,9 @@ set smarttab
 set spelllang=en_gb
 set statusline=%<%f\ %h%m%r%=%-20.(line=%l\ of\ %L,col=%c%V%)\%h%m%r%=%-40(,%n%Y%)\%P%#warningmsg#%{SyntasticStatuslineFlag()}%*
 set tabstop=2
-set timeoutlen=500
-set wildmode=list:longest " Shell-like behaviour for command autocompletion
-set fillchars+=vert:\  "Set the window borders to not have | chars in them
+set timeoutlen=500                      " Milliseconds to wait for another key press when evaluating commands
+set wildmode=list:longest               " Shell-like behaviour for command autocompletion
+set fillchars+=vert:\                   " Set the window borders to not have | chars in them
 
 " -----------------------------------
 " Setup file wildcard ignored names
@@ -161,23 +160,21 @@ set wildignore+=*.swp,*.swo,*~,._*
 
 call yankstack#setup()
 
+" -----------------------------------
 " GUI Vim Options
+" -----------------------------------
 set guioptions-=T     " no toolbar
 set guioptions-=m     " no menu
 set guioptions+=LlRrb " Hack which adds all scrollbars so that they can be removed, line below breaks without this
 set guioptions-=LlRrb " Remove all scrollbars
 
-" Search options
+" -----------------------------------
+" Search Options
+" -----------------------------------
 set hlsearch        " highlight search matches...
 set incsearch       " ...as you type
 set ignorecase
 set smartcase
-
-" Show lines which have been break-indented with a special character
-if v:version > 704 || v:version == 704 && has("patch338")
-  set breakindent
-  set showbreak=↪
-endif
 
 " ----------------------------------------------
 " Command Shortcuts
@@ -379,11 +376,15 @@ au BufNewFile,BufRead *.hl7 set filetype=hl7
 " Setup Look & Feel
 " ----------------------------------------------
 
-" Setup vim-startify's start screen
+" Show lines which have been break-indented with a special character
+if v:version > 704 || v:version == 704 && has("patch338")
+  set breakindent
+  set showbreak=↪
+endif
 
+" Setup vim-startify's start screen
 let g:startify_change_to_vcs_root = 1
 let g:startify_files_number = 6
-
 let g:startify_custom_header = [
       \ '   __      __            ',
       \ '   \ \    / (_)          ',
@@ -393,6 +394,7 @@ let g:startify_custom_header = [
       \ '       \/   |_|_| |_| |_|',
       \ '                         ',
       \ ]
+
 let g:startify_custom_footer = [
       \'', 
       \"   Adam's Vim Config: https://github.com/adamwhittingham/vim-config",
@@ -433,9 +435,10 @@ elseif has('mac')
   set guifont=Menlo:h12
 elseif has("unix")
   set guifont=DejaVu\ Sans\ Mono\ 10
-  " if you don't have these fonts, set one in your ~/vim.local file like this:
-  "   set guifont=fontname\ 10
 endif
+" if you don't have these fonts or want something else,
+" set one in your ~/vim.local file like this:
+"   set guifont=fontname\ 12
 
 " Display soft column limit in modern versions of vim
 if version >= 730
