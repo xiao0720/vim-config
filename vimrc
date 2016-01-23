@@ -6,7 +6,6 @@ call plug#begin('~/.vim/plugged')
 " ----------------------------------------------
 
 Plug 'AdamWhittingham/projector_mode'
-Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug 'colorizer'
 Plug 'christoomey/vim-tmux-navigator'
@@ -20,7 +19,6 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-unimpaired'
 
 " Search and file exploring
@@ -40,6 +38,7 @@ Plug 'gregsexton/MatchTag'
 Plug 'majutsushi/tagbar'
 
 " Extra text manipulation and movement
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'kana/vim-textobj-user'
 Plug 'matchit.zip'
@@ -47,6 +46,7 @@ Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'tpope/vim-speeddating'
 
 " Snippets and autocomplete
 Plug 'tpope/vim-endwise'
