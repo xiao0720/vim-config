@@ -50,6 +50,10 @@ hi NERDTreeCWD                guifg=#AFFF4B ctermfg=155  gui=NONE cterm=NONE
 hi NERDTreeDir                guifg=#1897DD ctermfg=32   gui=NONE cterm=NONE
 hi NERDTreeDirSlash           guifg=#1897DD ctermfg=32   gui=NONE cterm=NONE
 hi NERDTreeUp                 guifg=#45C2FB ctermfg=75   gui=NONE cterm=NONE
+hi bufExplorerCurFile         guifg=#45C2FB ctermfg=75   gui=NONE cterm=NONE
+hi bufExplorerAltBuf          guifg=#1897DD ctermfg=32   gui=NONE cterm=NONE
+hi bufExplorerHelp            guifg=#3C414C ctermfg=238  gui=NONE cterm=NONE
+hi bufExplorerSortBy          guifg=#59DC4C ctermfg=77   gui=NONE cterm=NONE
 hi ctrlsfFilename             guifg=#F0F040 ctermfg=227  gui=NONE cterm=NONE
 hi ctrlsfCuttingLine          guifg=#FEC833 ctermfg=221  gui=NONE cterm=NONE
 hi ctrlsfLnumMatch            guifg=#59DC4C ctermfg=77   gui=NONE cterm=NONE

@@ -396,7 +396,7 @@ let g:startify_custom_header = [
       \ ]
 
 let g:startify_custom_footer = [
-      \'', 
+      \'',
       \"   Adam's Vim Config: https://github.com/adamwhittingham/vim-config",
       \"   Vim is charityware. Please read ':help uganda'",
       \]
@@ -504,6 +504,12 @@ match RedundantSpaces /\s\+$\| \+\ze\t/ "\ze sets end of match so only spaces hi
 " Highlight Non-breaking spaces
 highlight BadSpaces term=standout ctermbg=red guibg=red
 match BadSpaces / \+/
+
+" ----------------------------------------------
+" Configure Buffer Explorer
+" ----------------------------------------------
+let g:bufExplorerDefaultHelp=1
+let g:bufExplorerDisableDefaultKeyMapping=1
 
 " ----------------------------------------------
 " Setup NERDTree
