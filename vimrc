@@ -10,7 +10,8 @@ Plug 'tpope/vim-repeat'                      " Make many more operations repeata
 " UI
 Plug 'AdamWhittingham/projector_mode'        " Toggle between colourschemes for work & projection or screensharing
 Plug 'airblade/vim-gitgutter'                " Show the column of changes to the file against git
-Plug 'bling/vim-airline'                     " Add a nicer status line
+Plug 'vim-airline/vim-airline'               " Add a nicer status line
+Plug 'vim-airline/vim-airline-themes'        " Themes for Airline
 Plug 'christoomey/vim-tmux-navigator'        " Move between Vim panes & Tmux panes easily
 Plug 'colorizer'                             " Show the colour off Hex colour codes
 Plug 'kien/rainbow_parentheses.vim'          " Colour in brachets in matching pairs
