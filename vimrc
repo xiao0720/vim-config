@@ -49,8 +49,12 @@ Plug 'wellle/targets.vim'                                     " Add lots of extr
 
 " Snippets and autocomplete
 Plug 'ervandew/supertab'                     " Make tab more useful in triggering Vim omni-complete
+Plug 'SirVer/ultisnips'                      " Add snippet expantion for all kinds of template formats
+Plug 'honza/vim-snippets'                    " Add many popular shared snippets
 Plug 'tpope/vim-endwise'                     " Automatically insert programming block endings (ie. `end` in Ruby, `endif` in VimL)
 Plug 'tpope/vim-ragtag'                      " Provide bindings for closing HTML/XML tags
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
 
 " Extra syntax highlighting and language support
 Plug 'scrooloose/syntastic'                                   " The Godfather of all syntax highlighting and checking
