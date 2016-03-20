@@ -956,6 +956,77 @@ command! -nargs=0 Hipster :normal iTrust fund fashion axe bitters art party
       \ truck DIY. Craft beer chia readymade ethnic, hella kogi Vice jean shorts
       \ cliche cray mlkshk ugh cornhole kitsch quinoa
 
+" Automatically turn on colorizers highlighting for some filetypes
+let g:colorizer_auto_filetype='css,haml,html,less,scss,vim'
+
+" Make colorizer play nicely with 2html
+let g:colorizer_syntax = 1
+
+" Enable spell-check & wrapping when editing text documents (eg Markdown)
+autocmd BufNewFile,BufRead *.md :setlocal wrap
+autocmd BufNewFile,BufRead *.md :setlocal spell
+
+" Setup relative number toggle on Ctrl+n
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+  set number
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
+" Set the git gutter colors to be the same as the number column
+hi clear SignColumn
+
+" Set the Gutter to show all the time, avoiding the column 'pop' when saving
+let g:gitgutter_sign_column_always = 1
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '~'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_modified_removed = '~'
+let g:gitgutter_max_signs = 1000
+
+" Vroom settings
+let g:vroom_write_all = 1
+let g:vroom_cucumber_path = 'cucumber '
+let g:vroom_map_keys = 0
+
+" xmp-filter mappings
+autocmd FileType ruby nmap <buffer> <Leader>X <Plug>(xmpfilter-mark)
+autocmd FileType ruby xmap <buffer> <Leader>X <Plug>(xmpfilter-mark)
+autocmd FileType ruby imap <buffer> <Leader>X <Plug>(xmpfilter-mark)
+
+autocmd FileType ruby nmap <buffer> <Leader>x <Plug>(xmpfilter-run)
+autocmd FileType ruby xmap <buffer> <Leader>x <Plug>(xmpfilter-run)
+autocmd FileType ruby imap <buffer> <Leader>x <Plug>(xmpfilter-run)
+
+" Disable Markdown folding
+let g:vim_markdown_folding_disabled=1
+
+" Don't report Angular ng-* attributes as errors in HTML
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
+" Projectionist defaults
+let g:projectionist_heuristics ={
+      \  "spec/*.rb": {
+      \     "app/*.rb":       {"alternate": "spec/{}_spec.rb",         "type": "source"},
+      \     "lib/*.rb":       {"alternate": "spec/{}_spec.rb",         "type": "source"},
+      \     "spec/*_spec.rb": {"alternate": ["app/{}.rb","lib/{}.rb"], "type": "test"}
+      \  }
+      \}
+
+" Get jsx highlighting in files regardless of ending in .jsx (ie. .jsx.coffee)
+let g:jsx_ext_required = 1
+
+" Show current line highlighting only in the active pane
+augroup BgHighlight
+  autocmd!
+  autocmd WinEnter * set cul
+  autocmd WinLeave * set nocul
+augroup END
 
 " ----------------------------------------------
 "  Source any local config
