@@ -95,14 +95,16 @@ call plug#end()
 filetype plugin indent on
 syntax on
 
+
 " ----------------------------------------------
 " Setup basic Vim behaviour
 " ----------------------------------------------
 
-let mapleader = ","
-" Space is a vary popular leader key, so make it mimic leader
-nmap <space> <leader>
-nmap <space><space> <leader><leader>
+let mapleader = " "
+" Comma has been the leader key for so long, emulate it being the leader still
+" for the sake of muscle memory
+nmap , <leader>
+nmap ,, <leader><leader>
 
 colorscheme adCode
 
