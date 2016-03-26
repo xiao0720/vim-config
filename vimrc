@@ -140,6 +140,8 @@ set tabstop=2
 set timeoutlen=500                      " Milliseconds to wait for another key press when evaluating commands
 set wildmode=list:longest               " Shell-like behaviour for command autocompletion
 set fillchars+=vert:\                   " Set the window borders to not have | chars in them
+set nojoinspaces                        " Use only 1 space after "." when joining lines instead of 2
+
 
 " Display soft column limit in modern versions of vim
 if version >= 730
@@ -153,6 +155,10 @@ if v:version > 704 || v:version == 704 && has("patch338")
   set showbreak=↪
 endif
 
+" Delete comment character when joining commented lines
+ if v:version > 703 || v:version == 703 && has("patch541")
+   set formatoptions+=j
+ endif
 
 " -----------------------------------
 " Setup file wildcard ignored names
@@ -425,6 +431,9 @@ au BufNewFile,BufRead *.hl7 set filetype=hl7
 " Setup filetype specific settings
 " ----------------------------------------------
 
+" Automatically turn on colorizers highlighting for some filetypes
+let g:colorizer_auto_filetype='css,haml,html,less,scss,vim'
+
 " MARKDOWN -------------------------------------
 " Enable spell-check & wrapping when editing text documents (eg Markdown)
 autocmd BufNewFile,BufRead *.md :setlocal wrap
@@ -627,6 +636,20 @@ let g:airline_theme = "kalisi"
 let g:bufExplorerDefaultHelp=1
 let g:bufExplorerDisableDefaultKeyMapping=1
 
+
+" ----------------------------------------------
+" Setup Syntastic
+" ----------------------------------------------
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+
+" ----------------------------------------------
+" Setup ctags
+" ----------------------------------------------
+
+" Tell Gutentags to store tags in .tags by default
+let g:gutentags_tagfile = '.tags'
+
 " ----------------------------------------------
 " Setup NERDTree
 " ----------------------------------------------
@@ -810,6 +833,65 @@ augroup END
 
 " Enable ragtag XML tag mappings
 let g:ragtag_global_maps = 1
+
+" ----------------------------------------------
+" Add Misc helpful functions
+" ----------------------------------------------
+
+" Jump to last cursor position when opening a file
+" Don't do it when writing a commit log entry
+autocmd BufReadPost * call SetCursorPosition()
+function! SetCursorPosition()
+  if &filetype !~ 'commit\c'
+    if line("'\"") > 0 && line("'\"") <= line("$")
+      exe "normal g`\""
+    endif
+  end
+endfunction
+
+" strip trailing whitespace
+function! StripTrailingWhitespace()
+	normal mz
+	normal Hmy
+	exec '%s/\s*$//g'
+	normal 'yz<cr>
+	normal `z
+endfunction
+
+" Display Vim syntax groups under the cursor
+function! VimSyntaxGroups()
+  for id in synstack(line("."), col("."))
+    echo synIDattr(id, "name")
+  endfor
+endfunction
+
+" Add function for showing the syntax tag for the selected text
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
+
+"define :Lorem command to dump in a paragraph of lorem ipsum
+command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
+      \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+      \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+      \ fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non
+      \ proident, sunt in culpa qui officia deserunt mollit anim id est
+      \ laborum
+
+"define :Hipster command to dump in a paragraph of Hipster ipsum
+command! -nargs=0 Hipster :normal iTrust fund fashion axe bitters art party
+      \ raw denim. XOXO distillery tofu, letterpress cred literally gluten-free
+      \ flexitarian fap. VHS fashion axe gluten-free 90's church-key, kogi
+      \ hashtag Marfa. Kogi Tumblr Brooklyn chambray. Flannel pickled YOLO
+      \ semiotics. Mlkshk keffiyeh narwhal, mumblecore gentrify raw denim food
+      \ truck DIY. Craft beer chia readymade ethnic, hella kogi Vice jean shorts
+      \ cliche cray mlkshk ugh cornhole kitsch quinoa
 
 " ----------------------------------------------
 "  Source any local config
