@@ -54,33 +54,33 @@ Plug 'tpope/vim-endwise'                     " Automatically insert programming 
 Plug 'tpope/vim-ragtag'                      " Provide bindings for closing HTML/XML tags
 
 " Extra syntax highlighting and language support
-Plug 'scrooloose/syntastic'                 " The Godfather of all syntax highlighting and checking
-Plug 'plasticboy/vim-markdown',        {'for': 'markdown'}
-Plug 'elixir-lang/vim-elixir'
-Plug 'chase/vim-ansible-yaml'
-Plug 'niquola/vim-hl7'
+Plug 'scrooloose/syntastic'                                " The Godfather of all syntax highlighting and checking
+Plug 'plasticboy/vim-markdown',        {'for': 'markdown'} " Markdown syntax highlighting 
+Plug 'elixir-lang/vim-elixir'                              " Elixir syntax highlighting
+Plug 'chase/vim-ansible-yaml'                              " Extra alignment & syntax for Ansible playbooks
+Plug 'niquola/vim-hl7'                                     " HL7 syntax highlighting
 
 " Ruby
-Plug 'tpope/vim-rbenv'
-Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}
-Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}
-Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}
-Plug 'vim-ruby/vim-ruby',              {'for': 'ruby'}
-Plug 'vroom',                          {'for': 'ruby'}
+Plug 'vim-ruby/vim-ruby',              {'for': 'ruby'}     " Bleeding edge Ruby support
+Plug 'tpope/vim-rbenv'                                     " Use rbenv for Ruby tools
+Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}     " Extra Ruby refactoring tools
+Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}     " Extend % to match Ruby syntax
+Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}     " Run the current line of Ruby inside Vim
+Plug 'vroom',                          {'for': 'ruby'}     " Easy running of Ruby tests inside Vim
 
 " CSS & HTML
-Plug 'cakebaker/scss-syntax.vim',      {'for': 'css'}
-Plug 'digitaltoad/vim-jade',           {'for': 'jade'}
-Plug 'groenewege/vim-less',            {'for': 'less'}
-Plug 'othree/html5.vim',               {'for': 'html'}
-Plug 'slim-template/vim-slim',         {'for': 'slim'}
-Plug 'tpope/vim-haml',                 {'for': 'haml'}
+Plug 'cakebaker/scss-syntax.vim',      {'for': 'css'}      " SCSS syntax highlighting
+Plug 'digitaltoad/vim-jade',           {'for': 'jade'}     " Jade syntax highlighting
+Plug 'groenewege/vim-less',            {'for': 'less'}     " Less syntax highlighting
+Plug 'othree/html5.vim',               {'for': 'html'}     " HTML5 syntax highlighting
+Plug 'slim-template/vim-slim',         {'for': 'slim'}     " Slim syntax highlighting
+Plug 'tpope/vim-haml',                 {'for': 'haml'}     " Haml syntax highlighting
 
 " Javascript
-Plug 'othree/yajs.vim',                {'for': 'javascript'}
-Plug 'mxw/vim-jsx',                    {'for': 'javascript.jsx'}
-Plug 'vim-coffee-script',              {'for': 'coffee'}
-Plug 'moll/vim-node'
+Plug 'othree/yajs.vim',                {'for': 'javascript'}  " Yet another JS syntax helper
+Plug 'mxw/vim-jsx',                    {'for': 'javascript.jsx'} " JSX syntax support
+Plug 'vim-coffee-script',              {'for': 'coffee'}   " Coffeescript syntax support
+Plug 'moll/vim-node'                                       " NodeJS syntax support
 
 " Load any extra plugins specified in the home directory
 if filereadable(expand("~/.vim.plugins.local"))
