@@ -87,9 +87,7 @@ if filereadable(expand("~/.vim.plugins.local"))
   source ~/.vim.plugins.local
 endif
 
-" ----------------------------------------------
 " No More plugins after here thanks!
-" ----------------------------------------------
 
 call plug#end()
 filetype plugin indent on
@@ -100,12 +98,16 @@ syntax on
 " Setup basic Vim behaviour
 " ----------------------------------------------
 
+" Setup the leader key, used for triggering all kinds of awesome things
 let mapleader = " "
+
 " Comma has been the leader key for so long, emulate it being the leader still
 " for the sake of muscle memory
 nmap , <leader>
 nmap ,, <leader><leader>
 
+
+" Set our primary colorscheme. Override this in ~/.vim.local if you want.
 colorscheme adCode
 
 set autoindent                          " Automatically indent based on syntax detection
@@ -139,6 +141,19 @@ set timeoutlen=500                      " Milliseconds to wait for another key p
 set wildmode=list:longest               " Shell-like behaviour for command autocompletion
 set fillchars+=vert:\                   " Set the window borders to not have | chars in them
 
+" Display soft column limit in modern versions of vim
+if version >= 730
+  au WinEnter,FileType * set cc=
+  au WinEnter,FileType ruby,eruby,rspec,cucumber set cc=140
+endif
+
+" Show lines which have been break-indented with a special character
+if v:version > 704 || v:version == 704 && has("patch338")
+  set breakindent
+  set showbreak=↪
+endif
+
+
 " -----------------------------------
 " Setup file wildcard ignored names
 " -----------------------------------
@@ -161,7 +176,33 @@ set wildignore+=node_modules/*
 " Disable temp and backup files
 set wildignore+=*.swp,*.swo,*~,._*
 
-call yankstack#setup()
+" ----------------------------------------------
+" Configure font & colourscheme
+" ----------------------------------------------
+" Setup the projector toggle plugin
+let g:default_colorscheme = 'adCode'
+let g:projector_colorscheme = 'mac-classic'
+
+" Setup Font
+if has('win32')
+  set guifont=Consolas\ 10
+elseif has('mac')
+  set guifont=Menlo:h12
+elseif has("unix")
+  set guifont=DejaVu\ Sans\ Mono\ 10
+endif
+" if you don't have these fonts or want something else,
+" set one in your ~/vim.local file like this:
+"   set guifont=fontname\ 12
+
+" -----------------------------------
+" Search Options
+" -----------------------------------
+set hlsearch        " highlight search matches...
+set incsearch       " ...as you type
+set ignorecase
+set smartcase
+
 
 " -----------------------------------
 " GUI Vim Options
@@ -171,13 +212,33 @@ set guioptions-=m     " no menu
 set guioptions+=LlRrb " Hack which adds all scrollbars so that they can be removed, line below breaks without this
 set guioptions-=LlRrb " Remove all scrollbars
 
+
+" ----------------------------------------------
+" Setup highlighting
+" ----------------------------------------------
+
+" Show current line highlighting only in the active pane
+augroup BgHighlight
+  autocmd!
+  autocmd WinEnter * set cul
+  autocmd WinLeave * set nocul
+augroup END
+
+
+" Highlight trailing whitespace
+highlight RedundantSpaces term=standout ctermbg=red guibg=red
+match RedundantSpaces /\s\+$\| \+\ze\t/ "\ze sets end of match so only spaces highlighted
+
+" Highlight Non-breaking spaces
+highlight BadSpaces term=standout ctermbg=red guibg=red
+match BadSpaces / \+/
+
+
 " -----------------------------------
-" Search Options
+" Initialise Plugins
 " -----------------------------------
-set hlsearch        " highlight search matches...
-set incsearch       " ...as you type
-set ignorecase
-set smartcase
+
+call yankstack#setup()
 
 " ----------------------------------------------
 " Command Shortcuts
@@ -349,6 +410,61 @@ nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 " ----------------------------------------------
+" Map Uncommon Filetype for Syntax Highlighting
+" ----------------------------------------------
+
+au BufRead,BufNewFile *.scss set filetype=scss.css
+au BufRead,BufNewFile *.jade.html set filetype=jade
+au BufRead,BufNewFile *.palette set filetype=ruby
+au BufNewFile,BufRead *.hl7 set filetype=hl7
+
+" ----------------------------------------------
+" Setup filetype specific settings
+" ----------------------------------------------
+
+" MARKDOWN -------------------------------------
+" Enable spell-check & wrapping when editing text documents (eg Markdown)
+autocmd BufNewFile,BufRead *.md :setlocal wrap
+autocmd BufNewFile,BufRead *.md :setlocal spell
+let g:vim_markdown_folding_disabled=1
+
+" YAML -------------------------------------
+" Ignore blank lines when calculating indentaiton on ansible yml configs
+let g:ansible_options = {'ignore_blank_lines': 0}
+
+" MAKE -------------------------------------
+" Leave tabs as tabs in Makefiles
+autocmd FileType make set noexpandtab
+
+" RUBY -------------------------------------
+" xmp-filter mappings
+autocmd FileType ruby nmap <buffer> <Leader>X <Plug>(xmpfilter-mark)
+autocmd FileType ruby xmap <buffer> <Leader>X <Plug>(xmpfilter-mark)
+autocmd FileType ruby imap <buffer> <Leader>X <Plug>(xmpfilter-mark)
+
+autocmd FileType ruby nmap <buffer> <Leader>x <Plug>(xmpfilter-run)
+autocmd FileType ruby xmap <buffer> <Leader>x <Plug>(xmpfilter-run)
+autocmd FileType ruby imap <buffer> <Leader>x <Plug>(xmpfilter-run)
+
+" Extend % to do/end etc
+runtime! plugin/matchit.vim
+
+" Fix supertab/endwise incompatibility
+let g:SuperTabCrMapping = 0
+
+" HTML & XML -------------------------------------
+" Don't report Angular ng-* attributes as errors in HTML
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
+" Enable ragtag XML tag mappings
+let g:ragtag_global_maps = 1
+
+" JAVASCRIPT -------------------------------------
+" Get jsx highlighting in files regardless of ending in .jsx (ie. .jsx.coffee)
+let g:jsx_ext_required = 0
+
+
+" ----------------------------------------------
 " Auto-complete shortcuts
 " ----------------------------------------------
 
@@ -366,24 +482,26 @@ nmap <leader>cf :CopyFileName<CR>
 nmap <leader>cd :CopyDirectoryPath<CR>
 nmap <leader>cr :CopyRelativePathAndLine<CR>
 
-" ----------------------------------------------
-" Map Uncommon Filetype for Syntax Highlighting
-" ----------------------------------------------
-
-au BufRead,BufNewFile *.scss set filetype=scss.css
-au BufRead,BufNewFile *.jade.html set filetype=jade
-au BufRead,BufNewFile *.palette set filetype=ruby
-au BufNewFile,BufRead *.hl7 set filetype=hl7
 
 " ----------------------------------------------
-" Setup Look & Feel
+" Toggle line numbers between absolute and relative
 " ----------------------------------------------
 
-" Show lines which have been break-indented with a special character
-if v:version > 704 || v:version == 704 && has("patch338")
-  set breakindent
-  set showbreak=↪
-endif
+" Setup relative number toggle on Ctrl+n
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+  set number
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
+" ----------------------------------------------
+" Setup Startify
+" ----------------------------------------------
 
 " Setup vim-startify's start screen
 let g:startify_change_to_vcs_root = 1
@@ -427,31 +545,6 @@ let g:startify_bookmarks = [
 " Stop things splitting with Startify and replace it instead
 autocmd User Startified setlocal buftype=
 
-" Setup the projector toggle plugin
-let g:default_colorscheme = 'adCode'
-let g:projector_colorscheme = 'mac-classic'
-
-" Setup Font
-if has('win32')
-  set guifont=Consolas\ 10
-elseif has('mac')
-  set guifont=Menlo:h12
-elseif has("unix")
-  set guifont=DejaVu\ Sans\ Mono\ 10
-endif
-" if you don't have these fonts or want something else,
-" set one in your ~/vim.local file like this:
-"   set guifont=fontname\ 12
-
-" Display soft column limit in modern versions of vim
-if version >= 730
-  au WinEnter,FileType * set cc=
-  au WinEnter,FileType ruby,eruby,rspec,cucumber set cc=140
-endif
-
-" Ignore blank lines when calculating indentaiton on ansible yml configs
-let g:ansible_options = {'ignore_blank_lines': 0}
-
 " ----------------------------------------------
 " Setup CtrlP File Finder
 " ----------------------------------------------
@@ -472,6 +565,43 @@ endif
 " Attempt alignment of keys when splitting a hash
 let g:splitjoin_align = 1
 
+
+" ----------------------------------------------
+" Configure GitGutter
+" ----------------------------------------------
+" Set the git gutter colors to be the same as the number column
+hi clear SignColumn
+
+" Set the Gutter to show all the time, avoiding the column 'pop' when saving
+let g:gitgutter_sign_column_always = 1
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '~'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_modified_removed = '~'
+let g:gitgutter_max_signs = 1000
+
+" ----------------------------------------------
+" Configure Testing tools
+" ----------------------------------------------
+
+" Vroom (Ruby) settings
+let g:vroom_write_all = 1
+let g:vroom_cucumber_path = 'cucumber '
+let g:vroom_map_keys = 0
+
+" ----------------------------------------------
+" Configure dynamic code execution tools
+" ----------------------------------------------
+
+" Projectionist defaults
+let g:projectionist_heuristics ={
+      \  "spec/*.rb": {
+      \     "app/*.rb":       {"alternate": "spec/{}_spec.rb",         "type": "source"},
+      \     "lib/*.rb":       {"alternate": "spec/{}_spec.rb",         "type": "source"},
+      \     "spec/*_spec.rb": {"alternate": ["app/{}.rb","lib/{}.rb"], "type": "test"}
+      \  }
+      \}
+
 " ----------------------------------------------
 " Setup the status bar
 " ----------------------------------------------
@@ -489,24 +619,6 @@ let g:airline#extensions#tagbar#enabled = 0
 
 let g:airline_theme = "kalisi"
 
-" ----------------------------------------------
-" Setup highlighting
-" ----------------------------------------------
-autocmd FileType make set noexpandtab
-
-" Extend % to do/end etc
-runtime! plugin/matchit.vim
-
-" Fix supertab/endwise incompatibility
-let g:SuperTabCrMapping = 0
-
-" Highlight trailing whitespace
-highlight RedundantSpaces term=standout ctermbg=red guibg=red
-match RedundantSpaces /\s\+$\| \+\ze\t/ "\ze sets end of match so only spaces highlighted
-
-" Highlight Non-breaking spaces
-highlight BadSpaces term=standout ctermbg=red guibg=red
-match BadSpaces / \+/
 
 " ----------------------------------------------
 " Configure Buffer Explorer
@@ -624,101 +736,19 @@ call s:DefineCommand("touch", "Touch")
 call s:DefineCommand("rm", "Remove")
 
 " ----------------------------------------------
-" Setup Misc Vim Behaviours
+" Setup filetype specific settings
 " ----------------------------------------------
-
-" Jump to last cursor position when opening a file
-" Don't do it when writing a commit log entry
-autocmd BufReadPost * call SetCursorPosition()
-function! SetCursorPosition()
-  if &filetype !~ 'commit\c'
-    if line("'\"") > 0 && line("'\"") <= line("$")
-      exe "normal g`\""
-    endif
-  end
-endfunction
-
-" strip trailing whitespace
-function! StripTrailingWhitespace()
-	normal mz
-	normal Hmy
-	exec '%s/\s*$//g'
-	normal 'yz<cr>
-	normal `z
-endfunction
-
-" Display Vim syntax groups under the cursor
-function! VimSyntaxGroups()
-  for id in synstack(line("."), col("."))
-    echo synIDattr(id, "name")
-  endfor
-endfunction
-
-" Delete comment character when joining commented lines
- if v:version > 703 || v:version == 703 && has("patch541")
-   set formatoptions+=j
- endif
-
-" Use only 1 space after "." when joining lines instead of 2
-set nojoinspaces
-
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
-
-" Tell Gutentags to store tags in .tags by default
-let g:gutentags_tagfile = '.tags'
-
-
-" Add function for showing the syntax tag for the selected text
-function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
-
-
-"define :Lorem command to dump in a paragraph of lorem ipsum
-command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
-      \ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      \ magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-      \ ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-      \ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-      \ fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non
-      \ proident, sunt in culpa qui officia deserunt mollit anim id est
-      \ laborum
-
-"define :Hipster command to dump in a paragraph of Hipster ipsum
-command! -nargs=0 Hipster :normal iTrust fund fashion axe bitters art party
-      \ raw denim. XOXO distillery tofu, letterpress cred literally gluten-free
-      \ flexitarian fap. VHS fashion axe gluten-free 90's church-key, kogi
-      \ hashtag Marfa. Kogi Tumblr Brooklyn chambray. Flannel pickled YOLO
-      \ semiotics. Mlkshk keffiyeh narwhal, mumblecore gentrify raw denim food
-      \ truck DIY. Craft beer chia readymade ethnic, hella kogi Vice jean shorts
-      \ cliche cray mlkshk ugh cornhole kitsch quinoa
-
-" Automatically turn on colorizers highlighting for some filetypes
-let g:colorizer_auto_filetype='css,haml,html,less,scss,vim'
-
-" Make colorizer play nicely with 2html
-let g:colorizer_syntax = 1
 
 " Enable spell-check & wrapping when editing text documents (eg Markdown)
 autocmd BufNewFile,BufRead *.md :setlocal wrap
 autocmd BufNewFile,BufRead *.md :setlocal spell
 
-" Setup relative number toggle on Ctrl+n
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set norelativenumber
-  else
-    set relativenumber
-  endif
-  set number
-endfunc
+" Ignore blank lines when calculating indentaiton on ansible yml configs
+let g:ansible_options = {'ignore_blank_lines': 0}
 
-nnoremap <C-n> :call NumberToggle()<cr>
-
+" ----------------------------------------------
+" Configure GitGutter
+" ----------------------------------------------
 " Set the git gutter colors to be the same as the number column
 hi clear SignColumn
 
@@ -730,10 +760,18 @@ let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_modified_removed = '~'
 let g:gitgutter_max_signs = 1000
 
-" Vroom settings
+" ----------------------------------------------
+" Configure Testing tools
+" ----------------------------------------------
+
+" Vroom (Ruby) settings
 let g:vroom_write_all = 1
 let g:vroom_cucumber_path = 'cucumber '
 let g:vroom_map_keys = 0
+
+" ----------------------------------------------
+" Configure dynamic code execution tools
+" ----------------------------------------------
 
 " xmp-filter mappings
 autocmd FileType ruby nmap <buffer> <Leader>X <Plug>(xmpfilter-mark)
@@ -769,6 +807,9 @@ augroup BgHighlight
   autocmd WinLeave * set nocul
 augroup END
 
+" Enable ragtag XML tag mappings
+let g:ragtag_global_maps = 1
+
 " ----------------------------------------------
 "  Source any local config
 "  Keep this last to make sure local config overrides global!
@@ -777,5 +818,3 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
-" Enable ragtag XML tag mappings
-let g:ragtag_global_maps = 1
