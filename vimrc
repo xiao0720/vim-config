@@ -43,7 +43,7 @@ Plug 'junegunn/vim-easy-align'               " Fast alignment of lines based on 
 Plug 'kana/vim-textobj-user'                 " Extend Vims text object
 Plug 'matchit.zip'                           " Extend % to match more text objects
 Plug 'maxbrunsfeld/vim-yankstack'            " Paste text, then rotate though things yanked before/after
-Plug 'scrooloose/nerdcommenter'              " Quick toggle for code commenting
+Plug 'tpope/vim-commentary'                   " Quick toggle for code commenting
 Plug 'tpope/vim-abolish'                     " Allow smartcase substitution and search
 Plug 'tpope/vim-speeddating'                 " Extend vim increment/decrement to work on dates
 Plug 'tpope/vim-surround'                    " Quick editing or insertion for surrounding characters (ie. quickly add quotes around a line)
@@ -275,6 +275,9 @@ vnoremap <silent> <Leader>a<space> :Tabularize /[^ ] \+\zs/l0r1<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipa)
 vmap aa <Plug>(LiveEasyAlign)
+
+" <Leader>c<space> to toggle comments on a line
+map <silent> <leader>c<space> gcc
 
 "  <Leader>f to fuzzy search files
 map <silent> <leader>f :CtrlP<cr>
