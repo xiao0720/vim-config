@@ -525,8 +525,6 @@ let g:startify_custom_footer = [
 let g:startify_list_order = [
       \ ['   Recent files in this directory:'],
       \ 'dir',
-      \ ['   Recent files:'],
-      \ 'files',
       \ ['   Bookmarks:'],
       \ 'bookmarks',
       \ ['   Sessions:'],
