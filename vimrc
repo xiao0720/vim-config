@@ -354,6 +354,9 @@ nnoremap <Leader>u :GundoToggle<CR>
 " Replace the default U (undo last line) to Redo for speedyness
 nmap U <c-r>
 
+" Add :w!! to save the current file with sudo
+cmap w!! w !sudo tee > /dev/null %
+
 "  <Leader>z to zoom pane when using splits
 map <Leader>z :ZoomWin<CR>
 
