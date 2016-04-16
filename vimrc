@@ -474,11 +474,6 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 " Enable ragtag XML tag mappings
 let g:ragtag_global_maps = 1
 
-" JAVASCRIPT -------------------------------------
-" Get jsx highlighting in files regardless of ending in .jsx (ie. .jsx.coffee)
-let g:jsx_ext_required = 0
-
-
 " ----------------------------------------------
 " Auto-complete shortcuts
 " ----------------------------------------------
@@ -823,9 +818,6 @@ let g:projectionist_heuristics ={
       \     "spec/*_spec.rb": {"alternate": ["app/{}.rb","lib/{}.rb"], "type": "test"}
       \  }
       \}
-
-" Get jsx highlighting in files regardless of ending in .jsx (ie. .jsx.coffee)
-let g:jsx_ext_required = 0
 
 " Show current line highlighting only in the active pane
 augroup BgHighlight
