@@ -164,23 +164,12 @@ endif
 " Setup file wildcard ignored names
 " -----------------------------------
 
-" Disable output and VCS files
-set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
-
-" Disable archive files
-set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.jar
-
-" Ignore bundler and sass cache
-set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
-
-" Ignore rails temporary asset caches
-set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
-
-" Ignore node modules
-set wildignore+=node_modules/*
-
-" Disable temp and backup files
-set wildignore+=*.swp,*.swo,*~,._*
+set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem          " Disable output and VCS files
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.jar                " Disable archive files
+set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/* " Ignore bundler and sass caches
+set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/* " Ignore rails temporary asset caches
+set wildignore+=node_modules/*                                               " Ignore node modules
+set wildignore+=*.swp,*.swo,*~,._*                                           " Disable temp and backup files
 
 " ----------------------------------------------
 " Configure font & colourscheme
@@ -201,13 +190,14 @@ endif
 " set one in your ~/vim.local file like this:
 "   set guifont=fontname\ 12
 
+
 " -----------------------------------
 " Search Options
 " -----------------------------------
 set hlsearch        " highlight search matches...
 set incsearch       " ...as you type
-set ignorecase
-set smartcase
+set ignorecase      " Generally ignore case
+set smartcase       " Care about case when capital letters show up
 
 
 " -----------------------------------
@@ -383,12 +373,14 @@ map <silent> <F5> <esc>:e %<CR>
 " F6 to view the Vim style of the text under the cursor
 nmap <F6> :call VimSyntaxGroups()<CR>
 
+
 " ----------------------------------------------
 " Insert Mode Abbreviations
 " ----------------------------------------------
 
 " Try to auto-complete xml tags on typing '</'
 iabbrev </ </<C-X><C-O>
+
 
 " ----------------------------------------------
 " Window split & size shortcuts
@@ -421,6 +413,7 @@ let g:yankstack_map_keys = 0
 nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
+
 " ----------------------------------------------
 " Map Uncommon Filetype for Syntax Highlighting
 " ----------------------------------------------
@@ -429,6 +422,7 @@ au BufRead,BufNewFile *.scss set filetype=scss.css
 au BufRead,BufNewFile *.jade.html set filetype=jade
 au BufRead,BufNewFile *.palette set filetype=ruby
 au BufNewFile,BufRead *.hl7 set filetype=hl7
+
 
 " ----------------------------------------------
 " Setup filetype specific settings
@@ -474,6 +468,7 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 " Enable ragtag XML tag mappings
 let g:ragtag_global_maps = 1
 
+
 " ----------------------------------------------
 " Auto-complete shortcuts
 " ----------------------------------------------
@@ -481,6 +476,7 @@ let g:ragtag_global_maps = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 
 " ----------------------------------------------
 " Copy file path details to the system clipboard
@@ -565,6 +561,7 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
   let g:ctrlp_use_caching = 0
 endif
+
 
 " ----------------------------------------------
 " Setup SplitJoin
