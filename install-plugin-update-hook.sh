@@ -3,7 +3,7 @@
 pushd $(dirname $0)>/dev/null
 
 cat > ~/.vim/.git/hooks/post-merge <<-EOF
-  ~/.vim/install
+  ~/.vim/install --force
 EOF
 
 chmod u+x ~/.vim/.git/hooks/post-merge
