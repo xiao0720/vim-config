@@ -71,7 +71,6 @@ Plug 'vroom',                          {'for': 'ruby'}     " Easy running of Rub
 Plug 'cakebaker/scss-syntax.vim'                           " SCSS syntax highlighting
 Plug 'csscomb/vim-csscomb'                                 " Organise and format CSS selectors like a proper human
 Plug 'digitaltoad/vim-jade',           {'for': 'jade'}     " Jade syntax highlighting
-Plug 'groenewege/vim-less',            {'for': 'less'}     " Less syntax highlighting
 Plug 'othree/html5.vim',               {'for': 'html'}     " HTML5 syntax highlighting
 Plug 'slim-template/vim-slim',         {'for': 'slim'}     " Slim syntax highlighting
 
@@ -869,7 +868,6 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
-
 
 "define :Lorem command to dump in a paragraph of lorem ipsum
 command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
