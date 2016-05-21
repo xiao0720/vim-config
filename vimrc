@@ -166,7 +166,7 @@ endif
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem          " Disable output and VCS files
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.jar                " Disable archive files
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/* " Ignore bundler and sass caches
-set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/* " Ignore rails temporary asset caches
+set wildignore+=*/tmp/cache/*                                                " Ignore rails temporary asset caches
 set wildignore+=node_modules/*                                               " Ignore node modules
 set wildignore+=*.swp,*.swo,*~,._*                                           " Disable temp and backup files
 
