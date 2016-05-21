@@ -22,7 +22,7 @@ Plug 'sjl/gundo.vim'                         " Visualise the undo tree and make 
 
 " Search and file exploring
 Plug 'jlanzarotta/bufexplorer'               " Show a sortable list of open buffers
-Plug 'kien/ctrlp.vim'                        " Really powerful fuzzy finder for file names
+Plug 'ctrlpvim/ctrlp.vim'                    " Really powerful fuzzy finder for file names
 Plug 'rking/ag.vim'                          " Really fast search for text in all files
 Plug 'scrooloose/nerdtree'                   " Visualise the project directory and make it easy to navigate
 Plug 'bogado/file-line'                      " Allow Vim to be opened with a fileline argument (ie. foo.txt:20)
@@ -43,7 +43,7 @@ Plug 'junegunn/vim-easy-align'               " Fast alignment of lines based on 
 Plug 'kana/vim-textobj-user'                 " Extend Vims text object
 Plug 'matchit.zip'                           " Extend % to match more text objects
 Plug 'maxbrunsfeld/vim-yankstack'            " Paste text, then rotate though things yanked before/after
-Plug 'tpope/vim-commentary'                   " Quick toggle for code commenting
+Plug 'tpope/vim-commentary'                  " Quick toggle for code commenting
 Plug 'tpope/vim-abolish'                     " Allow smartcase substitution and search
 Plug 'tpope/vim-speeddating'                 " Extend vim increment/decrement to work on dates
 Plug 'tpope/vim-surround'                    " Quick editing or insertion for surrounding characters (ie. quickly add quotes around a line)
