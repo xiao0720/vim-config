@@ -17,10 +17,13 @@ more details here: http://vim.1045645.n5.nabble.com/MacVim-and-PATH-td3388705.ht
 
 
 ## External Dependencies
-There are a couple of things you might want to install to get the best out of this config:
+There are a couple of things you need to install to get the best out of this config:
 * ctags - enables tags support when working with code
 * Ag - enables grepping through the current directories with [the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
-* Ack - enables grepping through the current directories with Ack-grep. Only needed if you can't (or won't) install Ag.
+* Ack - enables grepping through the current directories with Ack-grep. *Only needed if you can't (or won't) install Ag.*
+
+The following are more less essential dependencies which you may or may not want:
+* CSScomb - enables CSS formating and organisation via a node tool. Install with `npm install -g csscomb`
 * rcodetools - enables execution of ruby in-editor, run `gem install rcodetools`
 
 # Updating
@@ -74,6 +77,14 @@ Buffer explorer/browser ([more](http://www.vim.org/scripts/script.php?script_id=
 Keys               | Function
 -------------------|--------------------
   `<space>` `.`    | Show buffer explorer
+
+
+### CSScomb
+Enables the `:CSScomb` command to send the current buffer to CSScomb to be made beautiful. Requires `csscomb`.
+
+Keys               | Function
+-------------------|----------------------------
+  `:CSScomb`       | Run CSScomb over the buffer
 
 
 ### Coffeescript

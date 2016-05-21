@@ -69,7 +69,8 @@ Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}     " Run the current lin
 Plug 'vroom',                          {'for': 'ruby'}     " Easy running of Ruby tests inside Vim
 
 " CSS & HTML
-Plug 'cakebaker/scss-syntax.vim',      {'for': 'css'}      " SCSS syntax highlighting
+Plug 'cakebaker/scss-syntax.vim'                           " SCSS syntax highlighting
+Plug 'csscomb/vim-csscomb'                                 " Organise and format CSS selectors like a proper human
 Plug 'digitaltoad/vim-jade',           {'for': 'jade'}     " Jade syntax highlighting
 Plug 'groenewege/vim-less',            {'for': 'less'}     " Less syntax highlighting
 Plug 'othree/html5.vim',               {'for': 'html'}     " HTML5 syntax highlighting
