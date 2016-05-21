@@ -74,7 +74,6 @@ Plug 'digitaltoad/vim-jade',           {'for': 'jade'}     " Jade syntax highlig
 Plug 'groenewege/vim-less',            {'for': 'less'}     " Less syntax highlighting
 Plug 'othree/html5.vim',               {'for': 'html'}     " HTML5 syntax highlighting
 Plug 'slim-template/vim-slim',         {'for': 'slim'}     " Slim syntax highlighting
-Plug 'tpope/vim-haml',                 {'for': 'haml'}     " Haml syntax highlighting
 
 " Javascript
 Plug 'othree/yajs.vim',                {'for': 'javascript'}  " Yet another JS syntax helper
