@@ -312,6 +312,9 @@ nmap <Leader>gu <Plug>GitGutterRevertHunk
 "  <Leader>H to show hidden characters
 nmap <silent> <leader>H :set nolist!<CR>
 
+" <Leader>i to reindent the current file
+map <silent> <leader>i  mzgg=G`z
+
 " Rainbow colour parens and brachets to see what matches and which levels
 map <silent> <leader>) :RainbowParenthesesToggleAll<CR>
 
@@ -648,6 +651,7 @@ let g:syntastic_auto_loc_list=1
 
 " Tell Gutentags to store tags in .tags by default
 let g:gutentags_tagfile = '.tags'
+
 
 " ----------------------------------------------
 " Setup NERDTree
