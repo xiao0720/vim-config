@@ -269,7 +269,7 @@ vnoremap <silent> <Leader>a: :Tabularize /\w:\zs/l0l1<CR>
 vnoremap <silent> <Leader>a<space> :Tabularize /[^ ] \+\zs/l0r1<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipa)
-vmap aa <Plug>(LiveEasyAlign)
+vmap a <Plug>(LiveEasyAlign)
 
 " <Leader>c<space> to toggle comments on a line
 map <silent> <leader>c<space> gcc
@@ -288,6 +288,12 @@ nmap <leader>g <Plug>GitGutterNextHunk
 
 "  <Leader>G to jump to the last change since git commit
 nmap <leader>G <Plug>GitGutterPrevHunk
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 "  <Leader>gt to toggle the gutter
 nmap <leader>gt :GitGutterToggle<CR>
