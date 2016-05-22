@@ -285,7 +285,8 @@ Keys               | Function
 
 ### Targets.vim
 Additional text objects for faster editings ([more](https://github.com/wellle/targets.vim)).
-Take 2 
+Take 2 minutes to skim the list of things added; most of them are things you'd want vim to do out of the box.
+
 ### unimpaired
 Pairs of handy bracket maps ([more](http://www.vim.org/scripts/script.php?script_id=1590))
 
