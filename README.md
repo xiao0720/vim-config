@@ -22,7 +22,7 @@ There are a couple of things you need to install to get the best out of this con
 * Ag - enables grepping through the current directories with [the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 * Ack - enables grepping through the current directories with Ack-grep. *Only needed if you can't (or won't) install Ag.*
 
-The following are more less essential dependencies which you may or may not want:
+The following are not essential, though useful, dependencies which you may have use for:
 * CSScomb - enables CSS formating and organisation via a node tool. Install with `npm install -g csscomb`
 * rcodetools - enables execution of ruby in-editor, run `gem install rcodetools`
 
@@ -283,6 +283,9 @@ Keys               | Function
   `<space>` `]`    | toggle the sidebar
 
 
+### Targets.vim
+Additional text objects for faster editings ([more](https://github.com/wellle/targets.vim)).
+Take 2 
 ### unimpaired
 Pairs of handy bracket maps ([more](http://www.vim.org/scripts/script.php?script_id=1590))
 
@@ -332,14 +335,6 @@ Keys               | Function
 Adds syntax checking and better highlighting for Javascript files. ([more](https://github.com/pangloss/vim-javascript))
 
 
-### vim-haml
-Add haml, sass and SCSS syntax support ([more](https://github.com/tpope/vim-haml))
-
-
-### vim-less
-Less syntax highlighting ([more](https://github.com/groenewege/vim-less))
-
-
 ### vim-ruby
 Ruby support (newer than the version released with vim). ([more](https://github.com/vim-ruby/vim-ruby))
 
@@ -351,6 +346,7 @@ See [relish documentation](http://relishapp.com/despo/vim-ruby-refactoring) for 
 
 ### vim-startify
 Shows the nifty start window with links to recently used files. ([more](https://github.com/mhinz/vim-startify))
+
 
 ### vim-textobj-rubyblock
 Allow Ruby-aware text manipulation ([more](https://github.com/nelstrom/vim-textobj-rubyblock))
