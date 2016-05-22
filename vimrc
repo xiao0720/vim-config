@@ -315,6 +315,9 @@ nmap <silent> <leader>H :set nolist!<CR>
 " <Leader>i to reindent the current file
 map <silent> <leader>i  mzgg=G`z
 
+" <Leader>I to reindent the current file
+map <silent> <leader>I  gggqG
+
 " Rainbow colour parens and brachets to see what matches and which levels
 map <silent> <leader>) :RainbowParenthesesToggleAll<CR>
 
