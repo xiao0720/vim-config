@@ -69,7 +69,7 @@ Plug 'vroom',                          {'for': 'ruby'}     " Easy running of Rub
 
 " CSS & HTML
 Plug 'cakebaker/scss-syntax.vim'                           " SCSS syntax highlighting
-Plug 'csscomb/vim-csscomb'                                 " Organise and format CSS selectors like a proper human
+Plug 'adamwhittingham/vim-comb',       {'do': './install.sh'} " Organise and format CSS selectors like a proper human
 Plug 'digitaltoad/vim-jade',           {'for': 'jade'}     " Jade syntax highlighting
 Plug 'othree/html5.vim',               {'for': 'html'}     " HTML5 syntax highlighting
 Plug 'slim-template/vim-slim',         {'for': 'slim'}     " Slim syntax highlighting
