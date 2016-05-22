@@ -208,7 +208,12 @@ A set of mappings for HTML, XML, PHP, ASP, eRuby, JSP, and more ([more](http://w
 
 
 ### RainbowParenthesis
-Highlight all brachets based on their level. Helpful for working out the scope of nested things. ([more](http://www.vim.org/scripts/script.php?script_id=1230))
+Highlight all brachets based on their level. Helpful for working out the scope of nested things. ([more](https://github.com/luochen1990/rainbow))
+
+Want to disable this by default? Add the following to your `~/.vimrc.local` file:
+```
+let g:rainbow_active = 0
+```
 
 Keys               | Function
 -------------------|---------------------------------------------

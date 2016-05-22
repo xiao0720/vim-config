@@ -12,7 +12,7 @@ Plug 'vim-airline/vim-airline'               " Add a nicer status line
 Plug 'vim-airline/vim-airline-themes'        " Themes for Airline
 Plug 'christoomey/vim-tmux-navigator'        " Move between Vim panes & Tmux panes easily
 Plug 'colorizer'                             " Show the colour off Hex colour codes
-Plug 'kien/rainbow_parentheses.vim'          " Colour in brachets in matching pairs
+Plug 'luochen1990/rainbow'                   " Colour in brachets in matching pairs
 Plug 'mhinz/vim-startify'                    " Start Vim with a more useful start screen
 Plug 'nathanaelkane/vim-indent-guides'       " Show indentation level guides
 Plug 'regedarek/ZoomWin'                     " Enable one pane to be fullscreened temporarily
@@ -319,7 +319,7 @@ map <silent> <leader>i  mzgg=G`z
 map <silent> <leader>I  gggqG
 
 " Rainbow colour parens and brachets to see what matches and which levels
-map <silent> <leader>) :RainbowParenthesesToggleAll<CR>
+map <silent> <leader>) :RainbowToggle<CR>
 
 "  <Leader>m to toggle file tree (,M to select the current file in the tree)
 nmap <silent> <Leader>m :NERDTreeToggle<CR>
@@ -603,6 +603,17 @@ let g:gitgutter_max_signs = 1000
 let g:vroom_write_all = 1
 let g:vroom_cucumber_path = 'cucumber '
 let g:vroom_map_keys = 0
+
+" ----------------------------------------------
+" Configure Rainbow Parentheses
+" ----------------------------------------------
+
+let g:rainbow_active = 1
+
+    let g:rainbow_conf = {
+        \   'guifgs':   ['white', '#005fff', '#8700ff', '#af00af', '#af005f'],
+        \   'ctermfgs': ['white', '27', '93', '127', '125'],
+        \ }
 
 " ----------------------------------------------
 " Configure dynamic code execution tools
