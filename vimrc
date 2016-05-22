@@ -5,8 +5,6 @@ call plug#begin('~/.vim/plugged')
 " Define all the plugins!
 " ----------------------------------------------
 
-Plug 'tpope/vim-repeat'                      " Make many more operations repeatable with `.`
-
 " UI
 Plug 'AdamWhittingham/projector_mode'        " Toggle between colourschemes for work & projection or screensharing
 Plug 'airblade/vim-gitgutter'                " Show the column of changes to the file against git
@@ -19,6 +17,7 @@ Plug 'mhinz/vim-startify'                    " Start Vim with a more useful star
 Plug 'nathanaelkane/vim-indent-guides'       " Show indentation level guides
 Plug 'regedarek/ZoomWin'                     " Enable one pane to be fullscreened temporarily
 Plug 'sjl/gundo.vim'                         " Visualise the undo tree and make it easy to navigate
+Plug 'tpope/vim-repeat'                      " Make many more operations repeatable with `.`
 
 " Search and file exploring
 Plug 'jlanzarotta/bufexplorer'               " Show a sortable list of open buffers
@@ -46,6 +45,7 @@ Plug 'tpope/vim-commentary'                  " Quick toggle for code commenting
 Plug 'tpope/vim-abolish'                     " Allow smartcase substitution and search
 Plug 'tpope/vim-speeddating'                 " Extend vim increment/decrement to work on dates
 Plug 'tpope/vim-surround'                    " Quick editing or insertion for surrounding characters (ie. quickly add quotes around a line)
+Plug 'wellle/targets.vim'                    " Add lots of extra text objects for brachets, quotes, args and more
 
 " Snippets and autocomplete
 Plug 'ervandew/supertab'                     " Make tab more useful in triggering Vim omni-complete
