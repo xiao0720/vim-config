@@ -515,6 +515,7 @@ endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
 
+
 " ----------------------------------------------
 " Setup Startify
 " ----------------------------------------------
@@ -559,6 +560,7 @@ let g:startify_bookmarks = [
 " Stop things splitting with Startify and replace it instead
 autocmd User Startified setlocal buftype=
 
+
 " ----------------------------------------------
 " Setup CtrlP File Finder
 " ----------------------------------------------
@@ -595,6 +597,7 @@ let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_modified_removed = '~'
 let g:gitgutter_max_signs = 1000
 
+
 " ----------------------------------------------
 " Configure Testing tools
 " ----------------------------------------------
@@ -604,16 +607,37 @@ let g:vroom_write_all = 1
 let g:vroom_cucumber_path = 'cucumber '
 let g:vroom_map_keys = 0
 
+
 " ----------------------------------------------
 " Configure Rainbow Parentheses
 " ----------------------------------------------
 
 let g:rainbow_active = 1
 
-    let g:rainbow_conf = {
-        \   'guifgs':   ['white', '#005fff', '#8700ff', '#af00af', '#af005f'],
-        \   'ctermfgs': ['white', '27', '93', '127', '125'],
-        \ }
+let g:rainbow_conf = {
+    \   'guifgs':   ['white', '#005fff', '#8700ff', '#af00af', '#af005f'],
+    \   'ctermfgs': ['white', '27',      '93',      '127',     '125'],
+    \   'separately':{
+    \   'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/'],
+    \   'vim': {
+    \      'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+    \    },
+    \    'xml': {
+    \      'parentheses': ['start=/\v\<\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'))?)*\>/ end=#</\z1># fold'],
+    \    },
+    \    'xhtml': {
+    \      'parentheses': ['start=/\v\<\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'))?)*\>/ end=#</\z1># fold'],
+    \    },
+    \    'html': {
+    \      'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+    \    },
+    \    'ruby': {
+    \      'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold' ],
+    \    },
+    \    '*': {}
+    \   }
+    \ }
+
 
 " ----------------------------------------------
 " Configure dynamic code execution tools
@@ -627,6 +651,7 @@ let g:projectionist_heuristics ={
       \     "spec/*_spec.rb": {"alternate": ["app/{}.rb","lib/{}.rb"], "type": "test"}
       \  }
       \}
+
 
 " ----------------------------------------------
 " Setup the status bar
@@ -658,6 +683,7 @@ let g:bufExplorerDisableDefaultKeyMapping=1
 " ----------------------------------------------
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+
 
 " ----------------------------------------------
 " Setup ctags
@@ -776,6 +802,7 @@ call s:DefineCommand("cd", "ChangeDirectory")
 call s:DefineCommand("touch", "Touch")
 call s:DefineCommand("rm", "Remove")
 
+
 " ----------------------------------------------
 " Setup filetype specific settings
 " ----------------------------------------------
@@ -786,6 +813,7 @@ autocmd BufNewFile,BufRead *.md :setlocal spell
 
 " Ignore blank lines when calculating indentaiton on ansible yml configs
 let g:ansible_options = {'ignore_blank_lines': 0}
+
 
 " ----------------------------------------------
 " Configure GitGutter
@@ -801,6 +829,7 @@ let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_modified_removed = '~'
 let g:gitgutter_max_signs = 1000
 
+
 " ----------------------------------------------
 " Configure Testing tools
 " ----------------------------------------------
@@ -809,6 +838,7 @@ let g:gitgutter_max_signs = 1000
 let g:vroom_write_all = 1
 let g:vroom_cucumber_path = 'cucumber '
 let g:vroom_map_keys = 0
+
 
 " ----------------------------------------------
 " Configure dynamic code execution tools
@@ -847,6 +877,7 @@ augroup END
 
 " Enable ragtag XML tag mappings
 let g:ragtag_global_maps = 1
+
 
 " ----------------------------------------------
 " Add Misc helpful functions
@@ -906,6 +937,7 @@ command! -nargs=0 Hipster :normal iTrust fund fashion axe bitters art party
       \ truck DIY. Craft beer chia readymade ethnic, hella kogi Vice jean shorts
       \ cliche cray mlkshk ugh cornhole kitsch quinoa
 
+
 " ----------------------------------------------
 "  Source any local config
 "  Keep this last to make sure local config overrides global!
@@ -913,4 +945,3 @@ command! -nargs=0 Hipster :normal iTrust fund fashion axe bitters art party
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
-
