@@ -296,7 +296,7 @@ nmap <leader>gh :GitGutterLineHighlightsToggle<CR>
 nmap <Leader>ga <Plug>GitGutterStageHunk
 
 " <Leader>gu to undo the current changed hunk
-nmap <Leader>gu <Plug>GitGutterRevertHunk
+nmap <Leader>gu <Plug>GitGutterUndoHunk
 
 "  <Leader>h to dismiss search result highlighting until next search or press of 'n'
 :noremap <silent> <leader>h :noh<CR>
