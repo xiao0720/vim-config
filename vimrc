@@ -56,6 +56,7 @@ Plug 'tpope/vim-ragtag'                      " Provide bindings for closing HTML
 Plug 'scrooloose/syntastic'                                   " The Godfather of all syntax highlighting and checking
 Plug 'sheerun/vim-polyglot'                                   " Currated group of other excellent plugins
 Plug 'niquola/vim-hl7'                                        " HL7 syntax highlighting
+Plug 'slashmili/alchemist.vim'                                " Hook into Elixir Alchemist server for better completions'
 
 " Ruby
 Plug 'tpope/vim-rbenv'                                        " Use rbenv for Ruby tools
