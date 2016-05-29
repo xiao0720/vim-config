@@ -6,46 +6,46 @@ call plug#begin('~/.vim/plugged')
 " ----------------------------------------------
 
 " UI
-Plug 'AdamWhittingham/projector_mode'        " Toggle between colourschemes for work & projection or screensharing
-Plug 'airblade/vim-gitgutter'                " Show the column of changes to the file against git
-Plug 'vim-airline/vim-airline'               " Add a nicer status line
-Plug 'vim-airline/vim-airline-themes'        " Themes for Airline
-Plug 'christoomey/vim-tmux-navigator'        " Move between Vim panes & Tmux panes easily
-Plug 'colorizer'                             " Show the colour off Hex colour codes
-Plug 'luochen1990/rainbow'                   " Colour in brachets in matching pairs
-Plug 'mhinz/vim-startify'                    " Start Vim with a more useful start screen
-Plug 'nathanaelkane/vim-indent-guides'       " Show indentation level guides
-Plug 'regedarek/ZoomWin'                     " Enable one pane to be fullscreened temporarily
-Plug 'sjl/gundo.vim'                         " Visualise the undo tree and make it easy to navigate
-Plug 'tpope/vim-repeat'                      " Make many more operations repeatable with `.`
+Plug 'AdamWhittingham/projector_mode'                         " Toggle between colourschemes for work & projection or screensharing
+Plug 'airblade/vim-gitgutter'                                 " Show the column of changes to the file against git
+Plug 'vim-airline/vim-airline'                                " Add a nicer status line
+Plug 'vim-airline/vim-airline-themes'                         " Themes for Airline
+Plug 'christoomey/vim-tmux-navigator'                         " Move between Vim panes & Tmux panes easily
+Plug 'colorizer'                                              " Show the colour off Hex colour codes
+Plug 'luochen1990/rainbow'                                    " Colour in brachets in matching pairs
+Plug 'mhinz/vim-startify'                                     " Start Vim with a more useful start screen
+Plug 'nathanaelkane/vim-indent-guides'                        " Show indentation level guides
+Plug 'regedarek/ZoomWin'                                      " Enable one pane to be fullscreened temporarily
+Plug 'sjl/gundo.vim'                                          " Visualise the undo tree and make it easy to navigate
+Plug 'tpope/vim-repeat'                                       " Make many more operations repeatable with `.`
 
 " Search and file exploring
-Plug 'jlanzarotta/bufexplorer'               " Show a sortable list of open buffers
-Plug 'ctrlpvim/ctrlp.vim'                    " Really powerful fuzzy finder for file names
-Plug 'rking/ag.vim'                          " Really fast search for text in all files
-Plug 'scrooloose/nerdtree'                   " Visualise the project directory and make it easy to navigate
-Plug 'tpope/vim-unimpaired'                  " Extra bindings for common buffer navigation
+Plug 'jlanzarotta/bufexplorer'                                " Show a sortable list of open buffers
+Plug 'ctrlpvim/ctrlp.vim'                                     " Really powerful fuzzy finder for file names
+Plug 'rking/ag.vim'                                           " Really fast search for text in all files
+Plug 'scrooloose/nerdtree'                                    " Visualise the project directory and make it easy to navigate
+Plug 'tpope/vim-unimpaired'                                   " Extra bindings for common buffer navigation
 
 " Additional contextual information
-Plug 'AdamWhittingham/vim-copy-filename'     " Quick shortcuts for copying the file name, path and/or line number
-Plug 'gregsexton/MatchTag'                   " Highlight the matching opening or closing tag in HTML/XML
-Plug 'ludovicchabant/vim-gutentags'          " Better automated generation and update of ctags files
-Plug 'majutsushi/tagbar'                     " Visualise and navigate all the ctags found in the current file
-Plug 'tpope/vim-projectionist'               " Map tools and actions based on the project
+Plug 'AdamWhittingham/vim-copy-filename'                      " Quick shortcuts for copying the file name, path and/or line number
+Plug 'gregsexton/MatchTag'                                    " Highlight the matching opening or closing tag in HTML/XML
+Plug 'ludovicchabant/vim-gutentags'                           " Better automated generation and update of ctags files
+Plug 'majutsushi/tagbar'                                      " Visualise and navigate all the ctags found in the current file
+Plug 'tpope/vim-projectionist'                                " Map tools and actions based on the project
 
 " Extra text manipulation and movement
-Plug 'AndrewRadev/splitjoin.vim'             " Quick joining or splitting of programming constructs (ie. `if...else...` to `? ... : ...`)
-Plug 'AndrewRadev/switch.vim'                " Quickly switch programming constructs between alternate version (ie. Ruby string to symbol)
-Plug 'godlygeek/tabular'                     " Format lines into a table
-Plug 'junegunn/vim-easy-align'               " Fast alignment of lines based on preset rules
-Plug 'kana/vim-textobj-user'                 " Extend Vims text object
-Plug 'matchit.zip'                           " Extend % to match more text objects
-Plug 'maxbrunsfeld/vim-yankstack'            " Paste text, then rotate though things yanked before/after
-Plug 'tpope/vim-commentary'                  " Quick toggle for code commenting
-Plug 'tpope/vim-abolish'                     " Allow smartcase substitution and search
-Plug 'tpope/vim-speeddating'                 " Extend vim increment/decrement to work on dates
-Plug 'tpope/vim-surround'                    " Quick editing or insertion for surrounding characters (ie. quickly add quotes around a line)
-Plug 'wellle/targets.vim'                    " Add lots of extra text objects for brachets, quotes, args and more
+Plug 'AndrewRadev/splitjoin.vim'                              " Quick joining or splitting of programming constructs (ie. `if...else...` to `? ... : ...`)
+Plug 'AndrewRadev/switch.vim'                                 " Quickly switch programming constructs between alternate version (ie. Ruby string to symbol)
+Plug 'godlygeek/tabular'                                      " Format lines into a table
+Plug 'junegunn/vim-easy-align'                                " Fast alignment of lines based on preset rules
+Plug 'kana/vim-textobj-user'                                  " Extend Vims text object
+Plug 'matchit.zip'                                            " Extend % to match more text objects
+Plug 'maxbrunsfeld/vim-yankstack'                             " Paste text, then rotate though things yanked before/after
+Plug 'tpope/vim-commentary'                                   " Quick toggle for code commenting
+Plug 'tpope/vim-abolish'                                      " Allow smartcase substitution and search
+Plug 'tpope/vim-speeddating'                                  " Extend vim increment/decrement to work on dates
+Plug 'tpope/vim-surround'                                     " Quick editing or insertion for surrounding characters (ie. quickly add quotes around a line)
+Plug 'wellle/targets.vim'                                     " Add lots of extra text objects for brachets, quotes, args and more
 
 " Snippets and autocomplete
 Plug 'ervandew/supertab'                     " Make tab more useful in triggering Vim omni-complete
@@ -53,32 +53,23 @@ Plug 'tpope/vim-endwise'                     " Automatically insert programming 
 Plug 'tpope/vim-ragtag'                      " Provide bindings for closing HTML/XML tags
 
 " Extra syntax highlighting and language support
-Plug 'scrooloose/syntastic'                                " The Godfather of all syntax highlighting and checking
-Plug 'plasticboy/vim-markdown',        {'for': 'markdown'} " Markdown syntax highlighting 
-Plug 'elixir-lang/vim-elixir'                              " Elixir syntax highlighting
-Plug 'chase/vim-ansible-yaml'                              " Extra alignment & syntax for Ansible playbooks
-Plug 'niquola/vim-hl7'                                     " HL7 syntax highlighting
+Plug 'scrooloose/syntastic'                                   " The Godfather of all syntax highlighting and checking
+Plug 'sheerun/vim-polyglot'                                   " Currated group of other excellent plugins
+Plug 'niquola/vim-hl7'                                        " HL7 syntax highlighting
 
 " Ruby
-Plug 'vim-ruby/vim-ruby',              {'for': 'ruby'}     " Bleeding edge Ruby support
-Plug 'tpope/vim-rbenv'                                     " Use rbenv for Ruby tools
-Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}     " Extra Ruby refactoring tools
-Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}     " Extend % to match Ruby syntax
-Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}     " Run the current line of Ruby inside Vim
-Plug 'vroom',                          {'for': 'ruby'}     " Easy running of Ruby tests inside Vim
+Plug 'tpope/vim-rbenv'                                        " Use rbenv for Ruby tools
+Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}        " Extra Ruby refactoring tools
+Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}        " Extend % to match Ruby syntax
+Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}        " Run the current line of Ruby inside Vim
+Plug 'vroom',                          {'for': 'ruby'}        " Easy running of Ruby tests inside Vim
 
-" CSS & HTML
-Plug 'cakebaker/scss-syntax.vim'                           " SCSS syntax highlighting
+" JS, CSS & HTML
+Plug 'cakebaker/scss-syntax.vim'                              " SCSS syntax highlighting
 Plug 'adamwhittingham/vim-comb',       {'do': './install.sh'} " Organise and format CSS selectors like a proper human
-Plug 'digitaltoad/vim-jade',           {'for': 'jade'}     " Jade syntax highlighting
-Plug 'othree/html5.vim',               {'for': 'html'}     " HTML5 syntax highlighting
-Plug 'slim-template/vim-slim',         {'for': 'slim'}     " Slim syntax highlighting
+Plug 'digitaltoad/vim-jade',           {'for': 'jade'}        " Jade syntax highlighting
+Plug 'moll/vim-node'                                          " NodeJS syntax support
 
-" Javascript
-Plug 'othree/yajs.vim',                {'for': 'javascript'}  " Yet another JS syntax helper
-Plug 'mxw/vim-jsx',                    {'for': 'javascript.jsx'} " JSX syntax support
-Plug 'vim-coffee-script',              {'for': 'coffee'}   " Coffeescript syntax support
-Plug 'moll/vim-node'                                       " NodeJS syntax support
 
 " Load any extra plugins specified in the home directory
 if filereadable(expand("~/.vim.plugins.local"))
@@ -814,6 +805,7 @@ autocmd BufNewFile,BufRead *.md :setlocal spell
 " Ignore blank lines when calculating indentaiton on ansible yml configs
 let g:ansible_options = {'ignore_blank_lines': 0}
 
+let g:javascript_enable_domhtmlcss = 1
 
 " ----------------------------------------------
 " Configure GitGutter
