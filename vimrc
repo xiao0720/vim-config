@@ -540,20 +540,11 @@ nnoremap <C-n> :call NumberToggle()<cr>
 " Setup vim-startify's start screen
 let g:startify_change_to_vcs_root = 1
 let g:startify_files_number = 6
-let g:startify_custom_header = [
-      \ '   __      __            ',
-      \ '   \ \    / (_)          ',
-      \ '    \ \  / / _ _ __ ___  ',
-      \ '     \ \/ / | | `_ ` _ \ ',
-      \ '      \  /  | | | | | | |',
-      \ '       \/   |_|_| |_| |_|',
-      \ '                         ',
-      \ ]
+let g:startify_custom_header = []
 
 let g:startify_custom_footer = [
       \'',
-      \"   Adam's Vim Config: https://github.com/adamwhittingham/vim-config",
-      \"   Vim is charityware. Please read ':help uganda'",
+      \"   Github fork of Adam Whittingham's vim-config + Xiao's tailoring."
       \]
 
 let g:startify_list_order = [
