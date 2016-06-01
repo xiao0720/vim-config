@@ -63,6 +63,9 @@ Plug 'sheerun/vim-polyglot'                                   " Currated group o
 Plug 'niquola/vim-hl7'                                        " HL7 syntax highlighting
 Plug 'slashmili/alchemist.vim'                                " Hook into Elixir Alchemist server for better completions'
 Plug 'janko-m/vim-test'                                       " Add test running support for lots of languages & test frameworks
+Plug 'plasticboy/vim-markdown',        {'for': 'markdown'} " Markdown syntax highlighting
+Plug 'elixir-lang/vim-elixir'                              " Elixir syntax highlighting
+Plug 'chase/vim-ansible-yaml'                              " Extra alignment & syntax for Ansible playbooks
 
 " Ruby
 Plug 'tpope/vim-rbenv'                                        " Use rbenv for Ruby tools
