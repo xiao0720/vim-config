@@ -30,7 +30,6 @@ Plug 'tpope/vim-unimpaired'                                   " Extra bindings f
 Plug 'AdamWhittingham/vim-copy-filename'                      " Quick shortcuts for copying the file name, path and/or line number
 Plug 'gregsexton/MatchTag'                                    " Highlight the matching opening or closing tag in HTML/XML
 Plug 'ludovicchabant/vim-gutentags'                           " Better automated generation and update of ctags files
-Plug 'majutsushi/tagbar'                                      " Visualise and navigate all the ctags found in the current file
 Plug 'tpope/vim-projectionist'                                " Map tools and actions based on the project
 
 " Extra text manipulation and movement
@@ -246,9 +245,6 @@ nmap <silent> <unique> <Leader>. :BufExplorer<CR>
 
 " Double leader to switch to the previous buffer
 map <silent> <Leader><Leader> :b#<CR>
-
-" <leader>] to toggle the tags sidebar
-nmap <Leader>] :TagbarToggle<CR>
 
 " <leader>a<?> to align visually selected lines on <something>
 vnoremap <silent> <Leader>a= :Tabularize /=<CR>
