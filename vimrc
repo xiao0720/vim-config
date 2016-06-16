@@ -25,6 +25,7 @@ Plug 'ctrlpvim/ctrlp.vim'                                     " Really powerful 
 Plug 'rking/ag.vim'                                           " Really fast search for text in all files
 Plug 'scrooloose/nerdtree'                                    " Visualise the project directory and make it easy to navigate
 Plug 'tpope/vim-unimpaired'                                   " Extra bindings for common buffer navigation
+Plug 'timakro/vim-searchant'                                  " Better highlighting when searching in file
 
 " Additional contextual information
 Plug 'AdamWhittingham/vim-copy-filename'                      " Quick shortcuts for copying the file name, path and/or line number
