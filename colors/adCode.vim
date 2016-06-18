@@ -172,6 +172,9 @@ hi htmlunderlineitalic        guifg=#FAFAFA ctermfg=231  guibg=NONE    ctermbg=N
 hi htmlbold                   guifg=#FAFAFA ctermfg=231  guibg=NONE    ctermbg=NONE gui=BOLD cterm=BOLD
 hi htmlboldunderline          guifg=#FAFAFA ctermfg=231  guibg=NONE    ctermbg=NONE gui=BOLD,UNDERLINE cterm=BOLD,UNDERLINE
 hi htmlunderline              guifg=#FAFAFA ctermfg=231  guibg=NONE    ctermbg=NONE gui=UNDERLINE cterm=UNDERLINE
+hi xmlTag                     guifg=#45C2FB ctermfg=75   gui=NONE cterm=NONE
+hi xmlEndTag                  guifg=#1887FD ctermfg=33   gui=NONE cterm=NONE
+hi xmlAttrib                  guifg=#9D72C0 ctermfg=133  gui=NONE cterm=NONE
 hi cssAttributeSelector       guifg=#60D05C ctermfg=77   gui=NONE cterm=NONE
 hi cssBackgroundProp          guifg=#60D05C ctermfg=77   gui=NONE cterm=NONE
 hi cssBorderAttr              guifg=#45C2FB ctermfg=75   gui=NONE cterm=NONE
