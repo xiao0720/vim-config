@@ -23,7 +23,9 @@ There are a couple of things you need to install to get the best out of this con
 * Ack - enables grepping through the current directories with Ack-grep. *Only needed if you can't (or won't) install Ag.*
 
 The following are not essential, though useful, dependencies which you may have use for:
+* NodeJS - enables integration for JS tools listed here
 * CSScomb - enables CSS formating and organisation via a node tool. Install with `npm install -g csscomb`
+* ESLint - enables JS linting with support for Babel and React/JSX. Install with `npm install -g eslint babel-eslint eslint-plugin-react`
 * rcodetools - enables execution of ruby in-editor, run `gem install rcodetools`
 
 # Updating
