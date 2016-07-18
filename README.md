@@ -372,8 +372,8 @@ Keys               | Function
   `i``r`           | Contact the selection in one scope level
 
 
-### vroom
-A plugin for running your Ruby tests, specs, and features. ([more](http://www.vim.org/scripts/script.php?script_id=3995))
+### vim-test
+A plugin for running your tests, specs and features for multiple languages. ([more](https://github.com/janko-m/vim-test))
 
 Keys               | Function
 -------------------|--------------------------------------------------------------

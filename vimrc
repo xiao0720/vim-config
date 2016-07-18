@@ -19,6 +19,9 @@ Plug 'regedarek/ZoomWin'                                      " Enable one pane 
 Plug 'sjl/gundo.vim'                                          " Visualise the undo tree and make it easy to navigate
 Plug 'tpope/vim-repeat'                                       " Make many more operations repeatable with `.`
 
+" Tooling
+Plug 'tpope/vim-dispatch'                                     " Enable async running of tasks
+
 " Search and file exploring
 Plug 'jlanzarotta/bufexplorer'                                " Show a sortable list of open buffers
 Plug 'ctrlpvim/ctrlp.vim'                                     " Really powerful fuzzy finder for file names
@@ -59,13 +62,13 @@ Plug 'scrooloose/syntastic'                                   " The Godfather of
 Plug 'sheerun/vim-polyglot'                                   " Currated group of other excellent plugins
 Plug 'niquola/vim-hl7'                                        " HL7 syntax highlighting
 Plug 'slashmili/alchemist.vim'                                " Hook into Elixir Alchemist server for better completions'
+Plug 'janko-m/vim-test'                                       " Add test running support for lots of languages & test frameworks
 
 " Ruby
 Plug 'tpope/vim-rbenv'                                        " Use rbenv for Ruby tools
 Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}        " Extra Ruby refactoring tools
 Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}        " Extend % to match Ruby syntax
 Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}        " Run the current line of Ruby inside Vim
-Plug 'vroom',                          {'for': 'ruby'}        " Easy running of Ruby tests inside Vim
 
 " JS, CSS & HTML
 Plug 'cakebaker/scss-syntax.vim'                              " SCSS syntax highlighting
@@ -335,11 +338,12 @@ nmap <silent> <Leader>sp :setlocal spell!<CR>
 "  <Leader>sw to strip whitespace off the ends
 nmap <silent> <Leader>sw :call StripTrailingWhitespace()<CR>
 
-"  <Leader>t to run all tests in the current file
-map <silent> <leader>t :VroomRunTestFile<CR>
+"  <Leader>t to run all tests in the current file if it is a test, otherwise
+"  run the last test file
+map <silent> <leader>t :TestFile<CR>
 
 "  <Leader>t to run the tests in the scope nearest the cursor
-map <silent> <leader>T :VroomRunNearestTest<CR>
+map <silent> <leader>T :TestNearest<CR>
 
 "  <Leader>u to toggle undo history browser
 nnoremap <Leader>u :GundoToggle<CR>
@@ -611,11 +615,9 @@ let g:gitgutter_max_signs = 1000
 " Configure Testing tools
 " ----------------------------------------------
 
-" Vroom (Ruby) settings
-let g:vroom_write_all = 1
-let g:vroom_cucumber_path = 'cucumber '
-let g:vroom_map_keys = 0
-
+if !empty($TMUX)
+  let test#strategy = "dispatch"
+end
 
 " ----------------------------------------------
 " Configure Rainbow Parentheses
