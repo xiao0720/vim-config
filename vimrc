@@ -70,6 +70,9 @@ Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}        " Extra Ruby refac
 Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}        " Extend % to match Ruby syntax
 Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}        " Run the current line of Ruby inside Vim
 
+" Elixir
+Plug 'avdgaag/vim-phoenix',            {'for': 'elixir'}      " Add Projectionist, Dispatch and Mix integrations for Phoenix projects
+
 " JS, CSS & HTML
 Plug 'cakebaker/scss-syntax.vim'                              " SCSS syntax highlighting
 Plug 'adamwhittingham/vim-comb',       {'do': './install.sh'} " Organise and format CSS selectors like a proper human

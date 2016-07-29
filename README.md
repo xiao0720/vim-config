@@ -343,6 +343,10 @@ Keys               | Function
 Adds syntax checking and better highlighting for Javascript files. ([more](https://github.com/pangloss/vim-javascript))
 
 
+### vim-phoenix
+Add configuration of Projectionist and Dispatch for the Elixir Phoenix framework, as well as add Mix integration. ([more](https://github.com/avdgaag/vim-phoenix))
+
+
 ### vim-ruby
 Ruby support (newer than the version released with vim). ([more](https://github.com/vim-ruby/vim-ruby))
 
