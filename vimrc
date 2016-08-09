@@ -59,7 +59,6 @@ Plug 'ajh17/VimCompletesMe'                                   " Very lightweight
 
 " Extra syntax highlighting and language support
 Plug 'scrooloose/syntastic'                                   " The Godfather of all syntax highlighting and checking
-Plug 'sheerun/vim-polyglot'                                   " Currated group of other excellent plugins
 Plug 'niquola/vim-hl7'                                        " HL7 syntax highlighting
 Plug 'slashmili/alchemist.vim'                                " Hook into Elixir Alchemist server for better completions'
 Plug 'janko-m/vim-test'                                       " Add test running support for lots of languages & test frameworks
@@ -68,6 +67,7 @@ Plug 'elixir-lang/vim-elixir'                              " Elixir syntax highl
 Plug 'chase/vim-ansible-yaml'                              " Extra alignment & syntax for Ansible playbooks
 
 " Ruby
+Plug 'vim-ruby/vim-ruby',              {'for': 'ruby'}        " Bleeding edge Ruby support
 Plug 'tpope/vim-rbenv'                                        " Use rbenv for Ruby tools
 Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}        " Extra Ruby refactoring tools
 Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}        " Extend % to match Ruby syntax
@@ -81,7 +81,14 @@ Plug 'cakebaker/scss-syntax.vim'                              " SCSS syntax high
 Plug 'adamwhittingham/vim-comb',       {'do': './install.sh'} " Organise and format CSS selectors like a proper human
 Plug 'digitaltoad/vim-jade',           {'for': 'jade'}        " Jade syntax highlighting
 Plug 'moll/vim-node'                                          " NodeJS syntax support
+Plug 'othree/html5.vim',               {'for': 'html'}        " HTML5 syntax highlighting
+Plug 'slim-template/vim-slim',         {'for': 'slim'}        " Slim syntax highlighting
 
+" Javascript
+Plug 'othree/yajs.vim',                {'for': 'javascript'}     " Yet another JS syntax helper
+Plug 'mxw/vim-jsx',                    {'for': 'javascript.jsx'} " JSX syntax support
+Plug 'vim-coffee-script',              {'for': 'coffee'}         " Coffeescript syntax support
+Plug 'moll/vim-node'                                             " NodeJS syntax support
 
 " Load any extra plugins specified in the home directory
 if filereadable(expand("~/.vim.plugins.local"))
@@ -835,7 +842,6 @@ autocmd BufNewFile,BufRead *.md :setlocal spell
 " Ignore blank lines when calculating indentaiton on ansible yml configs
 let g:ansible_options = {'ignore_blank_lines': 0}
 
-let g:javascript_enable_domhtmlcss = 1
 
 " ----------------------------------------------
 " Configure GitGutter
